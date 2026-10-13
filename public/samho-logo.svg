@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Samho Brand Red: #C8102E -->
+  <g fill="#C8102E">
+    <!-- Left Crescent Outer Ring Arc -->
+    <path d="M 235,72 C 120,72 44,146 44,250 C 44,354 120,428 235,428 C 140,418 96,346 96,250 C 96,154 140,82 235,72 Z" />
+
+    <!-- Right Crescent Outer Ring Arc (180° rotationally symmetric) -->
+    <path d="M 265,428 C 380,428 456,354 456,250 C 456,146 380,72 265,72 C 360,82 404,154 404,250 C 404,346 360,418 265,428 Z" />
+
+    <!-- Central Stylized S Scroll / Ribbon (180° rotationally symmetric) -->
+    <path d="
+      M 255,138
+      L 345,138
+      A 22 22 0 1 1 324.5,168
+      L 245,362
+      L 155,362
+      A 22 22 0 1 1 175.5,332
+      Z
+    " />
+  </g>
+</svg>

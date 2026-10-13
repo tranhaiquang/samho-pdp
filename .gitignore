@@ -1,0 +1,26 @@
+node_modules/
+build/
+dist/
+dist-static/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+static_preview.png
+scripts_static_verify.mjs
+scripts_static_ui.mjs
+scripts_static_rename_check.mjs
+
+# Snapshots of files before the bundle-splitting / deploy prep pass.
+# Local only - never pushed.
+.originals/
+
+# Duplicate lockfile. The documented workflow is npm; see README.
+# Remove this line if you switch the project to bun.
+bun.lock
+
+# Editor / OS noise
+.vscode/
+.idea/
+Thumbs.db

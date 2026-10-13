@@ -1,0 +1,8 @@
+{
+  "name": "Remix Vietnam Samho Policy Deployment System",
+  "description": "App Hoạch định \u0026 Triển khai Chính sách (Hoshin Kanri, X-Matrix, Bowling Chart KPI Scorecards) theo chuẩn Vietnam Samho Co. Ltd 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
