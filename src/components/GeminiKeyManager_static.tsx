@@ -76,7 +76,7 @@ export function GeminiKeyManager({ language }: { language?: string }) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4">
+    <div>
       <div>
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200">
           <h3 className="text-sm font-bold text-slate-900 flex items-center gap-2">
