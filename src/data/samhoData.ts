@@ -551,7 +551,7 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
   ],
   "kpis": [
     {
-      "id": "kpi-import-L1-1794452912251-4",
+      "id": "kpi-import-L1-1794469343924-4",
       "code": "L1 1.1.1",
       "name": "Increasing PPH from 0,98 to 1.01",
       "nameVi": "Increasing PPH from 0,98 to 1.01",
@@ -634,17 +634,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L1-1794452912251-6",
+      "id": "kpi-import-L1-1794469343924-6",
       "code": "L1 1.1.2",
       "name": "Mini line 21%",
       "nameVi": "Mini line 21%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Lean",
       "monthly": {
         "Jan": {
           "target": 0.21,
@@ -717,17 +717,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-8",
+      "id": "kpi-import-L1-1794469343924-8",
       "code": "L1 1.1.3",
       "name": "LA Score = 3.0Pts",
       "nameVi": "LA Score = 3.0Pts",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Lean",
       "unit": "points",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Lean",
       "monthly": {
         "Jan": {
           "target": 2.85,
@@ -800,17 +800,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-10",
+      "id": "kpi-import-L1-1794469343924-10",
       "code": "L1 1.1.4",
       "name": "+4 C2B lines in Plant F",
       "nameVi": "+4 C2B lines in Plant F",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Lines",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Lean",
       "monthly": {
         "Jan": {
           "target": 4,
@@ -883,7 +883,7 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-12",
+      "id": "kpi-import-L1-1794469343924-12",
       "code": "L1 1.2.1",
       "name": "On Time to Customer Request = 100%",
       "nameVi": "On Time to Customer Request = 100%",
@@ -966,17 +966,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L1-1794452912251-14",
+      "id": "kpi-import-L1-1794469343924-14",
       "code": "L1 1.2.2",
       "name": "On Time to NB Request = 100%",
       "nameVi": "On Time to NB Request = 100%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Delivery",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Delivery",
       "monthly": {
         "Jan": {
           "target": 1,
@@ -1049,17 +1049,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-16",
+      "id": "kpi-import-L1-1794469343924-16",
       "code": "L1 1.2.3",
       "name": "On Time to Original Confirmed = 100%",
       "nameVi": "On Time to Original Confirmed = 100%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Delivery",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Delivery",
       "monthly": {
         "Jan": {
           "target": 1,
@@ -1132,7 +1132,7 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-18",
+      "id": "kpi-import-L1-1794469343924-18",
       "code": "L1 1.3.1",
       "name": "Management System = 4points",
       "nameVi": "Management System = 4points",
@@ -1215,17 +1215,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L1-1794452912251-20",
+      "id": "kpi-import-L1-1794469343924-20",
       "code": "L1 1.3.2",
       "name": "Sustainability = 6points",
       "nameVi": "Sustainability = 6points",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Responsible Leadership",
       "unit": "Points",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Responsible Leadership",
       "monthly": {
         "Jan": {
           "target": 6,
@@ -1298,17 +1298,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-22",
+      "id": "kpi-import-L1-1794469343924-22",
       "code": "L1 1.3.3",
       "name": "Respecting Human Rights = 5points",
       "nameVi": "Respecting Human Rights = 5points",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Responsible Leadership",
       "unit": "Points",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Responsible Leadership",
       "monthly": {
         "Jan": {
           "target": 5,
@@ -1381,7 +1381,7 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-24",
+      "id": "kpi-import-L1-1794469343924-24",
       "code": "L1 1.4.1.1",
       "name": "Development Quality Assessment = 4 points",
       "nameVi": "Development Quality Assessment = 4 points",
@@ -1464,17 +1464,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-26",
+      "id": "kpi-import-L1-1794469343924-26",
       "code": "L1 1.4.1.2",
       "name": "Development Team Survey = 3 points",
       "nameVi": "Development Team Survey = 3 points",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Development",
       "unit": "points",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Development",
       "monthly": {
         "Jan": {
           "target": 3,
@@ -1547,17 +1547,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-28",
+      "id": "kpi-import-L1-1794469343924-28",
       "code": "L1 1.4.2.1",
       "name": "Digital/Photo Quality >=95%",
       "nameVi": "Digital/Photo Quality >=95%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Development",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Development",
       "monthly": {
         "Jan": {
           "target": 0.95,
@@ -1630,17 +1630,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-30",
+      "id": "kpi-import-L1-1794469343924-30",
       "code": "L1 1.4.2.2",
       "name": "View/Angle Accuracy >=95%",
       "nameVi": "View/Angle Accuracy >=95%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Development",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Development",
       "monthly": {
         "Jan": {
           "target": 0.95,
@@ -1713,17 +1713,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-32",
+      "id": "kpi-import-L1-1794469343924-32",
       "code": "L1 1.4.3",
       "name": "On Time 100%",
       "nameVi": "On Time 100%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Development",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Development",
       "monthly": {
         "Jan": {
           "target": 1,
@@ -1796,17 +1796,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-34",
+      "id": "kpi-import-L1-1794469343924-34",
       "code": "L1 1.4.4",
       "name": "On Time 100%",
       "nameVi": "On Time 100%",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Development",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Production",
+      "owner": "Development",
       "monthly": {
         "Jan": {
           "target": 1,
@@ -1879,7 +1879,7 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       }
     },
     {
-      "id": "kpi-import-L1-1794452912251-36",
+      "id": "kpi-import-L1-1794469343924-36",
       "code": "L1 1.5.1",
       "name": "DPPM = 11K",
       "nameVi": "DPPM = 11K",
@@ -1962,17 +1962,17 @@ export const INITIAL_LEVEL_1_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L1-1794452912251-38",
+      "id": "kpi-import-L1-1794469343924-38",
       "code": "L1 1.5.2",
       "name": "ZERO cases",
       "nameVi": "ZERO cases",
       "nameKo": "",
       "level": "L1",
-      "department": "Production",
+      "department": "Quality",
       "unit": "Cases",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "lower",
-      "owner": "Production",
+      "owner": "Quality",
       "monthly": {
         "Jan": {
           "target": 0,
@@ -2312,7 +2312,7 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
   ],
   "kpis": [
     {
-      "id": "kpi-import-L2-1794452912255-4",
+      "id": "kpi-import-L2-1794469343928-4",
       "code": "L2 1.1.1",
       "name": "Auto cut roadmap: hit 80% in Dec. 2026",
       "nameVi": "Auto cut roadmap: hit 80% in Dec. 2026",
@@ -2396,16 +2396,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-6",
+      "id": "kpi-import-L2-1794469343928-6",
       "code": "L2 1.1.2",
       "name": "Increasing PPH of top model 740/860/880 10% in Dec 2026",
       "nameVi": "Increasing PPH of top model 740/860/880 10% in Dec 2026",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-2"
       ],
@@ -2480,16 +2480,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-8",
+      "id": "kpi-import-L2-1794469343928-8",
       "code": "L2 1.2.1",
       "name": "Set up a Hourly planning System from July -> Sep.",
       "nameVi": "Set up a Hourly planning System from July -> Sep.",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-3"
       ],
@@ -2564,16 +2564,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-10",
+      "id": "kpi-import-L2-1794469343928-10",
       "code": "L2 1.2.2",
       "name": "21% C2B line comply EOLR comply with STD",
       "nameVi": "21% C2B line comply EOLR comply with STD",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-4"
       ],
@@ -2648,16 +2648,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-12",
+      "id": "kpi-import-L2-1794469343928-12",
       "code": "L2 1.3.1.1",
       "name": "QCO = 3.2",
       "nameVi": "QCO = 3.2",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Point",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-5"
       ],
@@ -2732,16 +2732,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-14",
+      "id": "kpi-import-L2-1794469343928-14",
       "code": "L2 1.3.1.2",
       "name": "P & Q incentive policy = 2.4",
       "nameVi": "P & Q incentive policy = 2.4",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Point",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-5"
       ],
@@ -2816,16 +2816,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-16",
+      "id": "kpi-import-L2-1794469343928-16",
       "code": "L2 1.3.1.3",
       "name": "Andon = 3.0",
       "nameVi": "Andon = 3.0",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Point",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-5"
       ],
@@ -2900,16 +2900,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-18",
+      "id": "kpi-import-L2-1794469343928-18",
       "code": "L2 1.3.1.4",
       "name": "TPM = 3.0",
       "nameVi": "TPM = 3.0",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Point",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-5"
       ],
@@ -2984,16 +2984,16 @@ export const INITIAL_LEVEL_2_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L2-1794452912255-20",
+      "id": "kpi-import-L2-1794469343928-20",
       "code": "L2 1.4.1.1",
       "name": "Reduce lead-time of top model from 12 days to 10 days",
       "nameVi": "Reduce lead-time of top model from 12 days to 10 days",
       "level": "L2",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Days",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "lower",
-      "owner": "Lean: Quang/Huy",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l2-6"
       ],
@@ -3446,7 +3446,7 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
   ],
   "kpis": [
     {
-      "id": "kpi-import-L3-1794452912255-3",
+      "id": "kpi-import-L3-1794469343928-3",
       "code": "L3 1.1.1.1.1",
       "name": "+4 sets of auto cut in May. 2026",
       "nameVi": "+4 sets of auto cut in May. 2026",
@@ -3530,16 +3530,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-5",
+      "id": "kpi-import-L3-1794469343928-5",
       "code": "L3 1.1.1.2.1",
       "name": "OEE improvement from 72% to 80% from Apr. To Dec.",
       "nameVi": "OEE improvement from 72% to 80% from Apr. To Dec.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-2"
       ],
@@ -3614,16 +3614,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-7",
+      "id": "kpi-import-L3-1794469343928-7",
       "code": "L3 1.1.2.1.1",
       "name": "Reduce 12% TCT of top model 740v2",
       "nameVi": "Reduce 12% TCT of top model 740v2",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-3"
       ],
@@ -3698,16 +3698,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-9",
+      "id": "kpi-import-L3-1794469343928-9",
       "code": "L3 1.1.2.1.2",
       "name": "Reduce 10% TCT of top model 860v15",
       "nameVi": "Reduce 10% TCT of top model 860v15",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-4"
       ],
@@ -3782,16 +3782,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-11",
+      "id": "kpi-import-L3-1794469343928-11",
       "code": "L3 1.1.2.2",
       "name": "Model 740v2's LLER =85%",
       "nameVi": "Model 740v2's LLER =85%",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-4"
       ],
@@ -3866,16 +3866,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-13",
+      "id": "kpi-import-L3-1794469343928-13",
       "code": "L3 1.2.1.1",
       "name": "50% C2B lines in Q4 2026 using Hourly planning",
       "nameVi": "50% C2B lines in Q4 2026 using Hourly planning",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-5"
       ],
@@ -3950,16 +3950,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-15",
+      "id": "kpi-import-L3-1794469343928-15",
       "code": "L3 1.2.2.1",
       "name": "Making 4 miniline with EOLR under 100 pairs for model Mix",
       "nameVi": "Making 4 miniline with EOLR under 100 pairs for model Mix",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Number",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-6"
       ],
@@ -4034,16 +4034,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-17",
+      "id": "kpi-import-L3-1794469343928-17",
       "code": "L3 1.3.1.1",
       "name": "Incentive policy for productivity and quality, implement reward system for leaders and workers ( Target 30%)",
       "nameVi": "Incentive policy for productivity and quality, implement reward system for leaders and workers ( Target 30%)",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-7"
       ],
@@ -4118,16 +4118,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-19",
+      "id": "kpi-import-L3-1794469343928-19",
       "code": "L3 1.3.1.2.1",
       "name": "Apply digital for Change over Plan and Execution.",
       "nameVi": "Apply digital for Change over Plan and Execution.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-8"
       ],
@@ -4202,16 +4202,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-21",
+      "id": "kpi-import-L3-1794469343928-21",
       "code": "L3 1.3.1.2.2",
       "name": "SMED deployment for all type of AC machine (Travelling Head/ Blade cut). Set COT target base on SMED and track in PBI.",
       "nameVi": "SMED deployment for all type of AC machine (Travelling Head/ Blade cut). Set COT target base on SMED and track in PBI.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-8"
       ],
@@ -4286,16 +4286,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-23",
+      "id": "kpi-import-L3-1794469343928-23",
       "code": "L3 1.3.1.3.1",
       "name": "Upgrade system to apply new andon with response time data collecting.",
       "nameVi": "Upgrade system to apply new andon with response time data collecting.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-9"
       ],
@@ -4370,16 +4370,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-25",
+      "id": "kpi-import-L3-1794469343928-25",
       "code": "L3 1.3.1.3.2",
       "name": "Analyze and Improving response time base on data collected.",
       "nameVi": "Analyze and Improving response time base on data collected.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-9"
       ],
@@ -4454,16 +4454,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-27",
+      "id": "kpi-import-L3-1794469343928-27",
       "code": "L3 1.3.1.4.1",
       "name": "Analyze Machine downtime, MTTR, MTBF data and improvement for top 3 machines / areas.",
       "nameVi": "Analyze Machine downtime, MTTR, MTBF data and improvement for top 3 machines / areas.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-10"
       ],
@@ -4538,16 +4538,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-29",
+      "id": "kpi-import-L3-1794469343928-29",
       "code": "L3 1.3.1.4.2",
       "name": "Upgrade TPM app for visualizing MTTR, MTBF, PM schedule.",
       "nameVi": "Upgrade TPM app for visualizing MTTR, MTBF, PM schedule.",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Y/N",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "boolean",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-10"
       ],
@@ -4622,16 +4622,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-31",
+      "id": "kpi-import-L3-1794469343928-31",
       "code": "L3 1.4.1.1.1",
       "name": "Minimize partpath of 740/860 30%",
       "nameVi": "Minimize partpath of 740/860 30%",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "%",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "higher",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-11"
       ],
@@ -4706,16 +4706,16 @@ export const INITIAL_LEVEL_3_DATA: LevelPolicyData = {
       "actionStatus": "Open"
     },
     {
-      "id": "kpi-import-L3-1794452912255-33",
+      "id": "kpi-import-L3-1794469343928-33",
       "code": "L3 1.4.1.2.1",
       "name": "Reduce WIP of 740/860 from 3 days to 1 days",
       "nameVi": "Reduce WIP of 740/860 from 3 days to 1 days",
       "level": "L3",
-      "department": "Production",
+      "department": "Lean",
       "unit": "Days",
       "jumpingOffPoint": "Jan. 2026",
       "targetDirection": "lower",
-      "owner": "Lean: Huy/Trang/Bao",
+      "owner": "Lean",
       "linkedPriorityIds": [
         "p-l3-12"
       ],

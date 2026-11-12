@@ -20,6 +20,7 @@ const payload = {};
 for (const { sheet, level } of SHEETS) {
   const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheet], { header: 1, defval: '' });
   const kpis = [];
+  let activeDepartment = 'Production';
 
   for (let r = 0; r < rows.length; r++) {
     const row = rows[r];
@@ -32,10 +33,15 @@ for (const { sheet, level } of SHEETS) {
     if (!name && !code) continue;
 
     const rawDept = String(row[1] || '').trim().toLowerCase();
-    const department =
-      VALID_DEPTS.find((d) => d.toLowerCase() === rawDept) ||
-      VALID_DEPTS.find((d) => rawDept.includes(d.toLowerCase())) ||
-      'Production';
+    // Bowler leaves Dept. blank when it continues from the previous group;
+    // do not mistake that for Production.
+    if (rawDept) {
+      activeDepartment =
+        VALID_DEPTS.find((d) => d.toLowerCase() === rawDept) ||
+        VALID_DEPTS.find((d) => rawDept.includes(d.toLowerCase())) ||
+        activeDepartment;
+    }
+    const department = activeDepartment;
 
     const dirText = String(row[21] || '');
     const targetDirection = /lower|▼/i.test(dirText) ? 'lower' : /bool|y\/n/i.test(dirText) ? 'boolean' : 'higher';

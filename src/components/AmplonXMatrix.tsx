@@ -2627,16 +2627,15 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             <div className="flex flex-wrap items-center gap-1.5">
                               {primaryPics.map((pic) => {
                                 const picTeamColor = getTeamColorConfig(pic.department);
-                                const cleanName = pic.name.replace(new RegExp(`^${pic.department}:?\\s*`, 'i'), '');
+                                const picLabel = pic.fullTitle || `${pic.department}: ${pic.name}`;
                                 return (
                                   <span
                                     key={pic.key}
                                     className={`inline-flex items-center space-x-1.5 px-2 py-0.5 rounded-md text-[11px] font-semibold border ${picTeamColor.badge} shadow-2xs`}
-                                    title={`${isVi ? 'Trách nhiệm chính (●)' : 'Primary Responsible (●)'}: ${pic.fullTitle || pic.name}`}
+                                    title={`${isVi ? 'Trách nhiệm chính (●)' : 'Primary Responsible (●)'}: ${picLabel}`}
                                   >
                                     <span className="w-2 h-2 rounded-full bg-slate-900 inline-block shrink-0 shadow-2xs"></span>
-                                    <span className="font-bold">{pic.department}:</span>
-                                    <span className="text-slate-800">{cleanName}</span>
+                                    <span className="text-slate-800">{picLabel}</span>
                                   </span>
                                 );
                               })}

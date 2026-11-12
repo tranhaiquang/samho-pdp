@@ -105,13 +105,32 @@ export const TEAM_PALETTE: Record<string, TeamPaletteConfig> = {
   },
 };
 
+const OBJECTIVE_TEAM: Record<string, string> = {
+  'obj-l1-lean': 'Lean',
+  'obj-l1-sa2': 'Lean',
+  'obj-l1-del': 'Biz',
+  'obj-l1-csr': 'CSR',
+  'obj-l1-dev': 'Dev',
+  'obj-l1-qual': 'Quality',
+};
+
 /**
  * Extract canonical team name from item department, owner, code, or title
  */
 export function extractItemTeam(item: any): string {
   if (!item) return 'General';
 
-  // 1. Explicit department
+  // 3-year/annual SA1 capacity objective belongs to the Lean team.
+  if (item.id === 'obj-l1-sa2') return 'Lean';
+
+  // 1. Single linked annual objective is the strongest signal for imported L1 items.
+  // Multiple objectives mean the item is shared/common across teams.
+  const linkedObjectiveIds = Array.isArray(item?.linkedObjectiveIds) ? item.linkedObjectiveIds : [];
+  const linkedTeams = [...new Set<string>(linkedObjectiveIds.map((id: string) => OBJECTIVE_TEAM[id]).filter((team): team is string => Boolean(team)))];
+  if (linkedTeams.length === 1) return linkedTeams[0];
+  if (linkedTeams.length > 1) return 'General';
+
+  // 2. Explicit department
   if (item.department) {
     const d = item.department.toLowerCase().trim();
     if (d.includes('lean')) return 'Lean';
@@ -139,19 +158,21 @@ export function extractItemTeam(item: any): string {
     if (o.startsWith('hr') || o.includes('hr:')) return 'HR';
   }
 
-  // 3. Code patterns
+  // 3. Code patterns. Handles both legacy codes (L1 2.1) and re-imported L1 codes
+  // (L1 1.2.1): the family digit after the level index is 1=Lean, 2=Delivery/Biz,
+  // 3=CSR, 4=Development, 5=Quality. Top-level L1.x breakthrough objectives are common.
   if (item.code) {
     const c = item.code.trim();
-    if (c.startsWith('L1 1.') || c === 'L1.1' || c === 'L1 1') return 'Lean';
-    if (c.startsWith('L1 2.') || c === 'L1.2' || c === 'L1 2') return 'Biz';
-    if (c.startsWith('L1 3.') || c === 'L1.3' || c === 'L1 3') return 'CSR';
-    if (c.startsWith('L1 4.') || c === 'L1.4' || c === 'L1 4') return 'Dev';
-    if (c.startsWith('L1 5.') || c === 'L1.5' || c === 'L1 5') return 'Quality';
+    if (/^L1\.[12]$/.test(c)) return 'General';
+    const segs = (c.match(/\d+/g) || []).map(Number);
+    const familyIndex = segs[0] === 1 && segs[1] === 1 && segs.length >= 3 ? 2 : 1;
+    const family = segs[familyIndex];
+    if (family === 1) return 'Lean';
+    if (family === 2) return 'Biz';
+    if (family === 3) return 'CSR';
+    if (family === 4) return 'Dev';
+    if (family === 5) return 'Quality';
     if (c.startsWith('L3 1.4.')) return 'Production';
-    if (c.startsWith('L3 1.3.')) return 'Lean';
-    if (c.startsWith('L3 1.1.')) return 'Lean';
-    if (c.startsWith('L3 1.2.')) return 'Lean';
-    if (c.startsWith('L2 1.')) return 'Lean';
   }
 
   // 4. Title keywords
