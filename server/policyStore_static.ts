@@ -26,6 +26,46 @@ export interface StoreState {
 const STORAGE_KEY = 'samho_policy_state_v1';
 const BACKUP_KEY = 'samho_policy_state_backup_v1';
 
+// Hashes of the pre-import static baseline. If localStorage still contains exactly
+// that unedited snapshot, the site can safely adopt the shipped seed instead of
+// preserving obsolete IDs forever.
+const OLD_BASELINE_HASHES = {
+  l1Data: '4dd12566-4e17480',
+  l2Data: '777dee42-8dac2cc',
+  l3Data: '16150500-9de536d2',
+};
+
+function stableStringify(value: any): string {
+  if (value === undefined) return 'undefined';
+  if (value === null || typeof value !== 'object') return JSON.stringify(value);
+  if (Array.isArray(value)) return '[' + value.map(stableStringify).join(',') + ']';
+  return '{' + Object.keys(value).sort().map((k) => JSON.stringify(k) + ':' + stableStringify(value[k])).join(',') + '}';
+}
+
+function hashString(str: string): string {
+  let h1 = 0xdeadbeef;
+  let h2 = 0x41c6ce57;
+  for (let i = 0; i < str.length; i++) {
+    const ch = str.charCodeAt(i);
+    h1 = Math.imul(h1 ^ ch, 2654435761);
+    h2 = Math.imul(h2 ^ ch, 1597334677);
+  }
+  h1 = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+  h1 = Math.imul(h1 ^ (h2 >>> 13), 3266489909);
+  h2 = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+  h2 = Math.imul(h2 ^ (h1 >>> 13), 3266489909);
+  return (h2 >>> 0).toString(16) + '-' + (h1 >>> 0).toString(16);
+}
+
+function isExactOldBaseline(state: StoreState | null): boolean {
+  if (!state) return false;
+  return (
+    hashString(stableStringify(state.l1Data)) === OLD_BASELINE_HASHES.l1Data &&
+    hashString(stableStringify(state.l2Data)) === OLD_BASELINE_HASHES.l2Data &&
+    hashString(stableStringify(state.l3Data)) === OLD_BASELINE_HASHES.l3Data
+  );
+}
+
 function cloneBaseline(): StoreState {
   return {
     version: 1,
@@ -68,6 +108,10 @@ class PolicyStore {
         if (raw && raw.trim().length > 0) {
           const restored = normalize(JSON.parse(raw));
           if (restored) {
+            if (isExactOldBaseline(restored)) {
+              console.log('[PolicyStore] Discarding unedited legacy baseline; loading shipped seed data');
+              break;
+            }
             console.log(`[PolicyStore] Loaded saved data from localStorage:${key}, version: ${restored.version}`);
             return restored;
           }
