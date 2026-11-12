@@ -1,267 +1,239 @@
 {
-  "version": 1789310537155,
-  "lastModified": 1789372650736,
-  "lastAction": "Cập nhật KPI L1 1.1.1 tháng Jan (actual = 0.86)",
-  "lastClientId": "unknown",
+  "version": 1789310537192,
+  "lastModified": 1794462861619,
+  "lastAction": "Cập nhật ma trận quan hệ [nekpi_p-l1m-13_kpi-import-L1-1794452912251-14 = none] tại cấp L1",
+  "lastClientId": "opencode-excel-dot-match",
   "l1Data": {
     "level": "L1",
     "title": "2026 TOP Level Policy Deployment",
     "titleVi": "Triển khai Chính sách Cấp Cao nhất 2026",
     "year": "2026",
-    "owner": "SY Kim / KS Kang",
-    "revDate": "Apr. 2026",
+    "owner": "SYKIM",
+    "revDate": "Oct. 2026",
     "threeYearObjectives": [
       {
         "id": "3y-l1-1",
-        "code": "L1",
-        "title": "Best partnership factory for NB",
-        "titleVi": "Nhà máy đối tác tốt nhất cho New Balance",
+        "code": "L1.1",
+        "title": "Best partnership factory for NB Vietnam Samho Co. Ltd",
         "period": "2026 - 2028",
         "linkedObjectiveIds": [
-          "obj-l1-lean",
-          "obj-l1-del",
-          "obj-l1-csr",
+          "obj-l1-qual",
           "obj-l1-dev",
-          "obj-l1-qual"
-        ]
+          "obj-l1-csr",
+          "obj-l1-del",
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": []
       },
       {
         "id": "3y-l1-2",
-        "code": "L2",
-        "title": "Capacity expansion to 2.5M/month (group)",
-        "titleVi": "Mở rộng năng lực sản xuất lên 2.5 triệu đôi/tháng (toàn tập đoàn)",
+        "code": "L1.2",
+        "title": "Capacity expansion to 832k/month",
         "period": "2026 - 2028",
         "linkedObjectiveIds": [
           "obj-l1-sa2"
-        ]
+        ],
+        "linkedPriorityIds": []
       }
     ],
     "annualObjectives": [
       {
         "id": "obj-l1-qual",
-        "code": "L 1.5",
-        "title": "Quality ranking: top 5 , current is top 7 (Target: 25 points in Dec , current is 23 points in Aug)",
-        "titleVi": "Xếp hạng Chất lượng: Top 5, hiện tại là Top 7 (Mục tiêu: 25 điểm vào T12, hiện tại 23 điểm vào T8)",
-        "department": "Quality",
+        "code": "L 1.1.5",
+        "title": "Quality ranking: top 5 , current is top 7 Target: 25 points in Dec, current is 23 points in Aug",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-1"
         ],
         "linkedPriorityIds": [
-          "p-l1-16",
-          "p-l1-17"
+          "p-l1m-1",
+          "p-l1m-2"
         ]
       },
       {
         "id": "obj-l1-dev",
-        "code": "L 1.4",
-        "title": "Development : Top 1 Ranking (Target: 14 points)",
-        "titleVi": "Xếp hạng Phát triển mẫu: Top 1 (Mục tiêu: 14 điểm)",
-        "department": "Development",
+        "code": "L 1.1.4",
+        "title": "Development : Top 1 Ranking Target: 14 points",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-1"
         ],
         "linkedPriorityIds": [
-          "p-l1-12",
-          "p-l1-13",
-          "p-l1-14",
-          "p-l1-15"
+          "p-l1m-3",
+          "p-l1m-4",
+          "p-l1m-5",
+          "p-l1m-6"
         ]
       },
       {
         "id": "obj-l1-csr",
-        "code": "L 1.3",
-        "title": "Responsible Leadership: Top 3 in NB RL Ranking (Target 14 points in 2026, Current 6.5 points)",
-        "titleVi": "Lãnh đạo có trách nhiệm: Top 3 BXH New Balance (Mục tiêu: 14 điểm năm 2026, hiện tại 6.5 điểm)",
-        "department": "Responsible Leadership",
+        "code": "L1.1.3",
+        "title": "Responsible Leadership: Top 3 in NB RL Ranking Target 14 points in 2026, Current 6.5 points",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-1"
         ],
         "linkedPriorityIds": [
-          "p-l1-9",
-          "p-l1-10",
-          "p-l1-11"
+          "p-l1m-7",
+          "p-l1m-8",
+          "p-l1m-9"
         ]
       },
       {
         "id": "obj-l1-del",
-        "code": "L 1.2",
-        "title": "Delivery : Back to Top 1 (Target: 16 point of Score, Current 17.08 point till Mar.2026)",
-        "titleVi": "Giao hàng: Trở lại Top 1 (Mục tiêu: 16 điểm, hiện tại 17.08 điểm tính đến T3.2026)",
-        "department": "Delivery",
+        "code": "L 1.1.2",
+        "title": "Delivery : Back to Top 1 Target: 16 point of Score, Current 17.08 point till Mar.2026",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-1"
         ],
         "linkedPriorityIds": [
-          "p-l1-6",
-          "p-l1-7",
-          "p-l1-8"
+          "p-l1m-10",
+          "p-l1m-11",
+          "p-l1m-12"
         ]
       },
       {
         "id": "obj-l1-sa2",
-        "code": "L 1.1",
-        "title": "SA2: 1040prs/month (40K/days)",
-        "titleVi": "Sản lượng Xưởng SA2: 1,040,000 đôi/tháng (40,000 đôi/ngày)",
-        "department": "Lean",
+        "code": "L1.2.1",
+        "title": "SA1: 728000prs/month (28K/days)",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-2"
         ],
         "linkedPriorityIds": [
-          "p-l1-4",
-          "p-l1-5"
+          "p-l1m-13"
         ]
       },
       {
         "id": "obj-l1-lean",
-        "code": "L 1.1",
-        "title": "Lean: Back top 1 Lean Score card",
-        "titleVi": "Lean: Trở lại vị trí Top 1 Bảng điểm Lean",
-        "department": "Lean",
+        "code": "L 1.1.1",
+        "title": "Lean: Back to Top 1 Lean Scorecard",
         "period": "2026",
         "linkedObjectiveIds": [
           "3y-l1-1"
         ],
         "linkedPriorityIds": [
-          "p-l1-1",
-          "p-l1-2",
-          "p-l1-3"
+          "p-l1m-14",
+          "p-l1m-15",
+          "p-l1m-16"
         ]
       }
     ],
     "priorities": [
       {
-        "id": "p-l1-1",
-        "code": "L1 1.1",
+        "id": "p-l1m-16",
+        "code": "L1 1.1.1",
         "title": "PPH",
-        "titleVi": "Sản lượng trên giờ công (PPH)",
-        "owner": "Production: GB Kim",
-        "department": "Lean",
+        "titleVi": "PPH",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
         "linkedPriorityIds": [
-          "p-l2-1",
-          "p-l2-2"
-        ],
-        "resourceRoles": {
-          "biz": "secondary",
-          "quality": "secondary",
-          "csr": "none",
-          "lean": "secondary",
-          "dev": "secondary",
-          "prod": "primary",
-          "plan": "secondary",
-          "it": "none"
-        }
-      },
-      {
-        "id": "p-l1-2",
-        "code": "L1 1.2",
-        "title": "Miniline",
-        "titleVi": "Chuyền nhỏ (Miniline)",
-        "owner": "Lean: Ryan/Tai",
-        "department": "Lean",
-        "linkedObjectiveIds": [
-          "obj-l1-lean"
-        ],
-        "linkedPriorityIds": [
-          "p-l2-3",
-          "p-l2-4"
+          "kpi-import-L1-1794452912251-4"
         ],
         "resourceRoles": {
           "biz": "none",
           "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
-          "prod": "none",
+          "csr": "none",
+          "lean": "secondary",
+          "dev": "none",
+          "prod": "primary",
           "plan": "none",
           "it": "none"
         }
       },
       {
-        "id": "p-l1-3",
-        "code": "L1 1.3",
-        "title": "Lean Assessment",
-        "titleVi": "Đánh giá Tinh gọn (Lean Assessment)",
-        "owner": "Lean: Ryan/Tai",
-        "department": "Lean",
+        "id": "p-l1m-15",
+        "code": "L1 1.1.2",
+        "title": "Miniline",
+        "titleVi": "Miniline",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
         "linkedPriorityIds": [
-          "p-l2-5"
+          "kpi-import-L1-1794452912251-6"
         ],
         "resourceRoles": {
           "biz": "none",
-          "quality": "secondary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "secondary",
+          "dev": "none",
+          "prod": "primary",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l1m-14",
+        "code": "L1 1.1.3",
+        "title": "Lean Assessment",
+        "titleVi": "Lean Assessment",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-8"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
           "csr": "none",
           "lean": "primary",
-          "dev": "secondary",
+          "dev": "none",
           "prod": "none",
           "plan": "none",
           "it": "secondary"
         }
       },
       {
-        "id": "p-l1-4",
-        "code": "L1 1.4",
-        "title": "Ultilize the exsisting facility",
-        "titleVi": "Tận dụng cơ sở vật chất hiện có",
-        "owner": "Lean: Ryan/Tai",
-        "department": "Lean",
+        "id": "p-l1m-13",
+        "code": "L1 1.1.4",
+        "title": "Utilize the existing facility",
+        "titleVi": "Utilize the existing facility",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-sa2"
         ],
         "linkedPriorityIds": [
-          "p-l2-6"
+          "kpi-import-L1-1794452912251-10"
         ],
         "resourceRoles": {
           "biz": "none",
           "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
-          "prod": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "primary",
           "plan": "none",
           "it": "none"
         }
       },
       {
-        "id": "p-l1-5",
-        "code": "L1 1.5",
-        "title": "Build up the new building",
-        "titleVi": "Xây dựng nhà xưởng mới (Building F)",
-        "owner": "Lean: Ryan/Tai",
-        "department": "Lean",
-        "linkedObjectiveIds": [
-          "obj-l1-sa2"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        }
-      },
-      {
-        "id": "p-l1-6",
-        "code": "L1 2.1",
+        "id": "p-l1m-12",
+        "code": "L1 1.2.1",
         "title": "On Time to Customer Request",
-        "titleVi": "Giao hàng đúng hạn theo yêu cầu khách hàng",
-        "owner": "Biz: Thang",
-        "department": "Delivery",
+        "titleVi": "On Time to Customer Request",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-12"
         ],
         "resourceRoles": {
           "biz": "primary",
@@ -270,19 +242,23 @@
           "lean": "none",
           "dev": "none",
           "prod": "none",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
         }
       },
       {
-        "id": "p-l1-7",
-        "code": "L1 2.2",
+        "id": "p-l1m-11",
+        "code": "L1 1.2.2",
         "title": "On Time to NB Request",
-        "titleVi": "Giao hàng đúng hạn theo yêu cầu New Balance",
-        "owner": "Biz: Thang",
-        "department": "Delivery",
+        "titleVi": "On Time to NB Request",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-14"
         ],
         "resourceRoles": {
           "biz": "primary",
@@ -291,19 +267,23 @@
           "lean": "none",
           "dev": "none",
           "prod": "none",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
         }
       },
       {
-        "id": "p-l1-8",
-        "code": "L1 2.3",
+        "id": "p-l1m-10",
+        "code": "L1 1.2.3",
         "title": "On Time to Original Confirmed",
-        "titleVi": "Giao hàng đúng hạn theo xác nhận ban đầu",
-        "owner": "Biz: Thang",
-        "department": "Delivery",
+        "titleVi": "On Time to Original Confirmed",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-16"
         ],
         "resourceRoles": {
           "biz": "primary",
@@ -312,19 +292,23 @@
           "lean": "none",
           "dev": "none",
           "prod": "none",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
         }
       },
       {
-        "id": "p-l1-9",
-        "code": "L1 3.1",
-        "title": "Management System - 4/4 Points",
-        "titleVi": "Hệ thống Quản lý - 4/4 Điểm",
-        "owner": "CSR: Lan",
-        "department": "Responsible Leadership",
+        "id": "p-l1m-9",
+        "code": "L1 1.3.1",
+        "title": "Management System",
+        "titleVi": "Management System",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-18"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -338,14 +322,18 @@
         }
       },
       {
-        "id": "p-l1-10",
-        "code": "L1 3.2",
-        "title": "Protecting the Environment - 5/6 Points",
-        "titleVi": "Bảo vệ Môi trường - 5/6 Điểm",
-        "owner": "CSR: Lan",
-        "department": "Responsible Leadership",
+        "id": "p-l1m-8",
+        "code": "L1 1.3.2",
+        "title": "Sustainability",
+        "titleVi": "Sustainability",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-20"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -359,14 +347,18 @@
         }
       },
       {
-        "id": "p-l1-11",
-        "code": "L1 3.3",
-        "title": "Respecting Human Rights - 5/5 Points",
-        "titleVi": "Tôn trọng Quyền Con người - 5/5 Điểm",
-        "owner": "CSR: Lan",
-        "department": "Responsible Leadership",
+        "id": "p-l1m-7",
+        "code": "L1 1.3.3",
+        "title": "Respecting Human Rights",
+        "titleVi": "Respecting Human Rights",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-22"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -380,14 +372,19 @@
         }
       },
       {
-        "id": "p-l1-12",
-        "code": "L1 4.1",
-        "title": "Proto On Time (Proto 1 / 2 / Line Cfm)",
-        "titleVi": "Mẫu Proto đúng hạn (Proto 1 / 2 / Line Cfm)",
-        "owner": "Dev: Hukim",
-        "department": "Development",
+        "id": "p-l1m-6",
+        "code": "L1 1.4.1",
+        "title": "Development Quality",
+        "titleVi": "Development Quality",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-24",
+          "kpi-import-L1-1794452912251-26"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -401,14 +398,44 @@
         }
       },
       {
-        "id": "p-l1-13",
-        "code": "L1 4.2",
+        "id": "p-l1m-5",
+        "code": "L1 1.4.2",
+        "title": "Digital Assets (3D & Photography Accuracy- Proto 2 / Line Cfm)",
+        "titleVi": "Digital Assets (3D & Photography Accuracy- Proto 2 / Line Cfm)",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-28",
+          "kpi-import-L1-1794452912251-30"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l1m-4",
+        "code": "L1 1.4.3",
         "title": "Buy Ready On Time",
-        "titleVi": "Buy Ready đúng hạn",
-        "owner": "Dev: Hukim",
-        "department": "Development",
+        "titleVi": "Buy Ready On Time",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-32"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -422,14 +449,18 @@
         }
       },
       {
-        "id": "p-l1-14",
-        "code": "L1 4.3",
-        "title": "Digital Assets (Photography Accuracy)",
-        "titleVi": "Độ chính xác hình ảnh & dữ liệu số",
-        "owner": "Dev: Hukim",
-        "department": "Development",
+        "id": "p-l1m-3",
+        "code": "L1 1.4.4",
+        "title": "Dev & Merch Proto On Time (Proto 2 / Line Cfm)",
+        "titleVi": "Dev & Merch Proto On Time (Proto 2 / Line Cfm)",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-34"
         ],
         "resourceRoles": {
           "biz": "none",
@@ -443,38 +474,21 @@
         }
       },
       {
-        "id": "p-l1-15",
-        "code": "L1 4.4",
-        "title": "Development Quality Assessment",
-        "titleVi": "Đánh giá Chất lượng Phát triển mẫu",
-        "owner": "Dev: Hukim",
-        "department": "Development",
-        "linkedObjectiveIds": [
-          "obj-l1-dev"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "secondary",
-          "csr": "none",
-          "lean": "none",
-          "dev": "primary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        }
-      },
-      {
-        "id": "p-l1-16",
-        "code": "L1 5.1",
+        "id": "p-l1m-2",
+        "code": "L1 1.5.1",
         "title": "CSI",
-        "titleVi": "Chỉ số Thỏa mãn Khách hàng (CSI)",
-        "owner": "Quality: Tony Lopez/ Leonerdo Na",
-        "department": "Quality",
+        "titleVi": "CSI",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-36"
+        ],
         "resourceRoles": {
-          "biz": "secondary",
+          "biz": "none",
           "quality": "primary",
           "csr": "none",
           "lean": "none",
@@ -485,17 +499,21 @@
         }
       },
       {
-        "id": "p-l1-17",
-        "code": "L1 5.2",
+        "id": "p-l1m-1",
+        "code": "L1 1.5.2",
         "title": "SQI",
-        "titleVi": "Chỉ số Chất lượng Nhà cung ứng (SQI)",
-        "owner": "Quality: Tony Lopez/ Leonerdo Na",
-        "department": "Quality",
+        "titleVi": "SQI",
+        "titleKo": "",
+        "owner": "",
+        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
+        "linkedPriorityIds": [
+          "kpi-import-L1-1794452912251-38"
+        ],
         "resourceRoles": {
-          "biz": "secondary",
+          "biz": "none",
           "quality": "primary",
           "csr": "none",
           "lean": "none",
@@ -510,144 +528,198 @@
       {
         "key": "biz",
         "department": "Biz",
-        "name": "Thang",
-        "fullTitle": "Biz: Thang"
+        "name": "Ngoc",
+        "fullTitle": "Biz: Ngoc"
       },
       {
         "key": "quality",
         "department": "Quality",
-        "name": "Tony Lopez/ Leonerdo Na",
-        "fullTitle": "Quality: Tony Lopez/ Leonerdo Na"
+        "name": "Huong",
+        "fullTitle": "Quality: Huong"
       },
       {
         "key": "csr",
         "department": "CSR",
-        "name": "Lan",
-        "fullTitle": "CSR: Lan"
+        "name": "Doris",
+        "fullTitle": "CSR: Doris"
       },
       {
         "key": "lean",
         "department": "Lean",
-        "name": "Ryan/Tai",
-        "fullTitle": "Lean: Ryan/Tai"
+        "name": "Quang",
+        "fullTitle": "Lean: Quang"
       },
       {
         "key": "dev",
         "department": "Dev",
-        "name": "Hukim",
-        "fullTitle": "Dev: Hukim"
+        "name": "JYBae",
+        "fullTitle": "Dev: JYBae"
       },
       {
         "key": "prod",
         "department": "Production",
-        "name": "Production Team",
-        "fullTitle": "Production: Team"
-      },
-      {
-        "key": "plan",
-        "department": "Planning",
-        "name": "Joshep/Thin",
-        "fullTitle": "Planning: Joshep/Thin"
+        "name": "WSPark",
+        "fullTitle": "Production: WSPark"
       },
       {
         "key": "it",
         "department": "IT",
-        "name": "JH Yu",
-        "fullTitle": "IT: JH Yu"
+        "name": "SJKim",
+        "fullTitle": "IT: SJKim"
       }
     ],
     "kpis": [
       {
-        "id": "kpi-l1-1",
+        "id": "kpi-import-L1-1794452912251-4",
         "code": "L1 1.1.1",
-        "name": "Increasing PPH from 0,85 to 0,95",
-        "nameVi": "Tăng chỉ số PPH từ 0.85 lên 0.95",
+        "name": "Increasing PPH from 0,98 to 1.01",
+        "nameVi": "Increasing PPH from 0,98 to 1.01",
         "level": "L1",
         "department": "Lean",
         "unit": "points",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Production: GB Kim",
+        "owner": "Lean",
         "linkedPriorityIds": [
-          "p-l1-1"
+          "p-l1m-16"
         ],
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
         "resourceRoles": {
-          "biz": "secondary",
-          "quality": "secondary",
+          "biz": "none",
+          "quality": "none",
           "csr": "none",
           "lean": "secondary",
-          "dev": "secondary",
+          "dev": "none",
           "prod": "primary",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
         },
         "monthly": {
           "Jan": {
-            "target": 0.86,
-            "actual": 0.86
+            "target": 0.99,
+            "actual": 1
           },
           "Feb": {
-            "target": 0.87,
-            "actual": 0.88
+            "target": 0.99,
+            "actual": 0.99
           },
           "Mar": {
-            "target": 0.88,
-            "actual": 0.87
+            "target": 0.99,
+            "actual": 1
           },
           "Apr": {
-            "target": 0.89,
-            "actual": 0.89
+            "target": 1,
+            "actual": 1
           },
           "May": {
-            "target": 0.9,
-            "actual": 0.9
+            "target": 1,
+            "actual": 1.01
           },
           "Jun": {
-            "target": 0.91,
-            "actual": 0.9
+            "target": 1,
+            "actual": 1
           },
           "Jul": {
-            "target": 0.92,
-            "actual": null
+            "target": 1,
+            "actual": 1
           },
           "Aug": {
-            "target": 0.93,
-            "actual": null
+            "target": 1,
+            "actual": 1
           },
           "Sep": {
-            "target": 0.94,
-            "actual": null
+            "target": 1,
+            "actual": 1
           },
           "Oct": {
-            "target": 0.94,
-            "actual": null
+            "target": 1.01,
+            "actual": 1
           },
           "Nov": {
-            "target": 0.95,
+            "target": 1.01,
             "actual": null
           },
           "Dec": {
-            "target": 0.95,
+            "target": 1.01,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l1-2",
-        "code": "L1 1.2.1",
-        "name": "Mini line 20%",
-        "nameVi": "Tỷ lệ chuyền nhỏ (Miniline) đạt 20%",
+        "id": "kpi-import-L1-1794452912251-6",
+        "code": "L1 1.1.2",
+        "name": "Mini line 21%",
+        "nameVi": "Mini line 21%",
+        "nameKo": "",
         "level": "L1",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Lean: Ryan/Tai",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "May": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Jun": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Jul": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Aug": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Sep": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Oct": {
+            "target": 0.21,
+            "actual": 0
+          },
+          "Nov": {
+            "target": 0.21,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.21,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-2"
+          "p-l1m-15"
         ],
         "linkedObjectiveIds": [
           "obj-l1-lean"
@@ -655,233 +727,165 @@
         "resourceRoles": {
           "biz": "none",
           "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
-          "prod": "none",
+          "csr": "none",
+          "lean": "secondary",
+          "dev": "none",
+          "prod": "primary",
           "plan": "none",
           "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "20%",
-            "actual": "0%"
-          },
-          "Feb": {
-            "target": "20%",
-            "actual": "5%"
-          },
-          "Mar": {
-            "target": "20%",
-            "actual": "10%"
-          },
-          "Apr": {
-            "target": "20%",
-            "actual": "12%"
-          },
-          "May": {
-            "target": "20%",
-            "actual": "15%"
-          },
-          "Jun": {
-            "target": "20%",
-            "actual": "18%"
-          },
-          "Jul": {
-            "target": "20%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "20%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "20%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "20%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "20%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "20%",
-            "actual": null
-          }
         }
       },
       {
-        "id": "kpi-l1-3",
-        "code": "L1 1.3.1",
-        "name": "LA Score = 3.4 Pts",
-        "nameVi": "Điểm đánh giá Lean Assessment = 3.4 điểm",
+        "id": "kpi-import-L1-1794452912251-8",
+        "code": "L1 1.1.3",
+        "name": "LA Score = 3.0Pts",
+        "nameVi": "LA Score = 3.0Pts",
+        "nameKo": "",
         "level": "L1",
-        "department": "Lean",
+        "department": "Production",
         "unit": "points",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Lean: Ryan/Tai",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "Feb": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "Mar": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "Apr": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "May": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "Jun": {
+            "target": 2.85,
+            "actual": 2.85
+          },
+          "Jul": {
+            "target": 3,
+            "actual": 2.77
+          },
+          "Aug": {
+            "target": 3,
+            "actual": 2.77
+          },
+          "Sep": {
+            "target": 3,
+            "actual": 2.77
+          },
+          "Oct": {
+            "target": 3,
+            "actual": 2.77
+          },
+          "Nov": {
+            "target": 3,
+            "actual": null
+          },
+          "Dec": {
+            "target": 3,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-3"
+          "p-l1m-14"
         ],
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
         "resourceRoles": {
           "biz": "none",
-          "quality": "secondary",
+          "quality": "none",
           "csr": "none",
           "lean": "primary",
-          "dev": "secondary",
+          "dev": "none",
           "prod": "none",
           "plan": "none",
           "it": "secondary"
-        },
-        "monthly": {
-          "Jan": {
-            "target": 3.2,
-            "actual": 3.1
-          },
-          "Feb": {
-            "target": 3.2,
-            "actual": 3.15
-          },
-          "Mar": {
-            "target": 3.2,
-            "actual": 3.2
-          },
-          "Apr": {
-            "target": 3.2,
-            "actual": 3.25
-          },
-          "May": {
-            "target": 3.3,
-            "actual": 3.3
-          },
-          "Jun": {
-            "target": 3.3,
-            "actual": 3.35
-          },
-          "Jul": {
-            "target": 3.4,
-            "actual": null
-          },
-          "Aug": {
-            "target": 3.4,
-            "actual": null
-          },
-          "Sep": {
-            "target": 3.4,
-            "actual": null
-          },
-          "Oct": {
-            "target": 3.4,
-            "actual": null
-          },
-          "Nov": {
-            "target": 3.4,
-            "actual": null
-          },
-          "Dec": {
-            "target": 3.4,
-            "actual": null
-          }
         }
       },
       {
-        "id": "kpi-l1-4",
-        "code": "L1 1.4.1",
-        "name": "+12 C2B lines in Plant E",
-        "nameVi": "Bổ sung thêm 12 chuyền C2B tại Xưởng E",
+        "id": "kpi-import-L1-1794452912251-10",
+        "code": "L1 1.1.4",
+        "name": "+4 C2B lines in Plant F",
+        "nameVi": "+4 C2B lines in Plant F",
+        "nameKo": "",
         "level": "L1",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Lines",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Lean: Ryan/Tai",
-        "linkedPriorityIds": [
-          "p-l1-4"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-sa2"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
+        "owner": "Production",
         "monthly": {
           "Jan": {
-            "target": 2,
+            "target": 4,
             "actual": 2
           },
           "Feb": {
             "target": 4,
-            "actual": 4
+            "actual": 2
           },
           "Mar": {
-            "target": 6,
-            "actual": 5
+            "target": 4,
+            "actual": 2
           },
           "Apr": {
-            "target": 8,
-            "actual": 7
+            "target": 4,
+            "actual": 2
           },
           "May": {
-            "target": 10,
-            "actual": 9
+            "target": 4,
+            "actual": 2
           },
           "Jun": {
-            "target": 12,
-            "actual": 11
+            "target": 4,
+            "actual": 2
           },
           "Jul": {
-            "target": 12,
-            "actual": null
+            "target": 4,
+            "actual": 2
           },
           "Aug": {
-            "target": 12,
-            "actual": null
+            "target": 4,
+            "actual": 2
           },
           "Sep": {
-            "target": 12,
-            "actual": null
+            "target": 4,
+            "actual": 2
           },
           "Oct": {
-            "target": 12,
-            "actual": null
+            "target": 4,
+            "actual": 2
           },
           "Nov": {
-            "target": 12,
+            "target": 4,
             "actual": null
           },
           "Dec": {
-            "target": 12,
+            "target": 4,
             "actual": null
           }
-        }
-      },
-      {
-        "id": "kpi-l1-5",
-        "code": "L1 1.5.1",
-        "name": "Finish construction building F in June, facility setup in Nov",
-        "nameVi": "Hoàn thành xây dựng Xưởng F vào T6, lắp đặt thiết bị vào T11",
-        "level": "L1",
-        "department": "Lean",
-        "unit": "%",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "Lean: Ryan/Tai",
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-5"
+          "p-l1m-13"
         ],
         "linkedObjectiveIds": [
           "obj-l1-sa2"
@@ -889,77 +893,165 @@
         "resourceRoles": {
           "biz": "none",
           "quality": "none",
-          "csr": "secondary",
-          "lean": "primary",
-          "dev": "secondary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "primary",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-12",
+        "code": "L1 1.2.1",
+        "name": "On Time to Customer Request = 100%",
+        "nameVi": "On Time to Customer Request = 100%",
+        "level": "L1",
+        "department": "Delivery",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Delivery",
+        "linkedPriorityIds": [
+          "p-l1m-12"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
           "prod": "none",
           "plan": "none",
           "it": "none"
         },
         "monthly": {
           "Jan": {
+            "target": 1,
+            "actual": 0.907
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0.894688804046874
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0.904785230642988
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.875908723646132
+          },
+          "May": {
+            "target": 1,
+            "actual": 0.854603257973854
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 0.85
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 0.87
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 0.89
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 0.89
+          },
+          "Oct": {
+            "target": 1,
+            "actual": null
+          },
+          "Nov": {
             "target": "20%",
-            "actual": "20%"
+            "actual": null
           },
-          "Feb": {
-            "target": "35%",
-            "actual": "35%"
-          },
-          "Mar": {
-            "target": "50%",
-            "actual": "52%"
-          },
-          "Apr": {
-            "target": "65%",
-            "actual": "68%"
-          },
-          "May": {
-            "target": "80%",
-            "actual": "82%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Jul": {
+          "Dec": {
             "target": "20%",
             "actual": null
-          },
-          "Aug": {
-            "target": "40%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "60%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "80%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l1-6",
-        "code": "L1 2.1.1",
-        "name": "On Time to Customer Request",
-        "nameVi": "Giao hàng đúng hạn theo yêu cầu Khách hàng",
+        "id": "kpi-import-L1-1794452912251-14",
+        "code": "L1 1.2.2",
+        "name": "On Time to NB Request = 100%",
+        "nameVi": "On Time to NB Request = 100%",
+        "nameKo": "",
         "level": "L1",
-        "department": "Delivery",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Biz: Thang",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 0.9856
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0.98980859394002
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0.991002690636809
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.991649375657554
+          },
+          "May": {
+            "target": 1,
+            "actual": 0.990044266223584
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 0.99
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 0.98
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 0.98
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 0.98
+          },
+          "Oct": {
+            "target": 1,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-6"
+          "p-l1m-11"
         ],
         "linkedObjectiveIds": [
           "obj-l1-del"
@@ -971,73 +1063,78 @@
           "lean": "none",
           "dev": "none",
           "prod": "none",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "100%",
-            "actual": "92%"
-          },
-          "Feb": {
-            "target": "100%",
-            "actual": "90%"
-          },
-          "Mar": {
-            "target": "100%",
-            "actual": "91%"
-          },
-          "Apr": {
-            "target": "100%",
-            "actual": "89%"
-          },
-          "May": {
-            "target": "100%",
-            "actual": "88%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "90%"
-          },
-          "Jul": {
-            "target": "100%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "100%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "100%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "100%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
-          }
         }
       },
       {
-        "id": "kpi-l1-7",
-        "code": "L1 2.2.1",
-        "name": "On Time to NB Request",
-        "nameVi": "Giao hàng đúng hạn theo yêu cầu New Balance",
+        "id": "kpi-import-L1-1794452912251-16",
+        "code": "L1 1.2.3",
+        "name": "On Time to Original Confirmed = 100%",
+        "nameVi": "On Time to Original Confirmed = 100%",
+        "nameKo": "",
         "level": "L1",
-        "department": "Delivery",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Biz: Thang",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 0.9987
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0.998557195392453
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0.997730408448925
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.998710865747461
+          },
+          "May": {
+            "target": 1,
+            "actual": 0.998709133286029
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-7"
+          "p-l1m-10"
         ],
         "linkedObjectiveIds": [
           "obj-l1-del"
@@ -1049,151 +1146,23 @@
           "lean": "none",
           "dev": "none",
           "prod": "none",
-          "plan": "secondary",
+          "plan": "none",
           "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "Feb": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "Mar": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "Apr": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "May": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "99%"
-          },
-          "Jul": {
-            "target": "100%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "100%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "100%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "100%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
-          }
         }
       },
       {
-        "id": "kpi-l1-8",
-        "code": "L1 2.3.1",
-        "name": "On Time to Original Confirmed",
-        "nameVi": "Giao hàng đúng hạn theo ngày xác nhận ban đầu",
+        "id": "kpi-import-L1-1794452912251-18",
+        "code": "L1 1.3.1",
+        "name": "Management System = 4points",
+        "nameVi": "Management System = 4points",
         "level": "L1",
-        "department": "Delivery",
-        "unit": "%",
+        "department": "Responsible Leadership",
+        "unit": "Points",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Biz: Thang",
+        "owner": "Responsible Leadership",
         "linkedPriorityIds": [
-          "p-l1-8"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-del"
-        ],
-        "resourceRoles": {
-          "biz": "primary",
-          "quality": "none",
-          "csr": "none",
-          "lean": "none",
-          "dev": "none",
-          "prod": "none",
-          "plan": "secondary",
-          "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Feb": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Mar": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Apr": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "May": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Jul": {
-            "target": "100%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "100%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "100%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "100%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
-          }
-        }
-      },
-      {
-        "id": "kpi-l1-9",
-        "code": "L1 3.1.1",
-        "name": "Management System - 4/4 Points",
-        "nameVi": "Hệ thống Quản lý Trách nhiệm Xã hội - 4/4 Điểm",
-        "level": "L1",
-        "department": "CSR",
-        "unit": "points",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "CSR: Lan",
-        "linkedPriorityIds": [
-          "p-l1-9"
+          "p-l1m-9"
         ],
         "linkedObjectiveIds": [
           "obj-l1-csr"
@@ -1215,63 +1184,206 @@
           },
           "Feb": {
             "target": 4,
+            "actual": 2.5
+          },
+          "Mar": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Apr": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "May": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Jun": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Jul": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Aug": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Sep": {
+            "target": 4,
+            "actual": 2.5
+          },
+          "Oct": {
+            "target": 4,
+            "actual": null
+          },
+          "Nov": {
+            "target": 3.4,
+            "actual": null
+          },
+          "Dec": {
+            "target": 3.4,
+            "actual": null
+          }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-20",
+        "code": "L1 1.3.2",
+        "name": "Sustainability = 6points",
+        "nameVi": "Sustainability = 6points",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 6,
+            "actual": 5
+          },
+          "Feb": {
+            "target": 6,
+            "actual": 3
+          },
+          "Mar": {
+            "target": 6,
+            "actual": 3
+          },
+          "Apr": {
+            "target": 6,
+            "actual": 3
+          },
+          "May": {
+            "target": 6,
+            "actual": 6
+          },
+          "Jun": {
+            "target": 6,
+            "actual": 6
+          },
+          "Jul": {
+            "target": 6,
+            "actual": 6
+          },
+          "Aug": {
+            "target": 6,
+            "actual": 6
+          },
+          "Sep": {
+            "target": 6,
+            "actual": 6
+          },
+          "Oct": {
+            "target": 6,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-8"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-22",
+        "code": "L1 1.3.3",
+        "name": "Respecting Human Rights = 5points",
+        "nameVi": "Respecting Human Rights = 5points",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 5,
+            "actual": 4
+          },
+          "Feb": {
+            "target": 5,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 5,
+            "actual": 1.5
+          },
+          "Apr": {
+            "target": 5,
+            "actual": 1.5
+          },
+          "May": {
+            "target": 5,
+            "actual": 1.5
+          },
+          "Jun": {
+            "target": 5,
+            "actual": 1.5
+          },
+          "Jul": {
+            "target": 5,
+            "actual": 2
+          },
+          "Aug": {
+            "target": 5,
             "actual": 3.5
           },
-          "Mar": {
-            "target": 4,
+          "Sep": {
+            "target": 5,
             "actual": 3.5
           },
-          "Apr": {
-            "target": 4,
-            "actual": 4
-          },
-          "May": {
-            "target": 4,
-            "actual": 4
-          },
-          "Jun": {
-            "target": 4,
-            "actual": 4
-          },
-          "Jul": {
-            "target": 4,
-            "actual": null
-          },
-          "Aug": {
-            "target": 4,
-            "actual": null
-          },
-          "Sep": {
-            "target": 4,
-            "actual": null
-          },
           "Oct": {
-            "target": 4,
+            "target": 5,
             "actual": null
           },
           "Nov": {
-            "target": 4,
+            "target": null,
             "actual": null
           },
           "Dec": {
-            "target": 4,
+            "target": null,
             "actual": null
           }
-        }
-      },
-      {
-        "id": "kpi-l1-10",
-        "code": "L1 3.2.1",
-        "name": "Protecting the Environment - 5/6 Points",
-        "nameVi": "Bảo vệ Môi trường - 5/6 Điểm",
-        "level": "L1",
-        "department": "CSR",
-        "unit": "points",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "CSR: Lan",
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-10"
+          "p-l1m-7"
         ],
         "linkedObjectiveIds": [
           "obj-l1-csr"
@@ -1285,397 +1397,20 @@
           "prod": "none",
           "plan": "none",
           "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": 5,
-            "actual": 5
-          },
-          "Feb": {
-            "target": 5,
-            "actual": 4
-          },
-          "Mar": {
-            "target": 5,
-            "actual": 4.5
-          },
-          "Apr": {
-            "target": 5,
-            "actual": 5
-          },
-          "May": {
-            "target": 5,
-            "actual": 5
-          },
-          "Jun": {
-            "target": 5,
-            "actual": 5
-          },
-          "Jul": {
-            "target": 5,
-            "actual": null
-          },
-          "Aug": {
-            "target": 5,
-            "actual": null
-          },
-          "Sep": {
-            "target": 5,
-            "actual": null
-          },
-          "Oct": {
-            "target": 5,
-            "actual": null
-          },
-          "Nov": {
-            "target": 5,
-            "actual": null
-          },
-          "Dec": {
-            "target": 5,
-            "actual": null
-          }
         }
       },
       {
-        "id": "kpi-l1-11",
-        "code": "L1 3.3.1",
-        "name": "Respecting Human Rights - 5/5 Points",
-        "nameVi": "Tôn trọng Quyền Con người - 5/5 Điểm",
-        "level": "L1",
-        "department": "CSR",
-        "unit": "points",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "CSR: Lan",
-        "linkedPriorityIds": [
-          "p-l1-11"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-csr"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "primary",
-          "lean": "none",
-          "dev": "none",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": 5,
-            "actual": 5
-          },
-          "Feb": {
-            "target": 5,
-            "actual": 5
-          },
-          "Mar": {
-            "target": 5,
-            "actual": 4.5
-          },
-          "Apr": {
-            "target": 5,
-            "actual": 5
-          },
-          "May": {
-            "target": 5,
-            "actual": 5
-          },
-          "Jun": {
-            "target": 5,
-            "actual": 5
-          },
-          "Jul": {
-            "target": 5,
-            "actual": null
-          },
-          "Aug": {
-            "target": 5,
-            "actual": null
-          },
-          "Sep": {
-            "target": 5,
-            "actual": null
-          },
-          "Oct": {
-            "target": 5,
-            "actual": null
-          },
-          "Nov": {
-            "target": 5,
-            "actual": null
-          },
-          "Dec": {
-            "target": 5,
-            "actual": null
-          }
-        }
-      },
-      {
-        "id": "kpi-l1-12",
-        "code": "L1 4.1.1",
-        "name": "Proto On Time (Proto 1 / 2 / Line Cfm)",
-        "nameVi": "Hoàn thành mẫu Proto đúng hạn (Proto 1 / 2 / Line Cfm)",
-        "level": "L1",
-        "department": "Development",
-        "unit": "%",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "Dev: Hukim",
-        "linkedPriorityIds": [
-          "p-l1-12"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-dev"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "none",
-          "lean": "none",
-          "dev": "primary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Feb": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Mar": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Apr": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "May": {
-            "target": "100%",
-            "actual": "98%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Jul": {
-            "target": "100%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "100%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "100%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "100%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
-          }
-        }
-      },
-      {
-        "id": "kpi-l1-13",
-        "code": "L1 4.2.1",
-        "name": "Buy Ready On Time",
-        "nameVi": "Hoàn tất Buy Ready đúng hạn",
-        "level": "L1",
-        "department": "Development",
-        "unit": "%",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "Dev: Hukim",
-        "linkedPriorityIds": [
-          "p-l1-13"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-dev"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "none",
-          "lean": "none",
-          "dev": "primary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Feb": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Mar": {
-            "target": "100%",
-            "actual": "100%"
-          },
-          "Apr": {
-            "target": "100%",
-            "actual": "85%"
-          },
-          "May": {
-            "target": "100%",
-            "actual": "88%"
-          },
-          "Jun": {
-            "target": "100%",
-            "actual": "95%"
-          },
-          "Jul": {
-            "target": "100%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "100%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "100%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "100%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "100%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "100%",
-            "actual": null
-          }
-        }
-      },
-      {
-        "id": "kpi-l1-14",
-        "code": "L1 4.3.1",
-        "name": "Digital Assets (Photography Accuracy)",
-        "nameVi": "Độ chính xác hình ảnh & dữ liệu số (Digital Assets)",
-        "level": "L1",
-        "department": "Development",
-        "unit": "%",
-        "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
-        "owner": "Dev: Hukim",
-        "linkedPriorityIds": [
-          "p-l1-14"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-dev"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
-          "csr": "none",
-          "lean": "none",
-          "dev": "primary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": "95%",
-            "actual": "96%"
-          },
-          "Feb": {
-            "target": "95%",
-            "actual": "97%"
-          },
-          "Mar": {
-            "target": "95%",
-            "actual": "96%"
-          },
-          "Apr": {
-            "target": "95%",
-            "actual": "96%"
-          },
-          "May": {
-            "target": "95%",
-            "actual": "97%"
-          },
-          "Jun": {
-            "target": "95%",
-            "actual": "97%"
-          },
-          "Jul": {
-            "target": "95%",
-            "actual": null
-          },
-          "Aug": {
-            "target": "95%",
-            "actual": null
-          },
-          "Sep": {
-            "target": "95%",
-            "actual": null
-          },
-          "Oct": {
-            "target": "95%",
-            "actual": null
-          },
-          "Nov": {
-            "target": "95%",
-            "actual": null
-          },
-          "Dec": {
-            "target": "95%",
-            "actual": null
-          }
-        }
-      },
-      {
-        "id": "kpi-l1-15",
-        "code": "L1 4.4.1",
-        "name": "Development Quality Assessment",
-        "nameVi": "Đánh giá Chất lượng Phát triển mẫu",
+        "id": "kpi-import-L1-1794452912251-24",
+        "code": "L1 1.4.1.1",
+        "name": "Development Quality Assessment = 4 points",
+        "nameVi": "Development Quality Assessment = 4 points",
+        "nameKo": "",
         "level": "L1",
         "department": "Development",
         "unit": "points",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Dev: Hukim",
-        "linkedPriorityIds": [
-          "p-l1-15"
-        ],
-        "linkedObjectiveIds": [
-          "obj-l1-dev"
-        ],
-        "resourceRoles": {
-          "biz": "none",
-          "quality": "secondary",
-          "csr": "none",
-          "lean": "none",
-          "dev": "primary",
-          "prod": "none",
-          "plan": "none",
-          "it": "none"
-        },
+        "owner": "Development",
         "monthly": {
           "Jan": {
             "target": 4,
@@ -1703,49 +1438,484 @@
           },
           "Jul": {
             "target": 4,
-            "actual": null
+            "actual": 4
           },
           "Aug": {
             "target": 4,
-            "actual": null
+            "actual": 4
           },
           "Sep": {
             "target": 4,
-            "actual": null
+            "actual": 4
           },
           "Oct": {
             "target": 4,
             "actual": null
           },
           "Nov": {
-            "target": 4,
+            "target": null,
             "actual": null
           },
           "Dec": {
-            "target": 4,
+            "target": null,
             "actual": null
           }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-6"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
         }
       },
       {
-        "id": "kpi-l1-16",
-        "code": "L1 5.1.1",
-        "name": "CSI",
-        "nameVi": "Chỉ số Hài lòng Khách hàng (Customer Satisfaction Index - CSI)",
+        "id": "kpi-import-L1-1794452912251-26",
+        "code": "L1 1.4.1.2",
+        "name": "Development Team Survey = 3 points",
+        "nameVi": "Development Team Survey = 3 points",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 3,
+            "actual": 3
+          },
+          "Feb": {
+            "target": 3,
+            "actual": 3
+          },
+          "Mar": {
+            "target": 3,
+            "actual": 3
+          },
+          "Apr": {
+            "target": 3,
+            "actual": 3
+          },
+          "May": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jun": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jul": {
+            "target": 3,
+            "actual": 3
+          },
+          "Aug": {
+            "target": 3,
+            "actual": 3
+          },
+          "Sep": {
+            "target": 3,
+            "actual": 3
+          },
+          "Oct": {
+            "target": 3,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-6"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-28",
+        "code": "L1 1.4.2.1",
+        "name": "Digital/Photo Quality >=95%",
+        "nameVi": "Digital/Photo Quality >=95%",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 0.95,
+            "actual": 0.97
+          },
+          "Feb": {
+            "target": 0.95,
+            "actual": 0.97
+          },
+          "Mar": {
+            "target": 0.95,
+            "actual": 0.97
+          },
+          "Apr": {
+            "target": 0.95,
+            "actual": 0.97
+          },
+          "May": {
+            "target": 0.95,
+            "actual": 0.97
+          },
+          "Jun": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 0.95,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-5"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-30",
+        "code": "L1 1.4.2.2",
+        "name": "View/Angle Accuracy >=95%",
+        "nameVi": "View/Angle Accuracy >=95%",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 0.95,
+            "actual": 0.96
+          },
+          "Feb": {
+            "target": 0.95,
+            "actual": 0.96
+          },
+          "Mar": {
+            "target": 0.95,
+            "actual": 0.96
+          },
+          "Apr": {
+            "target": 0.95,
+            "actual": 0.96
+          },
+          "May": {
+            "target": 0.95,
+            "actual": 0.96
+          },
+          "Jun": {
+            "target": 0.95,
+            "actual": 10
+          },
+          "Jul": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 0.95,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-5"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-32",
+        "code": "L1 1.4.3",
+        "name": "On Time 100%",
+        "nameVi": "On Time 100%",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.830346435709527
+          },
+          "May": {
+            "target": 1,
+            "actual": 0.83
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 0.83
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 0.83
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 0.88
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 0.88
+          },
+          "Oct": {
+            "target": 1,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-4"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-34",
+        "code": "L1 1.4.4",
+        "name": "On Time 100%",
+        "nameVi": "On Time 100%",
+        "nameKo": "",
+        "level": "L1",
+        "department": "Production",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l1m-3"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-import-L1-1794452912251-36",
+        "code": "L1 1.5.1",
+        "name": "DPPM = 11K",
+        "nameVi": "DPPM = 11K",
         "level": "L1",
         "department": "Quality",
-        "unit": "points",
-        "jumpingOffPoint": "Aug. 2026",
-        "targetDirection": "higher",
-        "owner": "Quality: Tony Lopez/ Leonerdo Na",
+        "unit": "DPPM",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "lower",
+        "owner": "Quality",
         "linkedPriorityIds": [
-          "p-l1-16"
+          "p-l1m-2"
         ],
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
         "resourceRoles": {
-          "biz": "secondary",
+          "biz": "none",
           "quality": "primary",
           "csr": "none",
           "lean": "none",
@@ -1756,74 +1926,134 @@
         },
         "monthly": {
           "Jan": {
-            "target": 23,
-            "actual": 22
+            "target": 11000,
+            "actual": 28029.3846153846
           },
           "Feb": {
-            "target": 23,
-            "actual": 22.5
+            "target": 11000,
+            "actual": 19349.7433197315
           },
           "Mar": {
-            "target": 23,
-            "actual": 23
+            "target": 11000,
+            "actual": 21090.5349794239
           },
           "Apr": {
-            "target": 23,
-            "actual": 23
+            "target": 11000,
+            "actual": 22122.0811142974
           },
           "May": {
-            "target": 23,
-            "actual": 23
+            "target": 11000,
+            "actual": 20872.7022848308
           },
           "Jun": {
-            "target": 23,
-            "actual": 23.5
+            "target": 11000,
+            "actual": 19349.31506849315
           },
           "Jul": {
-            "target": 23,
-            "actual": null
+            "target": 11000,
+            "actual": 21965.81196581197
           },
           "Aug": {
-            "target": 23,
-            "actual": null
+            "target": 11000,
+            "actual": 22134
           },
           "Sep": {
-            "target": 24,
-            "actual": null
+            "target": 11000,
+            "actual": 22155
           },
           "Oct": {
-            "target": 24,
+            "target": 11000,
             "actual": null
           },
           "Nov": {
-            "target": 24,
+            "target": "100%",
             "actual": null
           },
           "Dec": {
-            "target": 25,
+            "target": "100%",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l1-17",
-        "code": "L1 5.2.1",
-        "name": "SQI",
-        "nameVi": "Chỉ số Chất lượng Nhà cung ứng (Supplier Quality Index - SQI)",
+        "id": "kpi-import-L1-1794452912251-38",
+        "code": "L1 1.5.2",
+        "name": "ZERO cases",
+        "nameVi": "ZERO cases",
+        "nameKo": "",
         "level": "L1",
-        "department": "Quality",
-        "unit": "points",
-        "jumpingOffPoint": "Aug. 2026",
-        "targetDirection": "higher",
-        "owner": "Quality: Tony Lopez/ Leonerdo Na",
+        "department": "Production",
+        "unit": "Cases",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "lower",
+        "owner": "Production",
+        "monthly": {
+          "Jan": {
+            "target": 0,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 0,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 0,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 0,
+            "actual": 0
+          },
+          "May": {
+            "target": 0,
+            "actual": 0
+          },
+          "Jun": {
+            "target": 0,
+            "actual": 0
+          },
+          "Jul": {
+            "target": 0,
+            "actual": 0
+          },
+          "Aug": {
+            "target": 0,
+            "actual": 0
+          },
+          "Sep": {
+            "target": 0,
+            "actual": 0
+          },
+          "Oct": {
+            "target": 0,
+            "actual": null
+          },
+          "Nov": {
+            "target": null,
+            "actual": null
+          },
+          "Dec": {
+            "target": null,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
         "linkedPriorityIds": [
-          "p-l1-17"
+          "p-l1m-1"
         ],
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
         "resourceRoles": {
-          "biz": "secondary",
+          "biz": "none",
           "quality": "primary",
           "csr": "none",
           "lean": "none",
@@ -1831,59 +2061,18 @@
           "prod": "none",
           "plan": "none",
           "it": "none"
-        },
-        "monthly": {
-          "Jan": {
-            "target": 23,
-            "actual": 22.8
-          },
-          "Feb": {
-            "target": 23,
-            "actual": 23
-          },
-          "Mar": {
-            "target": 23,
-            "actual": 23.1
-          },
-          "Apr": {
-            "target": 23,
-            "actual": 23.2
-          },
-          "May": {
-            "target": 23,
-            "actual": 23.4
-          },
-          "Jun": {
-            "target": 23,
-            "actual": 23.5
-          },
-          "Jul": {
-            "target": 23,
-            "actual": null
-          },
-          "Aug": {
-            "target": 23,
-            "actual": null
-          },
-          "Sep": {
-            "target": 24,
-            "actual": null
-          },
-          "Oct": {
-            "target": 24,
-            "actual": null
-          },
-          "Nov": {
-            "target": 24,
-            "actual": null
-          },
-          "Dec": {
-            "target": 25,
-            "actual": null
-          }
         }
       }
-    ]
+    ],
+    "correlations": {
+      "nekpi_p-l1m-13_kpi-import-L1-1794452912251-12": "none",
+      "nekpi_p-l1m-13_kpi-import-L1-1794452912251-14": "none",
+      "nekpi_p-l1m-13_kpi-import-L1-1794452912251-4": "none",
+      "nekpi_p-l1m-11_kpi-import-L1-1794452912251-18": "none",
+      "nekpi_p-l1m-8_kpi-import-L1-1794452912251-34": "none",
+      "nekpi_p-l1m-15_kpi-import-L1-1794452912251-30": "none",
+      "nekpi_p-l1m-10_kpi-import-L1-1794452912251-38": "none"
+    }
   },
   "l2Data": {
     "level": "L2",
@@ -2141,16 +2330,16 @@
     ],
     "kpis": [
       {
-        "id": "kpi-l2-1",
+        "id": "kpi-import-L2-1794452912255-4",
         "code": "L2 1.1.1",
         "name": "Auto cut roadmap: hit 80% in Dec. 2026",
-        "nameVi": "Lộ trình cắt tự động đạt 80% vào tháng 12/2026",
+        "nameVi": "Auto cut roadmap: hit 80% in Dec. 2026",
         "level": "L2",
         "department": "Lean",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Lean: Quang/Huy",
+        "owner": "Lean",
         "linkedPriorityIds": [
           "p-l2-1"
         ],
@@ -2170,62 +2359,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "76%",
-            "actual": "72%"
+            "target": 0.76,
+            "actual": 0.72
           },
           "Feb": {
-            "target": "76%",
-            "actual": "71%"
+            "target": 0.76,
+            "actual": 0.71
           },
           "Mar": {
-            "target": "76%",
-            "actual": "71%"
+            "target": 0.76,
+            "actual": 0.71
           },
           "Apr": {
-            "target": "76%",
-            "actual": "72%"
+            "target": 0.76,
+            "actual": 0.72
           },
           "May": {
-            "target": "76%",
-            "actual": "76%"
+            "target": 0.76,
+            "actual": 0.76
           },
           "Jun": {
-            "target": "76%",
-            "actual": "76%"
+            "target": 0.76,
+            "actual": 0.76
           },
           "Jul": {
-            "target": "78%",
-            "actual": null
+            "target": 0.78,
+            "actual": 0.78
           },
           "Aug": {
-            "target": "78%",
-            "actual": null
+            "target": 0.78,
+            "actual": 0.77
           },
           "Sep": {
-            "target": "78%",
-            "actual": null
+            "target": 0.78,
+            "actual": 0.79
           },
           "Oct": {
-            "target": "79%",
-            "actual": null
+            "target": 0.79,
+            "actual": 0.81
           },
           "Nov": {
-            "target": "80%",
+            "target": 0.8,
             "actual": null
           },
           "Dec": {
-            "target": "80%",
+            "target": 0.8,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-2",
+        "id": "kpi-import-L2-1794452912255-6",
         "code": "L2 1.1.2",
         "name": "Increasing PPH of top model 740/860/880 10% in Dec 2026",
-        "nameVi": "Tăng PPH của các model chính 740/860/880 thêm 10% vào T12/2026",
+        "nameVi": "Increasing PPH of top model 740/860/880 10% in Dec 2026",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -2249,62 +2443,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "2%",
-            "actual": "2%"
+            "target": 0.02,
+            "actual": 0.02
           },
           "Feb": {
-            "target": "2%",
-            "actual": "2%"
+            "target": 0.02,
+            "actual": 0.02
           },
           "Mar": {
-            "target": "2%",
-            "actual": "2%"
+            "target": 0.02,
+            "actual": 0.02
           },
           "Apr": {
-            "target": "4%",
-            "actual": "4%"
+            "target": 0.04,
+            "actual": 0.04
           },
           "May": {
-            "target": "4%",
-            "actual": "4%"
+            "target": 0.04,
+            "actual": 0.04
           },
           "Jun": {
-            "target": "4%",
-            "actual": "4%"
+            "target": 0.04,
+            "actual": 0.04
           },
           "Jul": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.05
           },
           "Aug": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.05
           },
           "Sep": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.05
           },
           "Oct": {
-            "target": "10%",
-            "actual": null
+            "target": 0.1,
+            "actual": 0.05
           },
           "Nov": {
-            "target": "10%",
+            "target": 0.1,
             "actual": null
           },
           "Dec": {
-            "target": "10%",
+            "target": 0.1,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-3",
+        "id": "kpi-import-L2-1794452912255-8",
         "code": "L2 1.2.1",
         "name": "Set up a Hourly planning System from July -> Sep.",
-        "nameVi": "Thiết lập hệ thống kế hoạch theo giờ từ tháng 7 đến tháng 9",
+        "nameVi": "Set up a Hourly planning System from July -> Sep.",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -2375,18 +2574,23 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-4",
+        "id": "kpi-import-L2-1794452912255-10",
         "code": "L2 1.2.2",
         "name": "21% C2B line comply EOLR comply with STD",
-        "nameVi": "21% chuyền C2B tuân thủ tiêu chuẩn EOLR",
+        "nameVi": "21% C2B line comply EOLR comply with STD",
         "level": "L2",
-        "department": "Lean",
-        "unit": "%",
+        "department": "Production",
+        "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
-        "targetDirection": "higher",
+        "targetDirection": "boolean",
         "owner": "Lean: Quang/Huy",
         "linkedPriorityIds": [
           "p-l2-4"
@@ -2454,15 +2658,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-5",
+        "id": "kpi-import-L2-1794452912255-12",
         "code": "L2 1.3.1.1",
         "name": "QCO = 3.2",
-        "nameVi": "Chỉ số chuyển đổi nhanh QCO = 3.2 điểm",
+        "nameVi": "QCO = 3.2",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Point",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -2510,20 +2719,20 @@
             "actual": 2.48
           },
           "Jul": {
-            "target": 3.2,
-            "actual": null
+            "target": 2.48,
+            "actual": 2.48
           },
           "Aug": {
-            "target": 3.2,
-            "actual": null
+            "target": 2.48,
+            "actual": 2.48
           },
           "Sep": {
-            "target": 3.2,
-            "actual": null
+            "target": 2.48,
+            "actual": 2.48
           },
           "Oct": {
-            "target": 3.2,
-            "actual": null
+            "target": 2.48,
+            "actual": 2.48
           },
           "Nov": {
             "target": 3.2,
@@ -2533,15 +2742,20 @@
             "target": 3.2,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-6",
+        "id": "kpi-import-L2-1794452912255-14",
         "code": "L2 1.3.1.2",
         "name": "P & Q incentive policy = 2.4",
-        "nameVi": "Chính sách thưởng Năng suất & Chất lượng = 2.4 điểm",
+        "nameVi": "P & Q incentive policy = 2.4",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Point",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -2589,20 +2803,20 @@
             "actual": 0.4
           },
           "Jul": {
-            "target": 2.4,
-            "actual": null
+            "target": 0.4,
+            "actual": 0.4
           },
           "Aug": {
-            "target": 2.4,
-            "actual": null
+            "target": 0.4,
+            "actual": 0.4
           },
           "Sep": {
-            "target": 2.4,
-            "actual": null
+            "target": 0.4,
+            "actual": 0.4
           },
           "Oct": {
-            "target": 2.4,
-            "actual": null
+            "target": 0.4,
+            "actual": 0.4
           },
           "Nov": {
             "target": 2.4,
@@ -2612,15 +2826,20 @@
             "target": 2.4,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-7",
+        "id": "kpi-import-L2-1794452912255-16",
         "code": "L2 1.3.1.3",
         "name": "Andon = 3.0",
-        "nameVi": "Điểm đánh giá hệ thống Andon = 3.0 điểm",
+        "nameVi": "Andon = 3.0",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Point",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -2668,20 +2887,20 @@
             "actual": 2.68
           },
           "Jul": {
-            "target": 3,
-            "actual": null
+            "target": 2.68,
+            "actual": 2.68
           },
           "Aug": {
-            "target": 3,
-            "actual": null
+            "target": 2.68,
+            "actual": 2.68
           },
           "Sep": {
-            "target": 3,
-            "actual": null
+            "target": 2.68,
+            "actual": 2.68
           },
           "Oct": {
-            "target": 3,
-            "actual": null
+            "target": 2.68,
+            "actual": 2.68
           },
           "Nov": {
             "target": 3,
@@ -2691,15 +2910,20 @@
             "target": 3,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-8",
+        "id": "kpi-import-L2-1794452912255-18",
         "code": "L2 1.3.1.4",
         "name": "TPM = 3.0",
-        "nameVi": "Bảo trì năng suất toàn diện TPM = 3.0 điểm",
+        "nameVi": "TPM = 3.0",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Point",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -2723,44 +2947,44 @@
         },
         "monthly": {
           "Jan": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "Feb": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "Mar": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "Apr": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "May": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "Jun": {
-            "target": 2.8,
+            "target": 2.83,
             "actual": 2.83
           },
           "Jul": {
-            "target": 3,
-            "actual": null
+            "target": 2.83,
+            "actual": 2.83
           },
           "Aug": {
-            "target": 3,
-            "actual": null
+            "target": 2.83,
+            "actual": 2.83
           },
           "Sep": {
-            "target": 3,
-            "actual": null
+            "target": 2.83,
+            "actual": 2.83
           },
           "Oct": {
-            "target": 3,
-            "actual": null
+            "target": 2.83,
+            "actual": 2.83
           },
           "Nov": {
             "target": 3,
@@ -2770,15 +2994,20 @@
             "target": 3,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l2-9",
+        "id": "kpi-import-L2-1794452912255-20",
         "code": "L2 1.4.1.1",
         "name": "Reduce lead-time of top model from 12 days to 10 days",
-        "nameVi": "Giảm thời gian sản xuất (Lead time) model chính từ 12 ngày xuống 10 ngày",
+        "nameVi": "Reduce lead-time of top model from 12 days to 10 days",
         "level": "L2",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Days",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "lower",
@@ -2827,19 +3056,19 @@
           },
           "Jul": {
             "target": 10,
-            "actual": null
+            "actual": 12
           },
           "Aug": {
             "target": 10,
-            "actual": null
+            "actual": 12
           },
           "Sep": {
             "target": 10,
-            "actual": null
+            "actual": 12
           },
           "Oct": {
             "target": 10,
-            "actual": null
+            "actual": 12
           },
           "Nov": {
             "target": 10,
@@ -2849,7 +3078,12 @@
             "target": 10,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       }
     ]
   },
@@ -3229,16 +3463,16 @@
     ],
     "kpis": [
       {
-        "id": "kpi-l3-1",
+        "id": "kpi-import-L3-1794452912255-3",
         "code": "L3 1.1.1.1.1",
         "name": "+4 sets of auto cut in May. 2026",
-        "nameVi": "Thêm 4 bộ máy cắt tự động vào tháng 5/2026",
+        "nameVi": "+4 sets of auto cut in May. 2026",
         "level": "L3",
         "department": "Lean",
         "unit": "Number",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
-        "owner": "Lean: Huy/Trang/Bao",
+        "owner": "Lean",
         "linkedPriorityIds": [
           "p-l3-1"
         ],
@@ -3283,19 +3517,19 @@
           },
           "Jul": {
             "target": 0,
-            "actual": null
+            "actual": 0
           },
           "Aug": {
             "target": 0,
-            "actual": null
+            "actual": 0
           },
           "Sep": {
             "target": 0,
-            "actual": null
+            "actual": 0
           },
           "Oct": {
             "target": 0,
-            "actual": null
+            "actual": 0
           },
           "Nov": {
             "target": 0,
@@ -3305,15 +3539,20 @@
             "target": 0,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-2",
+        "id": "kpi-import-L3-1794452912255-5",
         "code": "L3 1.1.1.2.1",
         "name": "OEE improvement from 72% to 80% from Apr. To Dec.",
-        "nameVi": "Cải thiện chỉ số OEE từ 72% lên 80% từ T4 đến T12",
+        "nameVi": "OEE improvement from 72% to 80% from Apr. To Dec.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3337,62 +3576,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "72%",
-            "actual": "72%"
+            "target": 0.72,
+            "actual": 0.72
           },
           "Feb": {
-            "target": "72%",
-            "actual": "72%"
+            "target": 0.72,
+            "actual": 0.72
           },
           "Mar": {
-            "target": "72%",
-            "actual": "71%"
+            "target": 0.72,
+            "actual": 0.71
           },
           "Apr": {
-            "target": "74%",
-            "actual": "71%"
+            "target": 0.74,
+            "actual": 0.71
           },
           "May": {
-            "target": "74%",
-            "actual": "72%"
+            "target": 0.74,
+            "actual": 0.72
           },
           "Jun": {
-            "target": "74%",
-            "actual": "72%"
+            "target": 0.74,
+            "actual": 0.72
           },
           "Jul": {
-            "target": "76%",
-            "actual": null
+            "target": 0.76,
+            "actual": 0.724
           },
           "Aug": {
-            "target": "76%",
-            "actual": null
+            "target": 0.76,
+            "actual": 0.731
           },
           "Sep": {
-            "target": "76%",
-            "actual": null
+            "target": 0.76,
+            "actual": 0.734
           },
           "Oct": {
-            "target": "78%",
-            "actual": null
+            "target": 0.78,
+            "actual": 0.733
           },
           "Nov": {
-            "target": "80%",
+            "target": 0.8,
             "actual": null
           },
           "Dec": {
-            "target": "80%",
+            "target": 0.8,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-3",
+        "id": "kpi-import-L3-1794452912255-7",
         "code": "L3 1.1.2.1.1",
         "name": "Reduce 12% TCT of top model 740v2",
-        "nameVi": "Giảm 12% thời gian chu kỳ TCT cho model chính 740v2",
+        "nameVi": "Reduce 12% TCT of top model 740v2",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3416,62 +3660,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "3%",
-            "actual": "3%"
+            "target": 0.03,
+            "actual": 0.03
           },
           "Feb": {
-            "target": "3%",
-            "actual": "3%"
+            "target": 0.03,
+            "actual": 0.03
           },
           "Mar": {
-            "target": "3%",
-            "actual": "3%"
+            "target": 0.03,
+            "actual": 0.03
           },
           "Apr": {
-            "target": "5%",
-            "actual": "5%"
+            "target": 0.05,
+            "actual": 0.05
           },
           "May": {
-            "target": "5%",
-            "actual": "5%"
+            "target": 0.05,
+            "actual": 0.05
           },
           "Jun": {
-            "target": "5%",
-            "actual": "5%"
+            "target": 0.05,
+            "actual": 0.05
           },
           "Jul": {
-            "target": "9%",
-            "actual": null
+            "target": 0.09,
+            "actual": 0.07
           },
           "Aug": {
-            "target": "9%",
-            "actual": null
+            "target": 0.09,
+            "actual": 0.07
           },
           "Sep": {
-            "target": "9%",
-            "actual": null
+            "target": 0.09,
+            "actual": 0.07
           },
           "Oct": {
-            "target": "12%",
-            "actual": null
+            "target": 0.12,
+            "actual": 0.07
           },
           "Nov": {
-            "target": "12%",
+            "target": 0.12,
             "actual": null
           },
           "Dec": {
-            "target": "12%",
+            "target": 0.12,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-4",
+        "id": "kpi-import-L3-1794452912255-9",
         "code": "L3 1.1.2.1.2",
         "name": "Reduce 10% TCT of top model 860v15",
-        "nameVi": "Giảm 10% thời gian chu kỳ TCT cho model chính 860v15",
+        "nameVi": "Reduce 10% TCT of top model 860v15",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3495,62 +3744,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "2%",
-            "actual": "1%"
+            "target": 0.02,
+            "actual": 0.01
           },
           "Feb": {
-            "target": "2%",
-            "actual": "2%"
+            "target": 0.02,
+            "actual": 0.02
           },
           "Mar": {
-            "target": "2%",
-            "actual": "2%"
+            "target": 0.02,
+            "actual": 0.02
           },
           "Apr": {
-            "target": "4%",
-            "actual": "2%"
+            "target": 0.04,
+            "actual": 0.02
           },
           "May": {
-            "target": "4%",
-            "actual": "2%"
+            "target": 0.04,
+            "actual": 0.02
           },
           "Jun": {
-            "target": "4%",
-            "actual": "2%"
+            "target": 0.04,
+            "actual": 0.02
           },
           "Jul": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.05
           },
           "Aug": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.07
           },
           "Sep": {
-            "target": "7%",
-            "actual": null
+            "target": 0.07,
+            "actual": 0.07
           },
           "Oct": {
-            "target": "10%",
-            "actual": null
+            "target": 0.1,
+            "actual": 0.08
           },
           "Nov": {
-            "target": "10%",
+            "target": 0.1,
             "actual": null
           },
           "Dec": {
-            "target": "10%",
+            "target": 0.1,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-5",
+        "id": "kpi-import-L3-1794452912255-11",
         "code": "L3 1.1.2.2",
         "name": "Model 740v2's LLER =85%",
-        "nameVi": "Hiệu suất chuyền Lean LLER cho Model 740v2 = 85%",
+        "nameVi": "Model 740v2's LLER =85%",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3574,62 +3828,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "85%",
-            "actual": "75%"
+            "target": 0.85,
+            "actual": 0.75
           },
           "Feb": {
-            "target": "85%",
-            "actual": "78%"
+            "target": 0.85,
+            "actual": 0.78
           },
           "Mar": {
-            "target": "85%",
-            "actual": "82%"
+            "target": 0.85,
+            "actual": 0.82
           },
           "Apr": {
-            "target": "85%",
-            "actual": "86%"
+            "target": 0.85,
+            "actual": 0.86
           },
           "May": {
-            "target": "85%",
-            "actual": "88%"
+            "target": 0.85,
+            "actual": 0.88
           },
           "Jun": {
-            "target": "85%",
-            "actual": "88%"
+            "target": 0.85,
+            "actual": 0.88
           },
           "Jul": {
-            "target": "85%",
-            "actual": null
+            "target": 0.85,
+            "actual": 0.92
           },
           "Aug": {
-            "target": "85%",
-            "actual": null
+            "target": 0.85,
+            "actual": 0.92
           },
           "Sep": {
-            "target": "85%",
-            "actual": null
+            "target": 0.85,
+            "actual": 0.92
           },
           "Oct": {
-            "target": "85%",
-            "actual": null
+            "target": 0.85,
+            "actual": 0.92
           },
           "Nov": {
-            "target": "85%",
+            "target": 0.85,
             "actual": null
           },
           "Dec": {
-            "target": "85%",
+            "target": 0.85,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-6",
+        "id": "kpi-import-L3-1794452912255-13",
         "code": "L3 1.2.1.1",
         "name": "50% C2B lines in Q4 2026 using Hourly planning",
-        "nameVi": "50% chuyền C2B trong Q4 2026 áp dụng kế hoạch theo giờ",
+        "nameVi": "50% C2B lines in Q4 2026 using Hourly planning",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3653,62 +3912,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "Feb": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "Mar": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "Apr": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "May": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "Jun": {
-            "target": "0%",
-            "actual": "0%"
+            "target": 0,
+            "actual": 0
           },
           "Jul": {
-            "target": "0%",
-            "actual": null
+            "target": 0,
+            "actual": 0
           },
           "Aug": {
-            "target": "0%",
-            "actual": null
+            "target": 0,
+            "actual": 0
           },
           "Sep": {
-            "target": "50%",
-            "actual": null
+            "target": 0.5,
+            "actual": 0
           },
           "Oct": {
-            "target": "50%",
-            "actual": null
+            "target": 0.5,
+            "actual": 0
           },
           "Nov": {
-            "target": "50%",
+            "target": 0.5,
             "actual": null
           },
           "Dec": {
-            "target": "50%",
+            "target": 0.5,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-7",
+        "id": "kpi-import-L3-1794452912255-15",
         "code": "L3 1.2.2.1",
         "name": "Making 4 miniline with EOLR under 100 pairs for model Mix",
-        "nameVi": "Tạo 4 chuyền nhỏ có EOLR dưới 100 đôi cho phối hợp model",
+        "nameVi": "Making 4 miniline with EOLR under 100 pairs for model Mix",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Number",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -3757,19 +4021,19 @@
           },
           "Jul": {
             "target": 4,
-            "actual": null
+            "actual": 0
           },
           "Aug": {
             "target": 4,
-            "actual": null
+            "actual": 0
           },
           "Sep": {
             "target": 4,
-            "actual": null
+            "actual": 0
           },
           "Oct": {
             "target": 4,
-            "actual": null
+            "actual": 0
           },
           "Nov": {
             "target": 4,
@@ -3779,16 +4043,21 @@
             "target": 4,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-8",
+        "id": "kpi-import-L3-1794452912255-17",
         "code": "L3 1.3.1.1",
-        "name": "Incentive policy for productivity and quality ( Target 30%)",
-        "nameVi": "Chính sách thưởng năng suất và chất lượng (mục tiêu 30%)",
+        "name": "Incentive policy for productivity and quality, implement reward system for leaders and workers ( Target 30%)",
+        "nameVi": "Incentive policy for productivity and quality, implement reward system for leaders and workers ( Target 30%)",
         "level": "L3",
-        "department": "Lean",
-        "unit": "Number",
+        "department": "Production",
+        "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
         "owner": "Lean: Huy/Trang/Bao",
@@ -3811,62 +4080,67 @@
         },
         "monthly": {
           "Jan": {
-            "target": "5%",
-            "actual": "6%"
+            "target": 0.05,
+            "actual": 0.06
           },
           "Feb": {
-            "target": "5%",
-            "actual": "6%"
+            "target": 0.05,
+            "actual": 0.06
           },
           "Mar": {
-            "target": "5%",
-            "actual": "6%"
+            "target": 0.05,
+            "actual": 0.06
           },
           "Apr": {
-            "target": "10%",
-            "actual": "6%"
+            "target": 0.1,
+            "actual": 0.06
           },
           "May": {
-            "target": "10%",
-            "actual": "6%"
+            "target": 0.1,
+            "actual": 0.06
           },
           "Jun": {
-            "target": "10%",
-            "actual": "6%"
+            "target": 0.1,
+            "actual": 0.06
           },
           "Jul": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.06
           },
           "Aug": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.06
           },
           "Sep": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.06
           },
           "Oct": {
-            "target": "30%",
-            "actual": null
+            "target": 0.3,
+            "actual": 0.06
           },
           "Nov": {
-            "target": "30%",
+            "target": 0.3,
             "actual": null
           },
           "Dec": {
-            "target": "30%",
+            "target": 0.3,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-9",
+        "id": "kpi-import-L3-1794452912255-19",
         "code": "L3 1.3.1.2.1",
         "name": "Apply digital for Change over Plan and Execution.",
-        "nameVi": "Ứng dụng chuyển đổi số cho Kế hoạch & Thực thi chuyển đổi chuyền",
+        "nameVi": "Apply digital for Change over Plan and Execution.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -3937,15 +4211,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-10",
+        "id": "kpi-import-L3-1794452912255-21",
         "code": "L3 1.3.1.2.2",
-        "name": "SMED deployment for all type of AC machine.",
-        "nameVi": "Triển khai SMED cho tất cả máy cắt AC & theo dõi PowerBI",
+        "name": "SMED deployment for all type of AC machine (Travelling Head/ Blade cut). Set COT target base on SMED and track in PBI.",
+        "nameVi": "SMED deployment for all type of AC machine (Travelling Head/ Blade cut). Set COT target base on SMED and track in PBI.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -4016,15 +4295,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-11",
+        "id": "kpi-import-L3-1794452912255-23",
         "code": "L3 1.3.1.3.1",
         "name": "Upgrade system to apply new andon with response time data collecting.",
-        "nameVi": "Nâng cấp hệ thống Andon mới có thu thập thời gian phản hồi",
+        "nameVi": "Upgrade system to apply new andon with response time data collecting.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -4095,15 +4379,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-12",
+        "id": "kpi-import-L3-1794452912255-25",
         "code": "L3 1.3.1.3.2",
         "name": "Analyze and Improving response time base on data collected.",
-        "nameVi": "Phân tích & Cải thiện thời gian phản hồi từ dữ liệu Andon",
+        "nameVi": "Analyze and Improving response time base on data collected.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -4174,15 +4463,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-13",
+        "id": "kpi-import-L3-1794452912255-27",
         "code": "L3 1.3.1.4.1",
         "name": "Analyze Machine downtime, MTTR, MTBF data and improvement for top 3 machines / areas.",
-        "nameVi": "Phân tích thời gian dừng máy (Downtime, MTTR, MTBF) cho 3 loại máy/khu vực hàng đầu",
+        "nameVi": "Analyze Machine downtime, MTTR, MTBF data and improvement for top 3 machines / areas.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -4253,15 +4547,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-14",
+        "id": "kpi-import-L3-1794452912255-29",
         "code": "L3 1.3.1.4.2",
         "name": "Upgrade TPM app for visualizing MTTR, MTBF, PM schedule.",
-        "nameVi": "Nâng cấp ứng dụng TPM trực quan hóa MTTR, MTBF & Lịch bảo trì",
+        "nameVi": "Upgrade TPM app for visualizing MTTR, MTBF, PM schedule.",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Y/N",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "boolean",
@@ -4332,15 +4631,20 @@
             "target": "Y",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-15",
+        "id": "kpi-import-L3-1794452912255-31",
         "code": "L3 1.4.1.1.1",
         "name": "Minimize partpath of 740/860 30%",
-        "nameVi": "Rút ngắn 30% đường đi linh kiện (Partpath) model 740/860",
+        "nameVi": "Minimize partpath of 740/860 30%",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
@@ -4388,20 +4692,20 @@
             "actual": "0%"
           },
           "Jul": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.22
           },
           "Aug": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.22
           },
           "Sep": {
-            "target": "20%",
-            "actual": null
+            "target": 0.2,
+            "actual": 0.25
           },
           "Oct": {
-            "target": "30%",
-            "actual": null
+            "target": 0.3,
+            "actual": 0.33
           },
           "Nov": {
             "target": "30%",
@@ -4411,15 +4715,20 @@
             "target": "30%",
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       },
       {
-        "id": "kpi-l3-16",
+        "id": "kpi-import-L3-1794452912255-33",
         "code": "L3 1.4.1.2.1",
         "name": "Reduce WIP of 740/860 from 3 days to 1 days",
-        "nameVi": "Giảm lượng hàng dở dang (WIP) model 740/860 từ 3 ngày xuống 1 ngày",
+        "nameVi": "Reduce WIP of 740/860 from 3 days to 1 days",
         "level": "L3",
-        "department": "Lean",
+        "department": "Production",
         "unit": "Days",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "lower",
@@ -4468,19 +4777,19 @@
           },
           "Jul": {
             "target": 1.5,
-            "actual": null
+            "actual": 1.5
           },
           "Aug": {
             "target": 1.5,
-            "actual": null
+            "actual": 1.5
           },
           "Sep": {
             "target": 1.5,
-            "actual": null
+            "actual": 0.5
           },
           "Oct": {
             "target": 1,
-            "actual": null
+            "actual": 0.5
           },
           "Nov": {
             "target": 1,
@@ -4490,7 +4799,12 @@
             "target": 1,
             "actual": null
           }
-        }
+        },
+        "nameKo": "",
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open"
       }
     ]
   }

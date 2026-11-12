@@ -13,6 +13,7 @@ import {
   StatusColor,
   matchesTeam,
   normalizeTeamName,
+  formatCellDisplay,
 } from '../lib/kpiUtils';
 import { getTeamColorConfig } from '../lib/teamUtils';
 import { EditKpiModal } from './EditKpiModal';
@@ -484,9 +485,7 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
                               title="Click to edit target"
                             >
                               <span>
-                                {val !== null && val !== undefined
-                                  ? String(val)
-                                  : '-'}
+                                {formatCellDisplay(kpi, val)}
                               </span>
                               <Edit2 className="w-2.5 h-2.5 text-slate-400 absolute right-0.5 top-0.5 opacity-0 group-hover:opacity-100" />
                             </td>
@@ -570,9 +569,7 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
                               title="Click to edit actual value"
                             >
                               <span>
-                                {aVal !== null && aVal !== undefined
-                                  ? String(aVal)
-                                  : '-'}
+                                {formatCellDisplay(kpi, aVal)}
                               </span>
                               <Edit2 className="w-2.5 h-2.5 text-slate-300 absolute right-0.5 top-0.5 opacity-0 group-hover:opacity-100" />
                             </td>

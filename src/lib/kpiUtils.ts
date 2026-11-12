@@ -31,17 +31,18 @@ export function getMonthStatus(
     return aNum >= tNum ? 'green' : 'red';
   }
 
+  // Excel Dashboard sheet rules (5% tolerance, cell D31):
+  // On track = target met; At risk = missed but within 5% band; Off track = beyond 5%.
   if (direction === 'lower') {
     if (aNum <= tNum) return 'green';
-    if (aNum <= tNum * 1.2) return 'yellow';
+    if (aNum <= tNum * 1.05) return 'yellow';
     return 'red';
   }
 
   // default 'higher'
   if (tNum === 0) return aNum >= 0 ? 'green' : 'red';
-  const ratio = aNum / tNum;
-  if (ratio >= 0.98) return 'green';
-  if (ratio >= 0.85) return 'yellow';
+  if (aNum >= tNum) return 'green';
+  if (aNum >= tNum * 0.95) return 'yellow';
   return 'red';
 }
 
@@ -110,6 +111,22 @@ export function matchesTeam(deptOrOwner: string | undefined, selectedTeam: strin
   if (d.startsWith(t) || d.includes(t) || t.includes(d)) return true;
 
   return false;
+}
+
+// Display values as % when the KPI's "Target to Improve" name contains '%'.
+// Excel stores fractions (0.99 = 99%); strings pass through (may already contain '%').
+export function isPercentKpi(kpi: KpiItem): boolean {
+  return `${kpi.name || ''}${kpi.nameVi || ''}`.includes('%');
+}
+
+export function formatCellDisplay(
+  kpi: KpiItem,
+  val: string | number | null | undefined
+): string {
+  if (val === null || val === undefined) return '-';
+  if (typeof val === 'string') return val;
+  if (!isPercentKpi(kpi)) return String(val);
+  return val > 1 ? `${val}%` : `${Number((val * 100).toFixed(2))}%`;
 }
 
 export function computeLevelSummary(kpis: KpiItem[]): KpiStatusSummary {

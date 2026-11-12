@@ -1,7 +1,6 @@
 import React from 'react';
 import { LevelPolicyData, Language, KpiItem, MonthKey } from '../types';
 import {
-  computeLevelSummary,
   getKpiOverallStatus,
   getMonthStatus,
   matchesTeam,
@@ -26,11 +25,12 @@ import {
   AlertTriangle,
   XCircle,
   TrendingUp,
-  Building,
   UserCheck,
   ArrowRight,
   Filter,
   X,
+  MinusCircle,
+  ClipboardList,
 } from 'lucide-react';
 import { getTeamColorConfig, getLocalizedPureText } from '../lib/teamUtils';
 
@@ -40,6 +40,8 @@ interface DashboardProps {
   onSelectKpi: (kpi: KpiItem) => void;
   selectedTeam?: string;
   onSelectTeam?: (team: string) => void;
+  /** Company-wide KPIs across all 3 levels (matches the Excel Dashboard sheet). */
+  allKpis?: KpiItem[];
 }
 
 const MONTHS: MonthKey[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
@@ -50,6 +52,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
   onSelectKpi,
   selectedTeam = 'ALL',
   onSelectTeam,
+  allKpis,
 }) => {
   const isVi = language === 'vi';
   const { kpis, level, title, titleVi } = data;
@@ -59,10 +62,40 @@ export const Dashboard: React.FC<DashboardProps> = ({
     ? kpis.filter((k) => matchesTeam(k.department, selectedTeam))
     : kpis;
 
-  const summary = computeLevelSummary(displayedKpis);
-  const onTrackPct = summary.total > 0 ? Math.round((summary.onTrack / summary.total) * 100) : 0;
-  const warningPct = summary.total > 0 ? Math.round((summary.warning / summary.total) * 100) : 0;
-  const offTrackPct = summary.total > 0 ? Math.round((summary.offTrack / summary.total) * 100) : 0;
+  // Company-wide headline (all 3 levels) — mirrors the Excel Dashboard sheet headline.
+  // Team filter from the toolbar still applies for consistency with the rest of the app.
+  const [reportMonth, setReportMonth] = React.useState<MonthKey>('Jun');
+  const HEADLINE_MONTHS = ['Dec', 'Nov', 'Oct', 'Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar', 'Feb', 'Jan'] as MonthKey[];
+  const headlineSource: KpiItem[] = allKpis ?? displayedKpis;
+  const headlineKpis = isTeamFiltered
+    ? headlineSource.filter((k) => matchesTeam(k.department, selectedTeam))
+    : headlineSource;
+
+  const monthStatusOf = (k: KpiItem): 'green' | 'yellow' | 'red' | 'gray' => {
+    const rec = k.monthly?.[reportMonth];
+    if (!rec || rec.actual === null || rec.actual === '') return 'gray';
+    return getMonthStatus(rec.target, rec.actual, k.targetDirection);
+  };
+
+  const headline = headlineKpis.reduce(
+    (acc, k) => {
+      acc.total += 1;
+      const st = monthStatusOf(k);
+      if (st === 'green') acc.onTrack += 1;
+      else if (st === 'yellow') acc.atRisk += 1;
+      else if (st === 'red') acc.offTrack += 1;
+      else acc.noData += 1;
+      return acc;
+    },
+    { total: 0, onTrack: 0, atRisk: 0, offTrack: 0, noData: 0 }
+  );
+  const headlineWithData = headline.total - headline.noData;
+  const onTrackRate = headlineWithData > 0 ? headline.onTrack / headlineWithData : 0;
+  const onTrackRateDisplay = `${Math.round(onTrackRate * 1000) / 10}%`;
+  const MONTH_LABEL: Record<string, string> = {
+    Jan: 'Jan', Feb: 'Feb', Mar: 'Mar', Apr: 'Apr', May: 'May', Jun: 'Jun',
+    Jul: 'Jul', Aug: 'Aug', Sep: 'Sep', Oct: 'Oct', Nov: 'Nov', Dec: 'Dec',
+  };
 
   // Identify Emergency Off-Track Metrics
   const redFlagKpis = displayedKpis.filter((k) => getKpiOverallStatus(k) === 'red');
@@ -145,86 +178,114 @@ export const Dashboard: React.FC<DashboardProps> = ({
           )}
         </div>
       )}
-      {/* Executive KPI Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {/* Card 1: Total Metrics */}
-        <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-              {isVi ? 'Tổng Số KPI' : 'Total Metrics'}
+      {/* Executive KPI Summary Cards — mirrors the Excel Dashboard sheet headline (all 3 levels, 5% tolerance) */}
+      <div className="space-y-2">
+        <div className="flex items-center justify-between flex-wrap gap-2 px-1">
+          <span className="text-[11px] uppercase font-bold tracking-widest text-slate-500">
+            {isVi ? 'Bức tranh tổng thể (L1+L2+L3)' : 'Company-wide headline (L1+L2+L3)'}
+          </span>
+          <label className="flex items-center gap-2 text-[11px] font-semibold text-slate-600 bg-white border border-slate-200 rounded-full pl-3 pr-1 py-1 shadow-2xs">
+            <span>{isVi ? 'Tháng báo cáo' : 'Reporting month'}</span>
+            <span className="relative inline-flex items-center">
+              <select
+                value={reportMonth}
+                onChange={(e) => setReportMonth(e.target.value as MonthKey)}
+                className="appearance-none bg-[#FFFACD] hover:bg-[#FFF4B3] text-slate-900 text-[11px] font-bold border border-amber-300 rounded-full pl-3 pr-7 py-1 outline-none cursor-pointer"
+                aria-label={isVi ? 'Tháng báo cáo' : 'Reporting month'}
+                title={isVi ? 'Chọn tháng (khớp sheet Dashboard)' : 'Reporting month (matches the Excel Dashboard sheet)'}
+              >
+                {HEADLINE_MONTHS.map((m) => (
+                  <option key={m} value={m}>{MONTH_LABEL[m] ?? m}</option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute right-2 text-[8px] text-slate-700">▼</span>
             </span>
-            <div className="text-2xl font-bold text-slate-900 mt-1">
-              {summary.total} <span className="text-xs text-slate-500 font-normal">KPIs</span>
-            </div>
-            <span className="text-xs text-slate-400 mt-1 block">
-              {level} Policy Level
-            </span>
-          </div>
-          <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
-            <Building className="w-6 h-6 text-slate-700" />
-          </div>
+          </label>
         </div>
 
-        {/* Card 2: On Track */}
-        <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wider">
-              {isVi ? 'Đạt Chỉ Tiêu' : 'On Track'}
-            </span>
-            <div className="text-2xl font-bold text-emerald-700 mt-1">
-              {summary.onTrack}{' '}
-              <span className="text-xs font-semibold text-emerald-600">
-                ({onTrackPct}%)
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-3">
+          {/* Card 1: KPIs Tracked */}
+          <div className="bg-[#1F3864] rounded-xl p-4 border border-[#162a4e] shadow-sm flex flex-col justify-between text-white min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-blue-200 uppercase tracking-wider leading-tight">
+                {isVi ? 'KPIs Theo Dõi' : 'KPIs Tracked'}
               </span>
+              <ClipboardList className="w-4 h-4 text-blue-300" />
             </div>
-            <span className="text-xs text-emerald-600/80 mt-1 block">
-              {isVi ? 'Hoàn thành đúng tiến độ' : 'Meeting or exceeding target'}
+            <div className="text-3xl font-black tracking-tight mt-1">{headline.total}</div>
+            <span className="text-[10px] text-blue-200/80 font-medium mt-1 leading-tight">
+              {isVi ? 'L1+L2+L3 · cả 3 cấp' : 'L1+L2+L3 · all levels'}
             </span>
           </div>
-          <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center">
-            <CheckCircle2 className="w-6 h-6 text-emerald-600" />
-          </div>
-        </div>
 
-        {/* Card 3: Warning */}
-        <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold text-amber-600 uppercase tracking-wider">
-              {isVi ? 'Cần Chú Ý' : 'Warning'}
-            </span>
-            <div className="text-2xl font-bold text-amber-700 mt-1">
-              {summary.warning}{' '}
-              <span className="text-xs font-semibold text-amber-600">
-                ({warningPct}%)
+          {/* Card 2: On Track */}
+          <div className="bg-[#C6EFCE] rounded-xl p-4 border border-[#7fbf93] shadow-sm flex flex-col justify-between min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-emerald-900 uppercase tracking-wider leading-tight">
+                {isVi ? 'Đạt Chỉ Tiêu' : 'On Track'}
               </span>
+              <CheckCircle2 className="w-4 h-4 text-emerald-700" />
             </div>
-            <span className="text-xs text-amber-600/80 mt-1 block">
-              {isVi ? 'Chênh lệch nhẹ so với mục tiêu' : 'Minor gap detected'}
+            <div className="text-3xl font-black tracking-tight text-emerald-950 mt-1">{headline.onTrack}</div>
+            <span className="text-[10px] text-emerald-800/90 font-semibold mt-1 leading-tight">
+              {headline.total > 0 ? `${Math.round((headline.onTrack / headline.total) * 100)}% of tracked` : '—'}
             </span>
           </div>
-          <div className="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center">
-            <AlertTriangle className="w-6 h-6 text-amber-600" />
-          </div>
-        </div>
 
-        {/* Card 4: Off Track */}
-        <div className="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center justify-between">
-          <div>
-            <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">
-              {isVi ? 'Cảnh Báo Đỏ (Off Track)' : 'Critical Gap'}
-            </span>
-            <div className="text-2xl font-bold text-red-700 mt-1">
-              {summary.offTrack}{' '}
-              <span className="text-xs font-semibold text-red-600">
-                ({offTrackPct}%)
+          {/* Card 3: At Risk */}
+          <div className="bg-[#FFEB9C] rounded-xl p-4 border border-[#e8c85a] shadow-sm flex flex-col justify-between min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-amber-900 uppercase tracking-wider leading-tight">
+                {isVi ? 'Cận Ngưỡng' : 'At Risk'}
               </span>
+              <AlertTriangle className="w-4 h-4 text-amber-700" />
             </div>
-            <span className="text-xs text-red-600/80 mt-1 block font-medium">
-              {isVi ? 'Cần hành động 8D khẩn cấp' : 'Requires urgent action plan'}
+            <div className="text-3xl font-black tracking-tight text-amber-950 mt-1">{headline.atRisk}</div>
+            <span className="text-[10px] text-amber-800/90 font-semibold mt-1 leading-tight">
+              {headline.total > 0 ? `${Math.round((headline.atRisk / headline.total) * 100)}% · within 5% band` : '—'}
             </span>
           </div>
-          <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-200 flex items-center justify-center">
-            <XCircle className="w-6 h-6 text-red-600" />
+
+          {/* Card 4: Off Track */}
+          <div className="bg-[#FFC7CE] rounded-xl p-4 border border-[#e79aa5] shadow-sm flex flex-col justify-between min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-red-900 uppercase tracking-wider leading-tight">
+                {isVi ? 'Lệch / Không Đạt' : 'Off Track'}
+              </span>
+              <XCircle className="w-4 h-4 text-red-700" />
+            </div>
+            <div className="text-3xl font-black tracking-tight text-red-950 mt-1">{headline.offTrack}</div>
+            <span className="text-[10px] text-red-800/90 font-semibold mt-1 leading-tight">
+              {headline.total > 0 ? `${Math.round((headline.offTrack / headline.total) * 100)}% · beyond 5% gap` : '—'}
+            </span>
+          </div>
+
+          {/* Card 5: No Data */}
+          <div className="bg-[#EDEDED] rounded-xl p-4 border border-[#c9c9c9] shadow-sm flex flex-col justify-between min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-slate-700 uppercase tracking-wider leading-tight">
+                {isVi ? 'Chưa Có Dữ Liệu' : 'No Data'}
+              </span>
+              <MinusCircle className="w-4 h-4 text-slate-500" />
+            </div>
+            <div className="text-3xl font-black tracking-tight text-slate-800 mt-1">{headline.noData}</div>
+            <span className="text-[10px] text-slate-600/90 font-semibold mt-1 leading-tight">
+              {headline.total > 0 ? `${Math.round((headline.noData / headline.total) * 100)}% · actual missing` : '—'}
+            </span>
+          </div>
+
+          {/* Card 6: On-track Rate */}
+          <div className="bg-[#D9E1F2] rounded-xl p-4 border border-[#b3c4de] shadow-sm flex flex-col justify-between min-h-[132px]">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-bold text-blue-900 uppercase tracking-wider leading-tight">
+                {isVi ? 'Tỷ Lệ Đạt (Có DL)' : 'On-Track Rate'}
+              </span>
+              <TrendingUp className="w-4 h-4 text-blue-800" />
+            </div>
+            <div className="text-3xl font-black tracking-tight text-blue-950 mt-1">{onTrackRateDisplay}</div>
+            <span className="text-[10px] text-blue-900/80 font-semibold mt-1 leading-tight">
+              {headlineWithData > 0 ? `${headline.onTrack}/${headlineWithData} with data` : '—'}
+            </span>
           </div>
         </div>
       </div>

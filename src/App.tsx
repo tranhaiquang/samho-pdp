@@ -1443,6 +1443,7 @@ export default function App() {
             onSelectKpi={setSelectedKpi}
             selectedTeam={selectedTeam}
             onSelectTeam={setSelectedTeam}
+            allKpis={allLevelKpis}
           />
         )}
 

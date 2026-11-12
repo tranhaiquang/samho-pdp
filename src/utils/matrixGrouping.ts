@@ -229,10 +229,6 @@ export function getCompassItemTextColor(
   if (level === 'L1' && direction === 'south') {
     return '#000000';
   }
-  // L1 West: 1-Year / Annual Breakthrough Objectives (common -> BLACK)
-  if (level === 'L1' && direction === 'west') {
-    return '#000000';
-  }
   // L2 South: Annual Breakthrough Objectives linked from L1 (common -> BLACK)
   if (level === 'L2' && direction === 'south') {
     return '#000000';

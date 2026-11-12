@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import { getKpiOverallStatus } from '../lib/kpiUtils';
 import { getTeamColorConfig, getLocalizedPureText } from '../lib/teamUtils';
+import { MANUAL_CELL_COLORS, MANUAL_CELL_TEXT_COLORS } from './matrixCellColors';
 import {
   sortContiguousByTeam,
   getCompassItemTextColor,
@@ -284,17 +285,33 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
     }
   }, [data.correlations]);
 
+  // Compare codes descending, segment-by-segment (L1 1.5.2 … L1 1.1.1)
+  const compareCodeDesc = (a: { code?: string }, b: { code?: string }) => {
+    const segs = (code: string | undefined) =>
+      (code || '').match(/\d+/g)?.map(Number) ?? [];
+    const pa = segs(a.code);
+    const pb = segs(b.code);
+    for (let i = 0; i < Math.max(pa.length, pb.length); i++) {
+      const da = pa[i] ?? 0;
+      const db = pb[i] ?? 0;
+      if (da !== db) return db - da; // descending
+    }
+    return 0;
+  };
+
   // 1. Top Items (North Arm): Improvement Priorities (Dữ liệu nhập của Level)
-  // Sắp xếp liên tục theo Functional Team
+  // Sorted biggest to smallest by code (L1 1.5.2 … L1 1.1.1), matching the workbook order
   const topItems: ImprovementPriority[] = useMemo(() => {
-    return sortContiguousByTeam(displayedPriorities);
+    return [...displayedPriorities].sort(compareCodeDesc);
   }, [displayedPriorities]);
 
   // 2. Left Items (West Arm): Section 2 Items
   // L1: Annual Objectives (Mục Tiêu Hàng Năm)
   // L2: Link từ 2nd level / L1 Top Priorities (Ưu Tiên Cải Thiện Hàng Đầu)
   // L3: Link từ 2nd level / L2 Priorities (Ưu Tiên Cải Thiện 2nd Level)
-  // Sắp xếp liên tục theo Functional Team
+  // Sorted biggest to smallest by code (L 1.5 … L 1.1), matching the workbook order
+  // L1 Annual Objectives follow the workbook/file order (Quality, Development, CSR, Delivery, SA1, Lean).
+  // Linked L2/L3 items keep the code-descending order used for cascaded priority arms.
   const leftItems = useMemo(() => {
     const raw = (section2Config.items as any[]).map((it) => ({
       id: it.id,
@@ -307,40 +324,96 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
       owner: it.owner,
       rawItem: it,
     }));
-    return sortContiguousByTeam(raw);
+    const preserveFileOrder = section2Config.itemType === 'objective' && section2Config.sourceLevel === 'L1';
+    return preserveFileOrder ? raw : [...raw].sort(compareCodeDesc);
   }, [section2Config]);
 
   // 3. Bottom Items (South Arm): Section 1 Items
   // L1: 3-Year Objectives (Mục Tiêu Đột Phá 3 Năm)
   // L2: Link từ top level / Annual Objectives (Mục Tiêu Hàng Năm)
   // L3: Link từ top level / L1 Top Priorities (Ưu Tiên Cải Thiện Hàng Đầu)
-  // Sắp xếp liên tục theo Functional Team
+  // Sorted biggest to smallest by code
   const bottomItems = useMemo(() => {
-    return sortContiguousByTeam(section1Config.items);
+    return [...section1Config.items].sort(compareCodeDesc);
   }, [section1Config]);
 
   // 4. Right Items (East Arm): Divided into KPIs + Resources
-  // Sắp xếp liên tục theo Functional Team
+  // KPIs sorted small to big by code (L1 1.1.1 … L1 1.5.2), left to right
   const rightKpiItems = useMemo(() => {
-    return sortContiguousByTeam(displayedKpis);
+    return [...displayedKpis].sort((a, b) => compareCodeDesc(b, a)); // flip desc -> asc
   }, [displayedKpis]);
 
   const rightResourceItems = useMemo(() => {
     return sortContiguousByTeam(displayedResources);
   }, [displayedResources]);
 
-  // Color palette for status dots (Orange, Red, Green, Blue like in Amplon)
-  const statusColors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6'];
-
-  const getStatusDotColor = (index: number, kpi?: KpiItem) => {
-    if (kpi) {
-      const st = getKpiOverallStatus(kpi);
-      if (st === 'green') return '#10b981'; // green
-      if (st === 'yellow') return '#f59e0b'; // amber
-      if (st === 'red') return '#ef4444'; // red
-      return '#64748b'; // slate
+  // Row theme colors taken from the Lieu PDP_2026_SA1_WS.xlsx matrix sheets:
+  // L1 1.1.x -> DBEEF4 (Lean/Prod, blue), 1.2.x -> EDE9FE (Delivery, purple),
+  // 1.3.x -> FFF4CC (Responsible Leadership, yellow), 1.4.x -> EBF1DE (Dev, light green),
+  // 1.5.x -> C6E0B4 (Quality, green). L2/L3 (cascaded from the Lean objective) -> DBEEF4.
+  // Returns '' for items without a theme (e.g. 3-year breakthrough objectives) -> keep white.
+  const getRowThemeColor = (code: string | undefined): string => {
+    if (data.level !== 'L1') return '#DBEEF4';
+    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
+    const fam = m ? `${m[1]}.${m[2]}` : '';
+    switch (fam) {
+      case '1.1':
+        return '#DBEEF4';
+      case '1.2':
+        return '#EDE9FE'; // violet-100 (Delivery - purple)
+      case '1.3':
+        return '#FFF4CC';
+      case '1.4':
+        return '#EBF1DE';
+      case '1.5':
+        return '#C6E0B4';
+      default:
+        return '';
     }
-    return statusColors[index % statusColors.length];
+  };
+
+  // Family text colors (readable darker variants of the theme pastels,
+  // used for arm labels & code badges)
+  const getFamilyTextColor = (code: string | undefined): string => {
+    if (data.level !== 'L1') return '#0284C7'; // L2/L3: Lean-cascade blue
+    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
+    const fam = m ? `${m[1]}.${m[2]}` : '';
+    switch (fam) {
+      case '1.1':
+        return '#0284C7'; // sky-600 (light blue)
+      case '1.2':
+        return '#6D28D9'; // violet-700 (Delivery - purple)
+      case '1.3':
+        return '#A16207'; // yellow-700 (CSR)
+      case '1.4':
+        return '#4D7C0F'; // lime-700 (Development)
+      case '1.5':
+        return '#15803D'; // green-700 (Quality)
+      default:
+        return '#0284C7';
+    }
+  };
+
+  // Family dot colors (status dot in row/column headers + grid correlation dots).
+  // Same family as the theme fills, but saturated enough to stay visible.
+  const getFamilyDotColor = (code: string | undefined): string => {
+    if (data.level !== 'L1') return '#38BDF8'; // L2/L3: Lean-cascade blue
+    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
+    const fam = m ? `${m[1]}.${m[2]}` : '';
+    switch (fam) {
+      case '1.1':
+        return '#38BDF8'; // light blue (Lean/Prod)
+      case '1.2':
+        return '#A78BFA'; // violet (Delivery - purple)
+      case '1.3':
+        return '#FDE047'; // yellow (CSR / RL)
+      case '1.4':
+        return '#A3E635'; // lime (Development)
+      case '1.5':
+        return '#4ADE80'; // green (Quality)
+      default:
+        return '#38BDF8';
+    }
   };
 
   const getDepartmentResourceColor = (department: string) => {
@@ -469,7 +542,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
     return 'none';
   };
 
-  // Helper to determine Primary Responsible Persons/Depts (calculated from Dot tròn đậm ●)
+  // Helper to determine Primary Responsible Persons/Depts (calculated from Dot ●)
   const getPrimaryPicList = (kpi: KpiItem) => {
     const allResources = (displayedResources && displayedResources.length > 0) ? displayedResources : (data.resources || []);
     const allPriorities = (displayedPriorities && displayedPriorities.length > 0) ? displayedPriorities : (data.priorities || []);
@@ -488,7 +561,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
       return false;
     });
 
-    // 2. Check each linked priority's row in the Northeast grid (amber area) for Dot tròn đậm ●
+    // 2. Check each linked priority's row in the Northeast grid (amber area) for Dot ●
     linkedPriorities.forEach((p) => {
       const pIdx = topItems.findIndex((item) => item.id === p.id);
       allResources.forEach((res, rIdx) => {
@@ -1001,7 +1074,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
         {/* Legend Quick Reference: Dot 'x' for 4-axis, Solid circle for Primary Owner, Hollow circle for Secondary */}
         <div className="hidden xl:flex items-center space-x-3 bg-white border border-slate-200 rounded-lg px-2.5 py-1 text-xs text-slate-700 shadow-2xs">
           <div className="flex items-center space-x-1.5" title={isVi ? 'Liên kết 4 trục (Đông - Tây - Nam - Bắc): Dot "x"' : '4-Axis Link (Dot "x")'}>
-            <span className="font-black text-slate-900 text-sm leading-none">✕</span>
+            <span className="font-black text-slate-900 text-sm leading-none">✓</span>
             <span className="text-[11px] font-medium">{isVi ? 'Liên kết 4 trục (Dot x)' : '4-Axis Link (Dot x)'}</span>
           </div>
           <div className="w-px h-3.5 bg-slate-200"></div>
@@ -1046,7 +1119,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
           {/* Square Compass & Vertical Height Controller */}
           <div className="flex items-center bg-white border border-slate-200 rounded-lg shadow-2xs p-0.5 text-xs">
             <span className="px-2 text-[11px] font-semibold text-emerald-800 hidden sm:inline flex items-center gap-1">
-              <span>📐 {isVi ? 'La bàn vuông:' : 'Square Compass:'}</span>
+              <span>📋 {isVi ? 'La bàn vuông:' : 'Square Compass:'}</span>
             </span>
             <button
               onClick={() => setCompassSquareSize((s) => Math.max(280, s - 20))}
@@ -1188,7 +1261,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                 >
                   <div className="flex items-center justify-center">
                     <span className="font-extrabold text-[11px] text-blue-700 uppercase tracking-wider bg-blue-50 border border-blue-200 px-2 py-0.5 rounded shadow-2xs flex items-center gap-1">
-                      <span className="font-black text-xs leading-none">✕</span>
+                      <span className="font-black text-xs leading-none">✓</span>
                       <span>{isVi ? 'Dot "x" liên kết' : 'Dot "x" Link'}</span>
                     </span>
                   </div>
@@ -1214,7 +1287,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       {isVi ? 'Mục tiêu cải thiện (Target to improve / KPIs)' : 'Targets to Improve (KPIs)'}
                     </span>
                     <span className="font-extrabold text-[10px] text-blue-700 uppercase bg-blue-50 border border-blue-200 px-1.5 py-0.2 rounded shadow-2xs flex items-center gap-1">
-                      <span className="font-black text-xs leading-none">✕</span>
+                      <span className="font-black text-xs leading-none">✓</span>
                       <span>Link</span>
                     </span>
                   </div>
@@ -1270,6 +1343,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                 const isTopRowDirect = hoveredTopRowIndex === pIndex || selectedTopRowId === priority.id;
                 const isTopRowLinked = linkedElements.topIds.has(priority.id);
                 const isTopRowHovered = isTopRowDirect || isTopRowLinked;
+                const rowTheme = getRowThemeColor(priority.code);
+                const prevRowTheme = pIndex > 0 ? getRowThemeColor(topItems[pIndex - 1].code) : '';
+                const nextRowTheme = pIndex < topItems.length - 1 ? getRowThemeColor(topItems[pIndex + 1].code) : '';
+                const sameAsAbove = !!rowTheme && rowTheme === prevRowTheme;
+                const sameAsBelow = !!rowTheme && rowTheme === nextRowTheme;
 
                 return (
                   <tr
@@ -1308,7 +1386,15 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             setHoveredTopRowIndex(null);
                             setHoveredLeftColIndex(null);
                           }}
-                          className={`w-11 h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 ${
+                          style={{
+                            ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isColDirect && !isTopRowHovered && !isColHovered && rowTheme
+                              ? { backgroundColor: rowTheme }
+                              : {}),
+                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(rowTheme && sameAsAbove ? { borderTopColor: 'transparent' } : {}),
+                            ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
+                          }}
+                          className={`relative w-11 h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 ${
                             isIntersect
                               ? 'bg-amber-200/95 ring-2 ring-amber-500 shadow-xs z-10'
                               : isCellLinked
@@ -1326,10 +1412,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
-                                    ? 'text-slate-950 text-base scale-125'
-                                    : 'text-slate-900 text-sm'
+                                    ? 'text-base scale-125'
+                                    : 'text-sm'
                                 }`}
                               >
                                 ●
@@ -1337,10 +1424,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
-                                    ? 'text-slate-900 text-sm scale-110'
-                                    : 'text-slate-500 text-xs opacity-80'
+                                    ? 'text-sm scale-110 opacity-80'
+                                    : 'text-xs opacity-60'
                                 }`}
                               >
                                 ○
@@ -1353,7 +1441,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
 
                     {/* NORTH ARM: TOP SECTION ITEM (Row of Improvement Priority / Project) */}
                     {(() => {
-                      const priorityColor = getCompassItemTextColor(priority, 'north', data.level);
+                      const priorityColor = getFamilyTextColor(priority.code);
                       const priorityTeam = extractItemTeam(priority);
 
                       return (
@@ -1361,29 +1449,29 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                           onClick={() => setSelectedTopRowId(selectedTopRowId === priority.id ? null : priority.id)}
                           onMouseEnter={() => setHoveredTopRowIndex(pIndex)}
                           onMouseLeave={() => setHoveredTopRowIndex(null)}
-                          style={{ width: `${compassSquareSize}px`, minWidth: `${compassSquareSize}px`, maxWidth: `${compassSquareSize}px` }}
+                          style={{
+                            width: `${compassSquareSize}px`,
+                            minWidth: `${compassSquareSize}px`,
+                            maxWidth: `${compassSquareSize}px`,
+                            ...(!isTopRowDirect && !isTopRowLinked && rowTheme ? { backgroundColor: rowTheme } : {}),
+                            ...(rowTheme && sameAsAbove ? { borderTopColor: 'transparent' } : {}),
+                            ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
+                          }}
                           className={`px-3 py-1.5 border border-slate-200 align-middle transition-all cursor-pointer group ${
                             isTopRowDirect
                               ? 'bg-sky-200/95 font-bold border-l-4 border-l-sky-600 shadow-xs ring-1 ring-sky-400'
                               : isTopRowLinked
                               ? 'bg-sky-100/90 font-semibold border-l-4 border-l-sky-400 shadow-2xs'
-                              : 'hover:bg-slate-50'
+                              : 'hover:brightness-95'
                           }`}
                           title={isVi ? `Dòng [${priority.code}]: Rà chuột sang phải để xem Người phụ trách (Nhấp để ghim dòng)` : `Row [${priority.code}]: Trace right to view Resources (Click to pin)`}
                         >
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center space-x-2 min-w-0">
-                              {/* Colored Status Dot */}
-                              <span
-                                style={{ backgroundColor: getStatusDotColor(pIndex) }}
-                                className="w-2.5 h-2.5 rounded-full shrink-0 shadow-2xs"
-                                title={`Status: Active`}
-                              ></span>
-
                               {/* Code Badge with Team Color */}
                               <span
-                                style={{ borderColor: priorityColor, color: priorityColor }}
-                                className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-slate-50 border shrink-0"
+                                style={{ borderColor: priorityColor, color: priorityColor, backgroundColor: '#ffffff' }}
+                                className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded border shrink-0"
                               >
                                 {priority.code}
                               </span>
@@ -1462,8 +1550,17 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             setHoveredTopRowIndex(null);
                             setHoveredRightColIndex(null);
                           }}
-                          style={{ width: `${kpiColWidth}px`, minWidth: `${kpiColWidth}px` }}
-                          className={`h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 ${
+                          style={{
+                            width: `${kpiColWidth}px`,
+                            minWidth: `${kpiColWidth}px`,
+                            ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isKpiColDirect && !isTopRowHovered && !isKpiColHovered && rowTheme
+                              ? { backgroundColor: rowTheme }
+                              : {}),
+                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(rowTheme && sameAsAbove ? { borderTopColor: 'transparent' } : {}),
+                            ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
+                          }}
+                          className={`relative h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 ${
                             isIntersect
                               ? 'bg-amber-200/95 ring-2 ring-amber-500 shadow-xs z-10'
                               : isCellLinked
@@ -1481,10 +1578,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
-                                    ? 'text-slate-950 text-base scale-125'
-                                    : 'text-slate-900 text-sm'
+                                    ? 'text-base scale-125'
+                                    : 'text-sm'
                                 }`}
                               >
                                 ●
@@ -1492,10 +1590,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
-                                    ? 'text-slate-900 text-sm scale-110'
-                                    : 'text-slate-500 text-xs opacity-80'
+                                    ? 'text-sm scale-110 opacity-80'
+                                    : 'text-xs opacity-60'
                                 }`}
                               >
                                 ○
@@ -1517,7 +1616,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       const cellKey = `neres_${priority.id}_${res.key}`;
                       const isCellLinked = linkedElements.cellKeys.has(cellKey);
                       const correlation = getNortheastResourceCorrelation(priority, res, pIndex, rIndex);
-                      const resColor = getDepartmentResourceColor(res.department);
+                      const resColor = MANUAL_CELL_COLORS[cellKey] || getDepartmentResourceColor(res.department);
 
                       const isFirstPicCol = rIndex === 0;
 
@@ -1533,7 +1632,14 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             setHoveredTopRowIndex(null);
                             setHoveredRightColIndex(null);
                           }}
-                          className={`w-10 h-9 border-r border-b border-amber-200/80 ${
+                          style={{
+                            ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isResColDirect && !isTopRowHovered && !isResColHovered && rowTheme
+                              ? { backgroundColor: rowTheme }
+                              : {}),
+                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
+                          }}
+                          className={`relative w-10 h-9 border-r border-b border-amber-200/80 ${
                             isFirstPicCol ? 'border-l-4 border-l-amber-500' : 'border-l border-l-amber-200/50'
                           } text-center align-middle cursor-pointer transition-all p-0 group/rescell ${
                             isIntersect
@@ -1593,7 +1699,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                   const isColDirect = hoveredLeftColIndex === lIndex || selectedLeftColId === obj.id;
                   const isColLinked = linkedElements.leftIds.has(obj.id);
                   const isColHovered = isColDirect || isColLinked;
-                  const leftItemColor = getCompassItemTextColor(obj.rawItem || obj, 'west', data.level);
+                  const leftItemColor = getFamilyTextColor(obj.code);
+                  const colTheme = getRowThemeColor(obj.code);
+                  const titleCellKey = `west_title_${obj.id}`;
+                  const manualTitleBg = MANUAL_CELL_COLORS[titleCellKey];
+                  const manualTitleColor = MANUAL_CELL_TEXT_COLORS[titleCellKey] || leftItemColor;
 
                   return (
                     <td
@@ -1601,38 +1711,39 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       onClick={() => setSelectedLeftColId(selectedLeftColId === obj.id ? null : obj.id)}
                       onMouseEnter={() => setHoveredLeftColIndex(lIndex)}
                       onMouseLeave={() => setHoveredLeftColIndex(null)}
-                      style={{ height: `${compassSquareSize}px` }}
-                      className={`w-11 min-w-[44px] max-w-[48px] border border-slate-200 align-bottom p-1.5 transition-all cursor-pointer group ${
+                      style={{
+                        height: `${compassSquareSize}px`,
+                        ...(!isColDirect && !isColLinked && colTheme ? { backgroundColor: colTheme } : {}),
+                        ...(manualTitleBg ? { backgroundColor: manualTitleBg } : {}),
+                      }}
+                      className={`relative w-11 min-w-[44px] max-w-[48px] border border-slate-200 align-bottom p-1.5 transition-all cursor-pointer group ${
                         isColDirect
                           ? 'bg-sky-200/95 font-bold ring-2 ring-sky-500 border-sky-400 shadow-xs text-sky-950'
                           : isColLinked
                           ? 'bg-sky-100/90 font-semibold ring-1 ring-sky-400 border-sky-300 shadow-2xs text-slate-900'
-                          : 'bg-white hover:bg-slate-50'
+                          : 'bg-white hover:brightness-95'
                       }`}
                     >
                       <div style={{ height: `${compassSquareSize - 16}px` }} className="flex flex-col items-center justify-between space-y-2">
-                        {/* Top: Status Dot & Code */}
-                        <div className="flex flex-col items-center space-y-1">
-                          <span
-                            style={{ backgroundColor: getStatusDotColor(lIndex) }}
-                            className="w-2.5 h-2.5 rounded-full shadow-2xs"
-                          ></span>
-                          <span
-                            style={{ borderColor: leftItemColor, color: leftItemColor }}
-                            className="text-[10px] font-mono font-bold px-1 py-0.5 rounded border bg-slate-50"
-                          >
-                            {obj.code}
-                          </span>
-                        </div>
-
-                        {/* Middle: Rotated Vertical Text (Reads bottom-to-top, aligned to bottom) */}
+                        {/* Rotated Vertical Text (Reads bottom-to-top, aligned to bottom): badge before title */}
                         <div className="flex-1 w-full flex flex-col items-center justify-end overflow-hidden pb-1 pt-1 px-0.5">
                           <div
-                            style={{ maxHeight: `${compassSquareSize - 110}px`, color: leftItemColor }}
-                            className="[writing-mode:vertical-rl] rotate-180 text-xs font-semibold tracking-tight whitespace-nowrap select-none overflow-hidden text-ellipsis text-left"
+                            style={{ maxHeight: `${compassSquareSize - 130}px` }}
+                            className="[writing-mode:vertical-rl] rotate-180 flex flex-row-reverse items-center gap-1 select-none overflow-hidden"
                             title={obj.titleVi || obj.title}
                           >
-                            {isVi && obj.titleVi ? obj.titleVi : isKo && obj.titleKo ? obj.titleKo : obj.title}
+                            <span
+                              style={{ color: manualTitleColor }}
+                              className="text-xs font-semibold tracking-tight whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              {isVi && obj.titleVi ? obj.titleVi : isKo && obj.titleKo ? obj.titleKo : obj.title}
+                            </span>
+                            <span
+                              style={{ borderColor: manualTitleColor, color: manualTitleColor, backgroundColor: manualTitleBg || '#ffffff' }}
+                              className="text-[10px] font-mono font-bold px-1 py-0.5 rounded border shrink-0"
+                            >
+                              {obj.code}
+                            </span>
                           </div>
                         </div>
 
@@ -1666,7 +1777,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                     minHeight: `${compassSquareSize}px`,
                     maxHeight: `${compassSquareSize}px`,
                   }}
-                  className={`p-0 border-2 align-middle relative overflow-hidden transition-all duration-300 group/compass ${
+                  className={`p-0 border-2 align-middle relative transition-all duration-300 group/compass ${
                     linkedElements.hasActive ? 'border-emerald-500 shadow-lg ring-2 ring-emerald-400/50' : 'border-emerald-700 shadow-inner'
                   }`}
                 >
@@ -1908,29 +2019,44 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       </foreignObject>
                     </g>
 
-                    {/* Center Logo Icon */}
+                    {/* Center Logo Icon: Compass Rose */}
+                    <defs>
+                      <clipPath id="amplonCompassCenterClip">
+                        <circle
+                          cx="200"
+                          cy="200"
+                          r={linkedElements.hasActive ? 40 : 34}
+                        />
+                      </clipPath>
+                    </defs>
                     <circle
                       cx="200"
                       cy="200"
-                      r={linkedElements.hasActive ? 22 : 18}
+                      r={linkedElements.hasActive ? 42 : 36}
                       fill="#ffffff"
                       stroke={linkedElements.hasActive ? '#15803d' : '#2d7c45'}
                       strokeWidth={linkedElements.hasActive ? 3.5 : 2.5}
                       className="transition-all duration-200 shadow-sm"
                     />
-                    <text
-                      x="200"
-                      y="200"
-                      dominantBaseline="central"
-                      textAnchor="middle"
-                      fill={linkedElements.hasActive ? '#15803d' : '#2d7c45'}
-                      fontWeight="900"
-                      fontSize={linkedElements.hasActive ? 18 : 15}
+                    <image
+                      href="compass-logo.png"
+                      x={200 - (linkedElements.hasActive ? 40 : 34)}
+                      y={200 - (linkedElements.hasActive ? 40 : 34)}
+                      width={(linkedElements.hasActive ? 40 : 34) * 2}
+                      height={(linkedElements.hasActive ? 40 : 34) * 2}
+                      clipPath="url(#amplonCompassCenterClip)"
+                      preserveAspectRatio="xMidYMid slice"
                       className="transition-all duration-200 select-none pointer-events-none"
-                    >
-                      X
-                    </text>
+                    />
                   </svg>
+
+                  {/* Floating Samho Logo Badge: pinned inside the compass square */}
+                  <img
+                    src="samho-logo-red.png"
+                    alt="Vietnam Samho Co. Ltd"
+                    title="Vietnam Samho Co. Ltd"
+                    className="absolute left-1/2 -translate-x-1/2 top-[95px] z-20 w-12 h-12 rounded-full bg-white ring-2 ring-white shadow-lg select-none pointer-events-none"
+                  />
                 </td>
 
                 {/* EAST ARM (PART 1): TARGETS TO IMPROVE (KPIs) - Rotated Columns */}
@@ -1939,7 +2065,8 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                   const isKpiColLinked = linkedElements.kpiIds.has(kpi.id);
                   const isKpiColHovered = isKpiColDirect || isKpiColLinked;
                   const kpiDisplayName = getLocalizedPureText(kpi.name, kpi.nameVi, language);
-                  const kpiTextColor = getCompassItemTextColor(kpi, 'east', data.level);
+                  const kpiTextColor = getFamilyTextColor(kpi.code);
+                  const kpiTheme = getRowThemeColor(kpi.code);
 
                   return (
                     <td
@@ -1950,40 +2077,41 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       }}
                       onMouseEnter={() => setHoveredRightColIndex(kIndex)}
                       onMouseLeave={() => setHoveredRightColIndex(null)}
-                      style={{ width: `${kpiColWidth}px`, minWidth: `${kpiColWidth}px`, maxWidth: `${kpiColWidth}px`, height: `${compassSquareSize}px` }}
+                      style={{
+                        width: `${kpiColWidth}px`,
+                        minWidth: `${kpiColWidth}px`,
+                        maxWidth: `${kpiColWidth}px`,
+                        height: `${compassSquareSize}px`,
+                        ...(!isKpiColDirect && !isKpiColLinked && kpiTheme ? { backgroundColor: kpiTheme } : {}),
+                      }}
                       className={`border border-slate-200 align-bottom p-1.5 transition-all cursor-pointer group ${
                         isKpiColDirect
                           ? 'bg-sky-200/95 font-bold ring-2 ring-sky-500 border-sky-400 shadow-xs text-sky-950'
                           : isKpiColLinked
                           ? 'bg-sky-100/90 font-semibold ring-1 ring-sky-400 border-sky-300 shadow-2xs text-slate-900'
-                          : 'bg-white hover:bg-slate-50'
+                          : 'bg-white hover:brightness-95'
                       }`}
                     >
                       <div style={{ height: `${compassSquareSize - 16}px` }} className="flex flex-col items-center justify-between space-y-1.5">
-                        {/* Top: Status Dot + Code Badge */}
-                        <div className="flex flex-col items-center space-y-1">
-                          <span
-                            style={{ backgroundColor: getStatusDotColor(kIndex, kpi) }}
-                            className="w-2.5 h-2.5 rounded-full shadow-2xs"
-                            title={`Status: ${getKpiOverallStatus(kpi)}`}
-                          ></span>
-                          <span
-                            style={{ borderColor: kpiTextColor, color: kpiTextColor }}
-                            className="text-[9px] font-mono font-bold px-1 py-0.5 rounded border bg-slate-50 text-center leading-tight max-w-[38px] truncate"
-                            title={kpi.code}
-                          >
-                            {kpi.code}
-                          </span>
-                        </div>
-
-                        {/* Middle: Rotated Vertical KPI Title (Aligned to bottom) */}
+                        {/* Rotated Vertical KPI Title (Aligned to bottom): badge before title */}
                         <div className="flex-1 w-full flex flex-col items-center justify-end overflow-hidden pb-1 pt-1 px-0.5">
                           <div
-                            style={{ maxHeight: `${compassSquareSize - 80}px`, color: kpiTextColor }}
-                            className="[writing-mode:vertical-rl] rotate-180 text-xs font-semibold tracking-tight whitespace-nowrap select-none overflow-hidden text-ellipsis text-left"
+                            style={{ maxHeight: `${compassSquareSize - 100}px` }}
+                            className="[writing-mode:vertical-rl] rotate-180 flex flex-row-reverse items-center gap-1 select-none overflow-hidden"
                             title={`${kpi.code}: ${kpiDisplayName}`}
                           >
-                            {kpiDisplayName}
+                            <span
+                              style={{ color: kpiTextColor }}
+                              className="text-xs font-semibold tracking-tight whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                              {kpiDisplayName}
+                            </span>
+                            <span
+                              style={{ borderColor: kpiTextColor, color: kpiTextColor, backgroundColor: '#ffffff' }}
+                              className="text-[9px] font-mono font-bold px-1 py-0.5 rounded border leading-tight max-w-[38px] truncate shrink-0"
+                            >
+                              {kpi.code}
+                            </span>
                           </div>
                         </div>
 
@@ -2070,6 +2198,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                 const isRowDirect = hoveredBottomRowIndex === bIndex || selectedBottomRowId === bItem.id;
                 const isRowLinked = linkedElements.bottomIds.has(bItem.id);
                 const isBottomRowHovered = isRowDirect || isRowLinked;
+                const bRowTheme = getRowThemeColor(bItem.code);
                 const isObj = section1Config.itemType === 'objective';
 
                 return (
@@ -2103,7 +2232,13 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             setHoveredBottomRowIndex(null);
                             setHoveredLeftColIndex(null);
                           }}
-                          className={`w-11 h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 group/swcell ${
+                          style={{
+                            ...(!isCellLinked && !isIntersect && !(isColDirect && isRowDirect) && !isColHovered && !isBottomRowHovered && bRowTheme
+                              ? { backgroundColor: bRowTheme }
+                              : {}),
+                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                          }}
+                          className={`relative w-11 h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 group/swcell ${
                             isCellLinked || isIntersect
                               ? 'bg-emerald-100/90 ring-1 ring-emerald-500 font-bold'
                               : isColDirect && isRowDirect
@@ -2121,8 +2256,9 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(bItem.code) }}
                                 className={`leading-none select-none inline-block transition-transform ${
-                                  isCellLinked || isIntersect ? 'text-emerald-950 text-base scale-125' : 'text-slate-900 text-sm'
+                                  isCellLinked || isIntersect ? 'text-base scale-125' : 'text-sm'
                                 }`}
                                 title={isVi ? 'Liên kết chính (●)' : 'Primary Alignment (●)'}
                               >
@@ -2131,8 +2267,9 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
+                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(bItem.code) }}
                                 className={`leading-none select-none inline-block transition-transform ${
-                                  isCellLinked || isIntersect ? 'text-emerald-800 text-sm scale-110 opacity-100' : 'text-slate-500 text-xs opacity-80'
+                                  isCellLinked || isIntersect ? 'text-sm scale-110 opacity-80' : 'text-xs opacity-60'
                                 }`}
                                 title={isVi ? 'Liên kết bổ trợ (○)' : 'Secondary Alignment (○)'}
                               >
@@ -2151,12 +2288,23 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                     {(() => {
                       const bottomItemColor = getCompassItemTextColor(bItem, 'south', data.level);
                       const bottomTeam = extractItemTeam(bItem);
+                      const titleCellKey = `south_title_${bItem.id}`;
+                      const manualTitleBg = MANUAL_CELL_COLORS[titleCellKey];
+                      const manualTitleColor = MANUAL_CELL_TEXT_COLORS[titleCellKey] || bottomItemColor;
+                      const hasManualTitleStyle = !!manualTitleBg || !!MANUAL_CELL_TEXT_COLORS[titleCellKey];
+                      const manualBadgeBg = manualTitleBg || `${manualTitleColor}15`;
 
                       return (
                         <td
                           onClick={() => setSelectedBottomRowId(selectedBottomRowId === bItem.id ? null : bItem.id)}
-                          style={{ width: `${compassSquareSize}px`, minWidth: `${compassSquareSize}px`, maxWidth: `${compassSquareSize}px` }}
-                          className={`px-3 py-1.5 border border-slate-200 align-middle transition-all cursor-pointer group ${
+                          style={{
+                            width: `${compassSquareSize}px`,
+                            minWidth: `${compassSquareSize}px`,
+                            maxWidth: `${compassSquareSize}px`,
+                            ...(!isRowDirect && !isRowLinked && bRowTheme ? { backgroundColor: bRowTheme } : {}),
+                            ...(manualTitleBg ? { backgroundColor: manualTitleBg } : {}),
+                          }}
+                          className={`relative px-3 py-1.5 border border-slate-200 align-middle transition-all cursor-pointer group ${
                             isRowDirect
                               ? 'bg-sky-200/95 font-bold ring-2 ring-sky-500 border-sky-400 shadow-xs'
                               : isRowLinked
@@ -2166,25 +2314,22 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                         >
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center space-x-2 min-w-0">
-                              {/* Colored Status Dot */}
-                              <span
-                                style={{ backgroundColor: getStatusDotColor(bIndex) }}
-                                className="w-2.5 h-2.5 rounded-full shrink-0 shadow-2xs"
-                              ></span>
-
                               {/* Code Badge */}
                               <span
-                                style={{ borderColor: bottomItemColor, color: bottomItemColor }}
-                                className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded bg-slate-50 border shrink-0"
+                                style={{ borderColor: manualTitleColor, color: manualTitleColor, backgroundColor: manualTitleBg || '#f8fafc' }}
+                                className="text-[10px] font-mono font-bold px-1.5 py-0.5 rounded border shrink-0"
                               >
                                 {bItem.code}
                               </span>
 
                               {/* Level badge */}
                               {compassLabels.bottomBadgeVi && (
-                                <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded shrink-0 ${
-                                  isL2 || isL3 ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-600'
-                                }`}>
+                                <span
+                                  style={hasManualTitleStyle ? { backgroundColor: manualBadgeBg, color: manualTitleColor } : undefined}
+                                  className={`text-[9px] font-semibold px-1.5 py-0.5 rounded shrink-0 ${
+                                    isL2 || isL3 ? 'bg-sky-100 text-sky-800' : 'bg-slate-100 text-slate-600'
+                                  }`}
+                                >
                                   {compassLabels.bottomBadgeVi}
                                 </span>
                               )}
@@ -2192,7 +2337,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                               {/* Department / Team badge if team-specific */}
                               {bottomTeam && bottomTeam !== 'GENERAL' && (
                                 <span
-                                  style={{ backgroundColor: `${bottomItemColor}15`, color: bottomItemColor }}
+                                  style={{ backgroundColor: manualBadgeBg, color: manualTitleColor }}
                                   className="text-[9px] font-bold px-1.5 py-0.2 rounded shrink-0 hidden sm:inline-block uppercase tracking-wider"
                                 >
                                   {bItem.department || bottomTeam}
@@ -2201,7 +2346,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
 
                               {/* Title */}
                               <span
-                                style={{ color: bottomItemColor }}
+                                style={{ color: manualTitleColor }}
                                 className="text-xs font-semibold truncate"
                                 title={bItem.titleVi || bItem.title}
                               >
@@ -2400,7 +2545,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
               className="flex items-center space-x-1 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white text-xs font-semibold rounded-lg border border-slate-700 transition cursor-pointer"
               title={isVi ? 'Cuộn lên Ma trận X' : 'Scroll up to X-Matrix'}
             >
-              <span>↑ {isVi ? 'Về Ma Trận X' : 'Back to Matrix'}</span>
+              <span>← {isVi ? 'Về Ma Trận X' : 'Back to Matrix'}</span>
             </button>
           </div>
         </div>
@@ -2444,12 +2589,14 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                 }
                 const status = getKpiOverallStatus(kpi);
                 const kpiDisplayName = getLocalizedPureText(kpi.name, kpi.nameVi, language);
+                const kpiRowTheme = getRowThemeColor(kpi.code);
 
                 return (
                   <tr
                     key={kpi.id}
                     onClick={() => onSelectKpi(kpi)}
-                    className="hover:bg-slate-50 transition-colors cursor-pointer group"
+                    style={kpiRowTheme ? { backgroundColor: kpiRowTheme } : undefined}
+                    className="hover:brightness-95 transition-all cursor-pointer group"
                   >
                     <td className="py-2.5 px-3 text-center font-mono text-slate-400 font-semibold">
                       {idx + 1}
