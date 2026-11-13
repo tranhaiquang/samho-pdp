@@ -112,6 +112,30 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
     return kpi.department;
   };
 
+  const getXMatrixTeamColor = (department: string) => {
+    if (department === 'Biz') {
+      return {
+        text: 'text-[#6D28D9]',
+        bg: 'bg-[#EDE9FE]',
+        border: 'border-[#A78BFA]',
+        badge: 'bg-[#EDE9FE] text-[#6D28D9] border border-[#A78BFA] font-semibold',
+        hex: '#EDE9FE',
+        ring: 'ring-[#A78BFA]',
+      };
+    }
+    if (department === 'CSR') {
+      return {
+        text: 'text-[#A16207]',
+        bg: 'bg-[#FFF4CC]',
+        border: 'border-[#FDE047]',
+        badge: 'bg-[#FFF4CC] text-[#A16207] border border-[#FDE047] font-semibold',
+        hex: '#FFF4CC',
+        ring: 'ring-[#FDE047]',
+      };
+    }
+    return getTeamColorConfig(department);
+  };
+
   // Filter logic
   // Helper to get the responsible party / owner from X-Matrix for a KPI according to the current level
   const getKpiOwnerFromXMatrix = (kpi: KpiItem): string => {
@@ -413,7 +437,7 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
                   const overallStatus = getKpiOverallStatus(kpi);
                   const ownerDisplay = getKpiOwnerFromXMatrix(kpi);
                   const displayDepartment = getBowlingChartDepartment(kpi);
-                  const teamColor = getTeamColorConfig(displayDepartment);
+                  const teamColor = getXMatrixTeamColor(displayDepartment);
 
                   return (
                     <React.Fragment key={kpi.id}>
