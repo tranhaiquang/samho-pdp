@@ -42,6 +42,13 @@ const LEGACY_BASELINE_HASHES = [
     l2Data: 'f35a5c48-7c84caaa',
     l3Data: 'a9056129-14ffacfa',
   },
+  {
+    // Bowler Dept. inheritance fixed, but Delivery/Responsible Leadership were not
+    // yet canonicalized to Biz/CSR.
+    l1Data: 'e04cf716-487dd309',
+    l2Data: '6bd05af1-7c0b0dbd',
+    l3Data: '8c1290a5-c2483731',
+  },
 ];
 
 function stableStringify(value: any): string {

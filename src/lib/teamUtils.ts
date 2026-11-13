@@ -196,7 +196,6 @@ export const ORDERED_TEAM_IDS = [
   'Dev',
   'CSR',
   'IT',
-  'Delivery',
   'HR',
   'Planning',
 ];

@@ -14,6 +14,13 @@ const SHEETS = [
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const VALID_DEPTS = ['Lean', 'Delivery', 'Responsible Leadership', 'Development', 'Quality', 'Production', 'Biz', 'IT', 'CSR', 'HR', 'Planning'];
 
+// Delivery is the same team as Biz; Responsible Leadership is the same team as CSR.
+const canonicalTeam = (department) => {
+  if (department === 'Delivery') return 'Biz';
+  if (department === 'Responsible Leadership') return 'CSR';
+  return department;
+};
+
 const wb = XLSX.readFile(FILE);
 const payload = {};
 
@@ -36,12 +43,13 @@ for (const { sheet, level } of SHEETS) {
     // Bowler leaves Dept. blank when it continues from the previous group;
     // do not mistake that for Production.
     if (rawDept) {
-      activeDepartment =
+      const found =
         VALID_DEPTS.find((d) => d.toLowerCase() === rawDept) ||
         VALID_DEPTS.find((d) => rawDept.includes(d.toLowerCase())) ||
         activeDepartment;
+      activeDepartment = canonicalTeam(found);
     }
-    const department = activeDepartment;
+    const department = canonicalTeam(activeDepartment);
 
     const dirText = String(row[21] || '');
     const targetDirection = /lower|▼/i.test(dirText) ? 'lower' : /bool|y\/n/i.test(dirText) ? 'boolean' : 'higher';

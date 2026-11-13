@@ -77,7 +77,7 @@ export function normalizeTeamName(dept: string | undefined): string {
   const d = dept.trim();
   const lower = d.toLowerCase();
   if (lower === 'dev' || lower === 'development') return 'Dev';
-  if (lower === 'biz' || lower === 'business') return 'Biz';
+  if (lower === 'biz' || lower === 'business' || lower === 'delivery') return 'Biz';
   if (lower === 'prod' || lower === 'production') return 'Production';
   if (lower === 'qual' || lower === 'quality') return 'Quality';
   // CSR and Responsible Leadership are one and the same
@@ -101,6 +101,11 @@ export function matchesTeam(deptOrOwner: string | undefined, selectedTeam: strin
   const isTeamCSR = t === 'csr' || t.includes('responsible') || t.includes('leadership');
   const isDataCSR = d.includes('csr') || d.includes('responsible') || d.includes('leadership');
   if (isTeamCSR && isDataCSR) return true;
+
+  // Biz and Delivery are one and the same
+  const isTeamBiz = t === 'biz' || t === 'delivery' || t === 'business';
+  const isDataBiz = d === 'biz' || d === 'delivery' || d === 'business';
+  if (isTeamBiz && isDataBiz) return true;
 
   if (d === t) return true;
 
