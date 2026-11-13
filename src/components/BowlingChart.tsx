@@ -12,7 +12,6 @@ import {
   getKpiOverallStatus,
   StatusColor,
   matchesTeam,
-  normalizeTeamName,
   formatCellDisplay,
 } from '../lib/kpiUtils';
 import { getTeamColorConfig } from '../lib/teamUtils';
@@ -103,9 +102,21 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
 
   const { kpis, level, title, titleVi, year } = data;
 
+  // Bowling Chart shows the short team labels used in the X-Matrix/PIC area.
+  const getBowlingChartDepartment = (kpi: KpiItem): string => {
+    if (level === 'L1') {
+      const family = kpi.code.match(/1\.(\d+)/)?.[1];
+      if (family === '2') return 'Biz';
+      if (family === '3') return 'CSR';
+    }
+    return kpi.department;
+  };
+
   // Filter logic
   // Helper to get the responsible party / owner from X-Matrix for a KPI according to the current level
   const getKpiOwnerFromXMatrix = (kpi: KpiItem): string => {
+    const departmentLabel = getBowlingChartDepartment(kpi);
+
     // 1. If kpi has an owner specified and it's not a generic level title (like 'Team Leader/Staff', 'Department heads', or 'SYKim')
     if (kpi.owner && kpi.owner.trim() !== '') {
       const trimmed = kpi.owner.trim();
@@ -136,20 +147,20 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
     // 3. Lookup resource by department in X-Matrix data for this level
     if (data.resources && data.resources.length > 0) {
       const deptRes = data.resources.find(
-        (r) => matchesTeam(r.department, kpi.department) || matchesTeam(r.key, kpi.department)
+        (r) => matchesTeam(r.department, departmentLabel) || matchesTeam(r.key, departmentLabel)
       );
       if (deptRes) {
         return deptRes.fullTitle || `${deptRes.department}: ${deptRes.name}`;
       }
     }
 
-    // 4. Fallback to kpi.owner if exists, otherwise kpi.department
-    return kpi.owner || kpi.department || '';
+    // 4. Fallback to kpi.owner if exists, otherwise display department
+    return kpi.owner || departmentLabel || '';
   };
 
   const filteredKpis = kpis.filter((kpi) => {
     // Dept/Team filter using matchesTeam for robust normalization
-    if (activeTeam !== 'ALL' && !matchesTeam(kpi.department, activeTeam)) return false;
+    if (activeTeam !== 'ALL' && !matchesTeam(getBowlingChartDepartment(kpi), activeTeam)) return false;
 
     // Status filter
     const status = getKpiOverallStatus(kpi);
@@ -173,9 +184,9 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
     return true;
   });
 
-  // Unique departments for filter (normalized, CSR and Responsible Leadership merged)
+  // Unique departments for filter (same labels shown in the table)
   const departments = Array.from(
-    new Set(kpis.map((k) => normalizeTeamName(k.department)).filter(Boolean))
+    new Set(kpis.map((k) => getBowlingChartDepartment(k)).filter(Boolean))
   );
 
   const handleStartEdit = (
@@ -401,7 +412,8 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
                 filteredKpis.map((kpi) => {
                   const overallStatus = getKpiOverallStatus(kpi);
                   const ownerDisplay = getKpiOwnerFromXMatrix(kpi);
-                  const teamColor = getTeamColorConfig(kpi.department);
+                  const displayDepartment = getBowlingChartDepartment(kpi);
+                  const teamColor = getTeamColorConfig(displayDepartment);
 
                   return (
                     <React.Fragment key={kpi.id}>
@@ -417,7 +429,7 @@ export const BowlingChart: React.FC<BowlingChartProps> = ({
                           <span
                             className={`px-2 py-0.5 rounded font-mono text-[11px] block text-center mb-1 font-bold ${teamColor.badge}`}
                           >
-                            {kpi.department}
+                            {displayDepartment}
                           </span>
                           <span
                             className={`text-[11px] font-bold block text-center px-1.5 py-0.5 rounded border shadow-2xs mt-0.5 font-mono break-words leading-tight ${teamColor.bg} ${teamColor.text} ${teamColor.border}`}
