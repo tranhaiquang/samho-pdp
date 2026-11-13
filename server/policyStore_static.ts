@@ -26,14 +26,23 @@ export interface StoreState {
 const STORAGE_KEY = 'samho_policy_state_v1';
 const BACKUP_KEY = 'samho_policy_state_backup_v1';
 
-// Hashes of the pre-import static baseline. If localStorage still contains exactly
-// that unedited snapshot, the site can safely adopt the shipped seed instead of
-// preserving obsolete IDs forever.
-const OLD_BASELINE_HASHES = {
-  l1Data: '4dd12566-4e17480',
-  l2Data: '777dee42-8dac2cc',
-  l3Data: '16150500-9de536d2',
-};
+// Hashes of obsolete static baselines. If localStorage still contains exactly
+// one of these unedited snapshots, the site can safely adopt the shipped seed
+// instead of preserving stale departments/IDs forever.
+const LEGACY_BASELINE_HASHES = [
+  {
+    // Pre-Excel-import L1 baseline.
+    l1Data: '4dd12566-4e17480',
+    l2Data: '777dee42-8dac2cc',
+    l3Data: '16150500-9de536d2',
+  },
+  {
+    // Imported L1 IDs, but department inheritance still fell back to Production.
+    l1Data: 'fe36acd6-2747e2c2',
+    l2Data: 'f35a5c48-7c84caaa',
+    l3Data: 'a9056129-14ffacfa',
+  },
+];
 
 function stableStringify(value: any): string {
   if (value === undefined) return 'undefined';
@@ -59,10 +68,11 @@ function hashString(str: string): string {
 
 function isExactOldBaseline(state: StoreState | null): boolean {
   if (!state) return false;
-  return (
-    hashString(stableStringify(state.l1Data)) === OLD_BASELINE_HASHES.l1Data &&
-    hashString(stableStringify(state.l2Data)) === OLD_BASELINE_HASHES.l2Data &&
-    hashString(stableStringify(state.l3Data)) === OLD_BASELINE_HASHES.l3Data
+  const l1Data = hashString(stableStringify(state.l1Data));
+  const l2Data = hashString(stableStringify(state.l2Data));
+  const l3Data = hashString(stableStringify(state.l3Data));
+  return LEGACY_BASELINE_HASHES.some(
+    (legacy) => l1Data === legacy.l1Data && l2Data === legacy.l2Data && l3Data === legacy.l3Data
   );
 }
 
