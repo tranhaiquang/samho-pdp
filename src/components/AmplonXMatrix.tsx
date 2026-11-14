@@ -194,6 +194,150 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
   const isL2 = data.level === 'L2';
   const isL3 = data.level === 'L3';
 
+  // L2-only per-cell color picker (the L1 workflow, restricted to the L2
+  // view). Persists to localStorage and exports JSON to bake into
+  // matrixCellColors.ts. Hidden; flip back to re-enable. L1 keeps the baked palette.
+  const SHOW_L2_COLOR_PICKER = false;
+  const CELL_COLOR_OPTIONS = [
+    { value: '#DBEEF4', label: 'Lean / Prod' },
+    { value: '#EDE9FE', label: 'Delivery' },
+    { value: '#FFF4CC', label: 'CSR / RL' },
+    { value: '#EBF1DE', label: 'Development' },
+    { value: '#C6E0B4', label: 'Quality' },
+  ] as const;
+  const CELL_TEXT_COLOR_OPTIONS = [
+    { value: '#0284C7', label: 'Lean / Prod' },
+    { value: '#6D28D9', label: 'Delivery' },
+    { value: '#A16207', label: 'CSR / RL' },
+    { value: '#4D7C0F', label: 'Development' },
+    { value: '#15803D', label: 'Quality' },
+  ] as const;
+  const CELL_COLOR_VALUES = new Set<string>(CELL_COLOR_OPTIONS.map((o) => o.value));
+  const CELL_TEXT_COLOR_VALUES = new Set<string>(CELL_TEXT_COLOR_OPTIONS.map((o) => o.value));
+  const filterSavedColors = (saved: Record<string, unknown>, allowed: Set<string>) =>
+    Object.fromEntries(
+      Object.entries(saved).filter(([key, color]) => key && typeof color === 'string' && allowed.has(color))
+    ) as Record<string, string>;
+  const [cellColors, setCellColors] = useState<Record<string, string>>(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem('amplon-cell-colors') || '{}') as Record<string, unknown>;
+      return filterSavedColors(saved, CELL_COLOR_VALUES);
+    } catch {
+      return {};
+    }
+  });
+  const [cellTextColors, setCellTextColors] = useState<Record<string, string>>(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem('amplon-cell-text-colors') || '{}') as Record<string, unknown>;
+      return filterSavedColors(saved, CELL_TEXT_COLOR_VALUES);
+    } catch {
+      return {};
+    }
+  });
+  const [cellColorsCopied, setCellColorsCopied] = useState(false);
+  useEffect(() => {
+    localStorage.setItem('amplon-cell-colors', JSON.stringify(cellColors));
+  }, [cellColors]);
+  useEffect(() => {
+    localStorage.setItem('amplon-cell-text-colors', JSON.stringify(cellTextColors));
+  }, [cellTextColors]);
+  const effectiveColors = isL2 ? { ...MANUAL_CELL_COLORS, ...cellColors } : MANUAL_CELL_COLORS;
+  const effectiveTextColors = isL2 ? { ...MANUAL_CELL_TEXT_COLORS, ...cellTextColors } : MANUAL_CELL_TEXT_COLORS;
+  const copyCellColors = async () => {
+    const json = JSON.stringify({ cellColors, cellTextColors }, null, 2);
+    try {
+      await navigator.clipboard.writeText(json);
+      setCellColorsCopied(true);
+      window.setTimeout(() => setCellColorsCopied(false), 1500);
+    } catch {
+      window.prompt('Cell colors JSON', json);
+    }
+  };
+  const clearCellColors = () => {
+    setCellColors({});
+    setCellTextColors({});
+  };
+  const renderCellColorPicker = (cellKey: string, position: 'right' | 'left' = 'right') => {
+    if (!isL2 || !SHOW_L2_COLOR_PICKER) return null;
+    return (
+      <label
+        className={`absolute top-0.5 ${position === 'right' ? 'right-0.5' : 'left-0.5'} z-20 opacity-70 hover:opacity-100 focus-within:opacity-100 transition cursor-pointer print:hidden`}
+        title={`Cell background: ${cellKey}`}
+        onClick={(e) => e.stopPropagation()}
+        onMouseEnter={(e) => e.stopPropagation()}
+        onMouseLeave={(e) => e.stopPropagation()}
+      >
+        <select
+          value={cellColors[cellKey] || ''}
+          onChange={(e) => {
+            const color = e.target.value;
+            setCellColors((prev) => {
+              if (!color) {
+                const next = { ...prev };
+                delete next[cellKey];
+                return next;
+              }
+              return { ...prev, [cellKey]: color };
+            });
+          }}
+          className="absolute inset-0 opacity-0 cursor-pointer"
+          aria-label="Pick cell background color"
+        >
+          <option value="">Default / none</option>
+          {CELL_COLOR_OPTIONS.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label} - {option.value}
+            </option>
+          ))}
+        </select>
+        <span
+          style={{ backgroundColor: cellColors[cellKey] || '#ffffff' }}
+          className="block w-3.5 h-3.5 rounded-sm border border-slate-500/70 shadow-sm"
+        />
+      </label>
+    );
+  };
+  const renderCellTextColorPicker = (cellKey: string, position: 'under' | 'right' = 'under') => {
+    if (!isL2 || !SHOW_L2_COLOR_PICKER) return null;
+    return (
+      <label
+        className={`absolute ${position === 'right' ? 'top-0.5 right-5' : 'top-5 left-0.5'} z-20 opacity-70 hover:opacity-100 focus-within:opacity-100 transition cursor-pointer print:hidden`}
+        title={`Cell text: ${cellKey}`}
+        onClick={(e) => e.stopPropagation()}
+        onMouseEnter={(e) => e.stopPropagation()}
+        onMouseLeave={(e) => e.stopPropagation()}
+      >
+        <select
+          value={cellTextColors[cellKey] || ''}
+          onChange={(e) => {
+            const color = e.target.value;
+            setCellTextColors((prev) => {
+              if (!color) {
+                const next = { ...prev };
+                delete next[cellKey];
+                return next;
+              }
+              return { ...prev, [cellKey]: color };
+            });
+          }}
+          className="absolute inset-0 opacity-0 cursor-pointer"
+          aria-label="Pick cell text color"
+        >
+          <option value="">Default / none</option>
+          {CELL_TEXT_COLOR_OPTIONS.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label} - {option.value}
+            </option>
+          ))}
+        </select>
+        <span
+          style={{ backgroundColor: cellTextColors[cellKey] || '#ffffff' }}
+          className="block w-3.5 h-3.5 rounded-sm border border-slate-500/70 shadow-sm"
+        />
+      </label>
+    );
+  };
+
   // Dynamic Compass & Quadrant labels reflecting exact 2nd level and 3rd level logic
   const compassLabels = useMemo(() => {
     if (isL2) {
@@ -338,83 +482,110 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
   }, [section1Config]);
 
   // 4. Right Items (East Arm): Divided into KPIs + Resources
-  // KPIs sorted small to big by code (L1 1.1.1 … L1 1.5.2), left to right
+  // KPIs grouped by family, left to right: Lean, Biz, Quality, CSR, Development.
+  // L1 keeps the workbook code order; L2/L3 rank by department because the CSR
+  // workbook renumbered the Delivery/Biz KPIs into the 1.1 block.
+  const eastFamilyRank = (kpi: { code?: string; department?: string }): number => {
+    const d = (kpi.department || '').toLowerCase();
+    if (d.includes('lean') || d.includes('prod')) return 0;
+    if (d.includes('biz') || d.includes('delivery')) return 100;
+    if (d.includes('quality') || d.includes('qa')) return 200;
+    if (d.includes('csr') || d.includes('responsible')) return 300;
+    if (d.includes('dev')) return 400;
+    const m = (kpi.code || '').match(/(\d+)\s*\.\s*(\d+)/);
+    return 500 + (m ? Number(`${m[1]}.${m[2]}`) : 99);
+  };
   const rightKpiItems = useMemo(() => {
-    return [...displayedKpis].sort((a, b) => compareCodeDesc(b, a)); // flip desc -> asc
-  }, [displayedKpis]);
+    if (isL1) return [...displayedKpis].sort((a, b) => compareCodeDesc(b, a)); // flip desc -> asc
+    return [...displayedKpis].sort((a, b) => eastFamilyRank(a) - eastFamilyRank(b) || compareCodeDesc(b, a));
+  }, [displayedKpis, isL1]);
 
   const rightResourceItems = useMemo(() => {
     return sortContiguousByTeam(displayedResources);
   }, [displayedResources]);
 
   // Row theme colors taken from the Lieu PDP_2026_SA1_WS.xlsx matrix sheets:
-  // L1 1.1.x -> DBEEF4 (Lean/Prod, blue), 1.2.x -> EDE9FE (Delivery, purple),
-  // 1.3.x -> FFF4CC (Responsible Leadership, yellow), 1.4.x -> EBF1DE (Dev, light green),
-  // 1.5.x -> C6E0B4 (Quality, green). L2/L3 (cascaded from the Lean objective) -> DBEEF4.
-  // Returns '' for items without a theme (e.g. 3-year breakthrough objectives) -> keep white.
-  const getRowThemeColor = (code: string | undefined): string => {
-    if (data.level !== 'L1') return '#DBEEF4';
-    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
-    const fam = m ? `${m[1]}.${m[2]}` : '';
-    switch (fam) {
-      case '1.1':
-        return '#DBEEF4';
-      case '1.2':
-        return '#EDE9FE'; // violet-100 (Delivery - purple)
-      case '1.3':
-        return '#FFF4CC';
-      case '1.4':
-        return '#EBF1DE';
-      case '1.5':
-        return '#C6E0B4';
-      default:
-        return '';
+  // Family colors are shared across levels, matched against the workbook
+  // numbering: L1 codes look like "L1 1.2 ..." (1.1 Lean, 1.2 Delivery,
+  // 1.3 Responsible Leadership, 1.4 Dev, 1.5 Quality); L2/L3 codes use
+  // single-digit families: 1=Lean, 2=Delivery/Biz, 3=Quality, 4=CSR/RL,
+  // 5=Development. Returns '' for items without a family (e.g. 3-year
+  // breakthrough objectives) -> keep white.
+  const FAMILY_THEME: Record<string, string> = {
+    '1.1': '#DBEEF4', '1.2': '#EDE9FE', '1.3': '#FFF4CC', '1.4': '#EBF1DE', '1.5': '#C6E0B4',
+    '1': '#DBEEF4', '2': '#EDE9FE', '3': '#C6E0B4', '4': '#FFF4CC', '5': '#EBF1DE',
+  };
+  const FAMILY_TEXT: Record<string, string> = {
+    '1.1': '#0284C7', '1.2': '#6D28D9', '1.3': '#A16207', '1.4': '#4D7C0F', '1.5': '#15803D',
+    '1': '#0284C7', '2': '#6D28D9', '3': '#15803D', '4': '#A16207', '5': '#4D7C0F',
+  };
+  const FAMILY_DOT: Record<string, string> = {
+    '1.1': '#38BDF8', '1.2': '#A78BFA', '1.3': '#FDE047', '1.4': '#A3E635', '1.5': '#4ADE80',
+    '1': '#38BDF8', '2': '#A78BFA', '3': '#4ADE80', '4': '#FDE047', '5': '#A3E635',
+  };
+
+  // Department is the most reliable color signal: some series (e.g. the CSR
+  // workbook's Delivery KPIs "L2 1.1.x.x") are numbered in the Lean block but
+  // belong to Biz. Built from every item in this level.
+  const deptKeyOf = (d?: string): string => {
+    const s = (d || '').toLowerCase();
+    if (s.includes('biz') || s.includes('delivery')) return '2';
+    if (s.includes('quality') || s.includes('qa')) return '3';
+    if (s.includes('csr') || s.includes('responsible')) return '4';
+    if (s.includes('dev')) return '5';
+    if (s.includes('lean') || s.includes('prod')) return '1';
+    return '';
+  };
+  const DEPT_FAMILY = (() => {
+    const map: Record<string, string> = {};
+    const add = (code?: string, department?: string) => {
+      const key = deptKeyOf(department);
+      if (code && key) map[String(code).trim()] = key;
+    };
+    const all: Array<{ code?: string; department?: string }> = [
+      ...(data.kpis || []),
+      ...(data.priorities || []),
+      ...(data.annualObjectives || []),
+      ...(data.threeYearObjectives || []),
+    ];
+    for (const item of all) add(item.code, item.department);
+    return map;
+  })();
+
+  const familyKeyOf = (code: string | undefined): string => {
+    const norm = (code || '').trim();
+    if (data.level !== 'L1') {
+      const byDept = DEPT_FAMILY[norm];
+      if (byDept) return byDept;
+      const m = norm.match(/^L[23][\s.]*(\d)/i); // L2/L3 native code: single-digit family
+      if (m) return m[1];
+      const t = norm.match(/(\d+)\s*\.\s*(\d+)/); // e.g. "L 1.5", "L1 1.4": L1-family item
+      if (t) {
+        const full = `${t[1]}.${t[2]}`;
+        return FAMILY_THEME[full] ? full : t[1];
+      }
+      return '';
     }
+    const m = norm.match(/(\d+)\s*\.\s*(\d+)/);
+    return m ? `${m[1]}.${m[2]}` : '';
+  };
+
+  const getRowThemeColor = (code: string | undefined): string => {
+    const theme = FAMILY_THEME[familyKeyOf(code)];
+    if (theme) return theme;
+    if (data.level !== 'L1') return '#DBEEF4';
+    return '';
   };
 
   // Family text colors (readable darker variants of the theme pastels,
   // used for arm labels & code badges)
-  const getFamilyTextColor = (code: string | undefined): string => {
-    if (data.level !== 'L1') return '#0284C7'; // L2/L3: Lean-cascade blue
-    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
-    const fam = m ? `${m[1]}.${m[2]}` : '';
-    switch (fam) {
-      case '1.1':
-        return '#0284C7'; // sky-600 (light blue)
-      case '1.2':
-        return '#6D28D9'; // violet-700 (Delivery - purple)
-      case '1.3':
-        return '#A16207'; // yellow-700 (CSR)
-      case '1.4':
-        return '#4D7C0F'; // lime-700 (Development)
-      case '1.5':
-        return '#15803D'; // green-700 (Quality)
-      default:
-        return '#0284C7';
-    }
-  };
+  const getFamilyTextColor = (code: string | undefined): string =>
+    FAMILY_TEXT[familyKeyOf(code)] || '#0284C7';
 
   // Family dot colors (status dot in row/column headers + grid correlation dots).
   // Same family as the theme fills, but saturated enough to stay visible.
-  const getFamilyDotColor = (code: string | undefined): string => {
-    if (data.level !== 'L1') return '#38BDF8'; // L2/L3: Lean-cascade blue
-    const m = (code || '').match(/(\d+)\s*\.\s*(\d+)/);
-    const fam = m ? `${m[1]}.${m[2]}` : '';
-    switch (fam) {
-      case '1.1':
-        return '#38BDF8'; // light blue (Lean/Prod)
-      case '1.2':
-        return '#A78BFA'; // violet (Delivery - purple)
-      case '1.3':
-        return '#FDE047'; // yellow (CSR / RL)
-      case '1.4':
-        return '#A3E635'; // lime (Development)
-      case '1.5':
-        return '#4ADE80'; // green (Quality)
-      default:
-        return '#38BDF8';
-    }
-  };
+  const getFamilyDotColor = (code: string | undefined): string =>
+    FAMILY_DOT[familyKeyOf(code)] || '#38BDF8';
 
   const getDepartmentResourceColor = (department: string) => {
     const d = (department || '').toLowerCase();
@@ -1390,7 +1561,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isColDirect && !isTopRowHovered && !isColHovered && rowTheme
                               ? { backgroundColor: rowTheme }
                               : {}),
-                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(effectiveColors[cellKey] ? { backgroundColor: effectiveColors[cellKey] } : {}),
                             ...(rowTheme && sameAsAbove ? { borderTopColor: 'transparent' } : {}),
                             ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
                           }}
@@ -1409,10 +1580,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             correlation === 'primary' ? (isVi ? 'Liên kết chính (●)' : 'Primary Alignment (●)') : correlation === 'secondary' ? (isVi ? 'Liên kết bổ trợ (○)' : 'Secondary Alignment (○)') : (isVi ? 'Chưa liên kết' : 'None')
                           } (${isVi ? 'Nhấp để đổi' : 'Click to toggle'})`}
                         >
+                          {renderCellColorPicker(cellKey)}
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
                                     ? 'text-base scale-125'
@@ -1424,7 +1596,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
                                     ? 'text-sm scale-110 opacity-80'
@@ -1556,7 +1728,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isKpiColDirect && !isTopRowHovered && !isKpiColHovered && rowTheme
                               ? { backgroundColor: rowTheme }
                               : {}),
-                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(effectiveColors[cellKey] ? { backgroundColor: effectiveColors[cellKey] } : {}),
                             ...(rowTheme && sameAsAbove ? { borderTopColor: 'transparent' } : {}),
                             ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
                           }}
@@ -1575,10 +1747,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             correlation === 'primary' ? (isVi ? 'Liên kết chỉ số KPI (●)' : 'Primary Target (●)') : correlation === 'secondary' ? (isVi ? 'Liên kết bổ trợ (○)' : 'Secondary (○)') : (isVi ? 'Chưa liên kết' : 'None')
                           } (${isVi ? 'Nhấp để đổi' : 'Click to toggle'})`}
                         >
+                          {renderCellColorPicker(cellKey)}
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
                                     ? 'text-base scale-125'
@@ -1590,7 +1763,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(priority.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(priority.code) }}
                                 className={`select-none inline-block leading-none transition-transform ${
                                   isCellLinked || isIntersect
                                     ? 'text-sm scale-110 opacity-80'
@@ -1616,7 +1789,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       const cellKey = `neres_${priority.id}_${res.key}`;
                       const isCellLinked = linkedElements.cellKeys.has(cellKey);
                       const correlation = getNortheastResourceCorrelation(priority, res, pIndex, rIndex);
-                      const resColor = MANUAL_CELL_COLORS[cellKey] || getDepartmentResourceColor(res.department);
+                      const resColor = effectiveColors[cellKey] || getDepartmentResourceColor(res.department);
 
                       const isFirstPicCol = rIndex === 0;
 
@@ -1636,7 +1809,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             ...(!isIntersect && !isCellLinked && !isTopRowDirect && !isResColDirect && !isTopRowHovered && !isResColHovered && rowTheme
                               ? { backgroundColor: rowTheme }
                               : {}),
-                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(effectiveColors[cellKey] ? { backgroundColor: effectiveColors[cellKey] } : {}),
                             ...(rowTheme && sameAsBelow ? { borderBottomColor: 'transparent' } : {}),
                           }}
                           className={`relative w-10 h-9 border-r border-b border-amber-200/80 ${
@@ -1660,6 +1833,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                               : isVi ? 'Chưa phân công' : 'Unassigned'
                           }\n(${isVi ? 'Nhấp để đổi: Chính ● ➔ Phụ ○ ➔ Trống' : 'Click to cycle: Primary ● ➔ Secondary ○ ➔ Clear'})`}
                         >
+                          {renderCellColorPicker(cellKey)}
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
@@ -1702,8 +1876,8 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                   const leftItemColor = getFamilyTextColor(obj.code);
                   const colTheme = getRowThemeColor(obj.code);
                   const titleCellKey = `west_title_${obj.id}`;
-                  const manualTitleBg = MANUAL_CELL_COLORS[titleCellKey];
-                  const manualTitleColor = MANUAL_CELL_TEXT_COLORS[titleCellKey] || leftItemColor;
+                  const manualTitleBg = effectiveColors[titleCellKey];
+                  const manualTitleColor = effectiveTextColors[titleCellKey] || leftItemColor;
 
                   return (
                     <td
@@ -1724,6 +1898,8 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                           : 'bg-white hover:brightness-95'
                       }`}
                     >
+                      {renderCellColorPicker(titleCellKey, 'left')}
+                      {renderCellTextColorPicker(titleCellKey, 'under')}
                       <div style={{ height: `${compassSquareSize - 16}px` }} className="flex flex-col items-center justify-between space-y-2">
                         {/* Rotated Vertical Text (Reads bottom-to-top, aligned to bottom): badge before title */}
                         <div className="flex-1 w-full flex flex-col items-center justify-end overflow-hidden pb-1 pt-1 px-0.5">
@@ -2236,7 +2412,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             ...(!isCellLinked && !isIntersect && !(isColDirect && isRowDirect) && !isColHovered && !isBottomRowHovered && bRowTheme
                               ? { backgroundColor: bRowTheme }
                               : {}),
-                            ...(MANUAL_CELL_COLORS[cellKey] ? { backgroundColor: MANUAL_CELL_COLORS[cellKey] } : {}),
+                            ...(effectiveColors[cellKey] ? { backgroundColor: effectiveColors[cellKey] } : {}),
                           }}
                           className={`relative w-11 h-9 border border-slate-200 text-center align-middle cursor-pointer transition-all p-0 group/swcell ${
                             isCellLinked || isIntersect
@@ -2253,10 +2429,11 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             correlation === 'primary' ? (isVi ? 'Liên kết chính (●)' : 'Primary Alignment (●)') : correlation === 'secondary' ? (isVi ? 'Liên kết bổ trợ (○)' : 'Secondary Alignment (○)') : (isVi ? 'Chưa liên kết' : 'None')
                           } (${isVi ? 'Nhấp để đổi' : 'Click to toggle'})`}
                         >
+                          {renderCellColorPicker(cellKey)}
                           <div className="flex items-center justify-center w-full h-full">
                             {correlation === 'primary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(bItem.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(bItem.code) }}
                                 className={`leading-none select-none inline-block transition-transform ${
                                   isCellLinked || isIntersect ? 'text-base scale-125' : 'text-sm'
                                 }`}
@@ -2267,7 +2444,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                             )}
                             {correlation === 'secondary' && (
                               <span
-                                style={{ color: MANUAL_CELL_COLORS[cellKey] || getFamilyDotColor(bItem.code) }}
+                                style={{ color: effectiveColors[cellKey] || getFamilyDotColor(bItem.code) }}
                                 className={`leading-none select-none inline-block transition-transform ${
                                   isCellLinked || isIntersect ? 'text-sm scale-110 opacity-80' : 'text-xs opacity-60'
                                 }`}
@@ -2289,9 +2466,9 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                       const bottomItemColor = getCompassItemTextColor(bItem, 'south', data.level);
                       const bottomTeam = extractItemTeam(bItem);
                       const titleCellKey = `south_title_${bItem.id}`;
-                      const manualTitleBg = MANUAL_CELL_COLORS[titleCellKey];
-                      const manualTitleColor = MANUAL_CELL_TEXT_COLORS[titleCellKey] || bottomItemColor;
-                      const hasManualTitleStyle = !!manualTitleBg || !!MANUAL_CELL_TEXT_COLORS[titleCellKey];
+                      const manualTitleBg = effectiveColors[titleCellKey];
+                      const manualTitleColor = effectiveTextColors[titleCellKey] || bottomItemColor;
+                      const hasManualTitleStyle = !!manualTitleBg || !!effectiveTextColors[titleCellKey];
                       const manualBadgeBg = manualTitleBg || `${manualTitleColor}15`;
 
                       return (
@@ -2312,6 +2489,8 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                               : bIndex % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'
                           }`}
                         >
+                          {renderCellColorPicker(titleCellKey, 'left')}
+                          {renderCellTextColorPicker(titleCellKey, 'right')}
                           <div className="flex items-center justify-between gap-2">
                             <div className="flex items-center space-x-2 min-w-0">
                               {/* Code Badge */}
@@ -2458,6 +2637,25 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
                   <span>{isVi ? 'Liên kết phụ (Secondary)' : 'Complementary correlation'}</span>
                 </span>
               </div>
+
+              {/* L2 color picker toolbar (export JSON to bake into matrixCellColors.ts) */}
+              {isL2 && SHOW_L2_COLOR_PICKER && (
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-500 font-medium">{isVi ? 'Ch?n m?u t?ng �:' : 'Per-cell colors:'}</span>
+                  <button
+                    onClick={copyCellColors}
+                    className="inline-flex items-center gap-1 font-bold text-emerald-900 bg-emerald-50 border border-emerald-300 px-2 py-0.5 rounded text-[10px] hover:bg-emerald-100 transition-colors"
+                  >
+                    {cellColorsCopied ? (isVi ? '�� copy!' : 'Copied!') : (isVi ? 'Copy JSON m?u �' : 'Copy cell colors JSON')}
+                  </button>
+                  <button
+                    onClick={clearCellColors}
+                    className="inline-flex items-center gap-1 font-bold text-red-900 bg-red-50 border border-red-300 px-2 py-0.5 rounded text-[10px] hover:bg-red-100 transition-colors"
+                  >
+                    {isVi ? 'X�a m?u d� pick' : 'Clear picks'}
+                  </button>
+                </div>
+              )}
 
               {/* Team color badges */}
               <div className="flex flex-wrap items-center gap-2">

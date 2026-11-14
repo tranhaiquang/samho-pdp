@@ -1,8 +1,8 @@
 {
-  "version": 1789310537194,
-  "lastModified": 1794543514861,
-  "lastAction": "Đồng bộ nhiều Sheet Excel: 18 KPI L1, 9 KPI L2, 16 KPI L3",
-  "lastClientId": "excel-import-script",
+  "version": 1789310537210,
+  "lastModified": 1794648052781,
+  "lastAction": "Cập nhật chỉ số KPI L2 4.3.1.1",
+  "lastClientId": "usr_mwg6vghi_2h29w",
   "l1Data": {
     "level": "L1",
     "title": "2026 TOP Level Policy Deployment",
@@ -128,7 +128,6 @@
         "titleVi": "PPH",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
@@ -153,7 +152,6 @@
         "titleVi": "Miniline",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
@@ -178,7 +176,6 @@
         "titleVi": "Lean Assessment",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
@@ -203,7 +200,6 @@
         "titleVi": "Utilize the existing facility",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-sa2"
         ],
@@ -228,7 +224,6 @@
         "titleVi": "On Time to Customer Request",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
         ],
@@ -253,7 +248,6 @@
         "titleVi": "On Time to NB Request",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
         ],
@@ -278,7 +272,6 @@
         "titleVi": "On Time to Original Confirmed",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-del"
         ],
@@ -303,7 +296,6 @@
         "titleVi": "Management System",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
         ],
@@ -328,7 +320,6 @@
         "titleVi": "Sustainability",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
         ],
@@ -353,7 +344,6 @@
         "titleVi": "Respecting Human Rights",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-csr"
         ],
@@ -378,7 +368,6 @@
         "titleVi": "Development Quality",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
         ],
@@ -404,7 +393,6 @@
         "titleVi": "Digital Assets (3D & Photography Accuracy- Proto 2 / Line Cfm)",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
         ],
@@ -430,7 +418,6 @@
         "titleVi": "Buy Ready On Time",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
         ],
@@ -455,7 +442,6 @@
         "titleVi": "Dev & Merch Proto On Time (Proto 2 / Line Cfm)",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-dev"
         ],
@@ -480,7 +466,6 @@
         "titleVi": "CSI",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
@@ -505,7 +490,6 @@
         "titleVi": "SQI",
         "titleKo": "",
         "owner": "",
-        "department": "",
         "linkedObjectiveIds": [
           "obj-l1-qual"
         ],
@@ -2092,6 +2076,56 @@
           "obj-l1-lean",
           "obj-l1-sa2"
         ]
+      },
+      {
+        "id": "3y-l2csr-1",
+        "code": "L 1.1",
+        "title": "Lean: PPH 1.06 Lean Assessment target 3.03 points",
+        "titleVi": "Lean: PPH 1.06 Lean Assessment target 3.03 points",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l2csr-2",
+        "code": "L 1.2",
+        "title": "Delivery : Back to Top 1 Target: 16 point of Score, Current 18.37 point in Sep.2025",
+        "titleVi": "Delivery : Back to Top 1 Target: 16 point of Score, Current 18.37 point in Sep.2025",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l2csr-3",
+        "code": "L 1.3",
+        "title": "Quality ranking: top 5 , current is top 7",
+        "titleVi": "Quality ranking: top 5 , current is top 7",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l2csr-4",
+        "code": "L1.4",
+        "title": "Responsible Leadearship : Top 3 in NB RL Ranking Target 14 points in Dec 2024, Current 13 points in Oct 2024",
+        "titleVi": "Responsible Leadearship : Top 3 in NB RL Ranking Target 14 points in Dec 2024, Current 13 points in Oct 2024",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l2csr-5",
+        "code": "L1.5",
+        "title": "Development : Top 1 Ranking Target: 14 points",
+        "titleVi": "Development : Top 1 Ranking Target: 14 points",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
       }
     ],
     "annualObjectives": [
@@ -2146,14 +2180,15 @@
         "titleVi": "Hệ thống Cắt tự động (Autocut)",
         "owner": "Lean: Quang/Huy",
         "linkedPriorityIds": [
-          "p-l1-1"
+          "p-l1-1",
+          "kpi-import-L2-1794543514734-4"
         ],
         "linkedObjectiveIds": [
           "obj-l1-lean"
         ],
         "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
+          "biz": "secondary",
+          "quality": "secondary",
           "csr": "none",
           "lean": "primary",
           "dev": "none",
@@ -2276,6 +2311,502 @@
           "plan": "none",
           "it": "secondary"
         }
+      },
+      {
+        "id": "p-l2csr-1",
+        "code": "L2 5.3.2",
+        "title": "Standard format in use at each stage: PRR",
+        "titleVi": "Standard format in use at each stage: PRR",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.6.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-2",
+        "code": "L2 5.3.1",
+        "title": "Standard format in use at each stage: DFX",
+        "titleVi": "Standard format in use at each stage: DFX",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.5.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-3",
+        "code": "L2 5.2.3",
+        "title": "Weekly meeting with NBV",
+        "titleVi": "Weekly meeting with NBV",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.4.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-4",
+        "code": "L2 5.2.2",
+        "title": "Hand over meeting with NBV",
+        "titleVi": "Hand over meeting with NBV",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.3.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-5",
+        "code": "L2 5.2.1",
+        "title": "Trial Meeting with NBV & Production",
+        "titleVi": "Trial Meeting with NBV & Production",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.2.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-6",
+        "code": "L2 5.1.1",
+        "title": "Standard format in use: DFX cover page summary",
+        "titleVi": "Standard format in use: DFX cover page summary",
+        "titleKo": "",
+        "owner": "",
+        "department": "Development",
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-5.1.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-7",
+        "code": "L2 4.4.1",
+        "title": "Wage data collection - 1 point",
+        "titleVi": "Wage data collection - 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-4.3.1.4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-8",
+        "code": "L2 4.3.1",
+        "title": "Workplace Dialogue Programs & Women Empowerment Programs - 4 points",
+        "titleVi": "Workplace Dialogue Programs & Women Empowerment Programs - 4 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-4.3.1.1",
+          "kpi-csr-l2-4.3.1.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-9",
+        "code": "L2 4.2.1",
+        "title": "Climate & waste - 6 points",
+        "titleVi": "Climate & waste - 6 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-4.2.1.1",
+          "kpi-csr-l2-4.2.1.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-10",
+        "code": "L2 4.1.1",
+        "title": "No ZT HR & Verify Step 3 on SLCP - 4 points",
+        "titleVi": "No ZT HR & Verify Step 3 on SLCP - 4 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-4.1.1.1",
+          "kpi-csr-l2-4.1.1.2",
+          "kpi-csr-l2-4.1.1.3",
+          "kpi-csr-l2-4.1.1.4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-11",
+        "code": "L2 3.2.1",
+        "title": "The number of SQI case from Oct to Dec is 0",
+        "titleVi": "The number of SQI case from Oct to Dec is 0",
+        "titleKo": "",
+        "owner": "",
+        "department": "Quality",
+        "linkedObjectiveIds": [
+          "obj-l1-qual"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-3.1.1.3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "primary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-12",
+        "code": "L2 3.1.1",
+        "title": "The number of defect for CSI from Oct to Dec = or < 1",
+        "titleVi": "The number of defect for CSI from Oct to Dec = or < 1",
+        "titleKo": "",
+        "owner": "",
+        "department": "Quality",
+        "linkedObjectiveIds": [
+          "obj-l1-qual"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-3.1.1.1",
+          "kpi-csr-l2-3.1.1.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "primary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-13",
+        "code": "L2 2.3.1",
+        "title": "On Time to Customer Request = 100%",
+        "titleVi": "On Time to Customer Request = 100%",
+        "titleKo": "",
+        "owner": "",
+        "department": "Biz",
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-1.1.3.1"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-14",
+        "code": "L2 2.2.1",
+        "title": "On Time to NB Request = 100%",
+        "titleVi": "On Time to NB Request = 100%",
+        "titleKo": "",
+        "owner": "",
+        "department": "Biz",
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-1.1.2.1"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-15",
+        "code": "L2 2.1.1",
+        "title": "On Time to Original Confirmed = 100%",
+        "titleVi": "On Time to Original Confirmed = 100%",
+        "titleKo": "",
+        "owner": "",
+        "department": "Biz",
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l2-1.1.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-16",
+        "code": "L2 1.2.5",
+        "title": "Miniline 80% = 2 points and 1 bonus point for stockfit colocation",
+        "titleVi": "Miniline 80% = 2 points and 1 bonus point for stockfit colocation",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "secondary",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-17",
+        "code": "L2.1.2.4",
+        "title": "IT system for BTS and PO completion 100% = 2 points",
+        "titleVi": "IT system for BTS and PO completion 100% = 2 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-18",
+        "code": "L2.1.2.3",
+        "title": "BTS 85% = 1 point",
+        "titleVi": "BTS 85% = 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-19",
+        "code": "L2.1.2.2",
+        "title": "PO Completion : MLT ≤15 days for 80% of PO = 2 points",
+        "titleVi": "PO Completion : MLT ≤15 days for 80% of PO = 2 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l2csr-20",
+        "code": "L2.1.2.1",
+        "title": "Auto cut implementation 76%= 1 point",
+        "titleVi": "Auto cut implementation 76%= 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "obj-l1-lean"
+        ],
+        "linkedPriorityIds": [],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
       }
     ],
     "resources": [
@@ -2348,8 +2879,8 @@
           "obj-l1-lean"
         ],
         "resourceRoles": {
-          "biz": "none",
-          "quality": "none",
+          "biz": "secondary",
+          "quality": "secondary",
           "csr": "none",
           "lean": "primary",
           "dev": "none",
@@ -3084,8 +3615,1838 @@
         "rootCause": "",
         "actionPlan": "",
         "actionStatus": "Open"
+      },
+      {
+        "id": "kpi-csr-l2-5.1.1.1",
+        "code": "L2 5.1.1.1",
+        "name": "Standard format in use: DFX cover page summary = 100%",
+        "nameVi": "Standard format in use: DFX cover page summary = 100%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-6"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-5.2.1.1",
+        "code": "L2 5.2.1.1",
+        "name": "Trial Meeting with NBV & Production = 35%",
+        "nameVi": "Trial Meeting with NBV & Production = 35%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Feb": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Mar": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Apr": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "May": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Jun": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Jul": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Aug": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Sep": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Oct": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Nov": {
+            "target": 0.35,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.35,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-5"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-5.3.1.1",
+        "code": "L2 5.3.1.1",
+        "name": "Hand over meeting with NBV = 35%",
+        "nameVi": "Hand over meeting with NBV = 35%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Feb": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Mar": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Apr": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "May": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Jun": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Jul": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Aug": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Sep": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Oct": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Nov": {
+            "target": 0.35,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.35,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-4"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-5.4.1.1",
+        "code": "L2 5.4.1.1",
+        "name": "Weekly meeting with NBV = 30%",
+        "nameVi": "Weekly meeting with NBV = 30%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Feb": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Mar": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Apr": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "May": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Jun": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Jul": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Aug": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Sep": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Oct": {
+            "target": 0.3,
+            "actual": 0.3
+          },
+          "Nov": {
+            "target": 0.3,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.3,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-3"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-5.5.1.1",
+        "code": "L2 5.5.1.1",
+        "name": "Standard format in use at each stage: DFX =50%",
+        "nameVi": "Standard format in use at each stage: DFX =50%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-2"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-5.6.1.1",
+        "code": "L2 5.6.1.1",
+        "name": "Standard format in use at each stage: PRR =50%",
+        "nameVi": "Standard format in use at each stage: PRR =50%",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Development",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Development",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-1"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-dev"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "primary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-3.1.1.1",
+        "code": "L2 3.1.1.1",
+        "name": "CCQP Process Efficiency: 100% Production line CCQP's covered by RQC with Cart on wheels",
+        "nameVi": "CCQP Process Efficiency: 100% Production line CCQP's covered by RQC with Cart on wheels",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Quality",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Quality",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-qual"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "primary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-3.1.1.2",
+        "code": "L2 3.1.1.2",
+        "name": "Co-located the SI online with production area - 100% C2B line",
+        "nameVi": "Co-located the SI online with production area - 100% C2B line",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Quality",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Quality",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0.78
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0.78
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.78
+          },
+          "May": {
+            "target": 1,
+            "actual": 0.78
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 0.78
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 0.76
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 0.76
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 0.76
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 0.76
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-qual"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "primary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-3.1.1.3",
+        "code": "L2 3.1.1.3",
+        "name": "SI real-time: 100% apply for plant A, C & E",
+        "nameVi": "SI real-time: 100% apply for plant A, C & E",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Quality",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Quality",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.14
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-11"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-qual"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "primary",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.1.1.1",
+        "code": "L2 4.1.1.1",
+        "name": "No HR Issues from the verified assessment reports: SLCP + FEM",
+        "nameVi": "No HR Issues from the verified assessment reports: SLCP + FEM",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Point",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-10"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.1.1.2",
+        "code": "L2 4.1.1.2",
+        "name": "Management Systems",
+        "nameVi": "Management Systems",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-10",
+          "p-l2csr-13"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.1.1.3",
+        "code": "L2 4.1.1.3",
+        "name": "Internal Assessment",
+        "nameVi": "Internal Assessment",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-10",
+          "p-l2-6",
+          "p-l2-4"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.1.1.4",
+        "code": "L2 4.1.1.4",
+        "name": "Above and Beyond",
+        "nameVi": "Above and Beyond",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-10"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.2.1.1",
+        "code": "L2 4.2.1.1",
+        "name": "Climate 50 % Renewable Energy (RE)",
+        "nameVi": "Climate 50 % Renewable Energy (RE)",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 3,
+            "actual": 3
+          },
+          "Feb": {
+            "target": 3,
+            "actual": 3
+          },
+          "Mar": {
+            "target": 3,
+            "actual": 3
+          },
+          "Apr": {
+            "target": 3,
+            "actual": 3
+          },
+          "May": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jun": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jul": {
+            "target": 3,
+            "actual": 3
+          },
+          "Aug": {
+            "target": 3,
+            "actual": 3
+          },
+          "Sep": {
+            "target": 3,
+            "actual": 3
+          },
+          "Oct": {
+            "target": 3,
+            "actual": 3
+          },
+          "Nov": {
+            "target": 3,
+            "actual": null
+          },
+          "Dec": {
+            "target": 3,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-9"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.2.1.2",
+        "code": "L2 4.2.1.2",
+        "name": "Waste 100% Diverted, 70% Recycle",
+        "nameVi": "Waste 100% Diverted, 70% Recycle",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 2,
+            "actual": 2
+          },
+          "Feb": {
+            "target": 2,
+            "actual": 2
+          },
+          "Mar": {
+            "target": 2,
+            "actual": 2
+          },
+          "Apr": {
+            "target": 2,
+            "actual": 2
+          },
+          "May": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jun": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jul": {
+            "target": 2,
+            "actual": 2
+          },
+          "Aug": {
+            "target": 2,
+            "actual": 2
+          },
+          "Sep": {
+            "target": 2,
+            "actual": 2
+          },
+          "Oct": {
+            "target": 2,
+            "actual": 2
+          },
+          "Nov": {
+            "target": 2,
+            "actual": null
+          },
+          "Dec": {
+            "target": 2,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-9",
+          "p-l2csr-17"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.3.1.1",
+        "code": "L2 4.3.1.1",
+        "name": "Workplace Dialogue Programs",
+        "nameVi": "Workplace Dialogue Programs",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 2,
+            "actual": 2
+          },
+          "Feb": {
+            "target": 2,
+            "actual": 2
+          },
+          "Mar": {
+            "target": 2,
+            "actual": 2
+          },
+          "Apr": {
+            "target": 2,
+            "actual": 2
+          },
+          "May": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jun": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jul": {
+            "target": 2,
+            "actual": 2
+          },
+          "Aug": {
+            "target": 2,
+            "actual": 2
+          },
+          "Sep": {
+            "target": 2,
+            "actual": 2
+          },
+          "Oct": {
+            "target": 2,
+            "actual": 2
+          },
+          "Nov": {
+            "target": 2,
+            "actual": null
+          },
+          "Dec": {
+            "target": 2,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-8",
+          "p-l2csr-15",
+          "p-l2-4"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.3.1.2",
+        "code": "L2 4.3.1.2",
+        "name": "Women Empowerment Program (SERI)",
+        "nameVi": "Women Empowerment Program (SERI)",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1.5,
+            "actual": 1.5
+          },
+          "Feb": {
+            "target": 1.5,
+            "actual": 1.5
+          },
+          "Mar": {
+            "target": 1.5,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 1.5,
+            "actual": 0
+          },
+          "May": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 1.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 1.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-8",
+          "p-l2csr-17"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-4.3.1.3",
+        "code": "L2 4.3.1.3",
+        "name": "Digital Engagement Programs (WOVO)",
+        "nameVi": "Digital Engagement Programs (WOVO)",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-17"
+        ]
+      },
+      {
+        "id": "kpi-csr-l2-4.3.1.4",
+        "code": "L2 4.3.1.4",
+        "name": "Fair Compensation",
+        "nameVi": "Fair Compensation",
+        "nameKo": "",
+        "level": "L2",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-7"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-csr"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-1.1.1.1",
+        "code": "L2 1.1.1.1",
+        "name": "Customer request Score",
+        "nameVi": "Customer request Score",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Biz",
+        "unit": "Percentage",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Biz",
+        "monthly": {
+          "Jan": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Feb": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Mar": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Apr": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "May": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Jun": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Jul": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Aug": {
+            "target": 0.7,
+            "actual": 0.99
+          },
+          "Sep": {
+            "target": 0.7,
+            "actual": 0.98
+          },
+          "Oct": {
+            "target": 0.7,
+            "actual": 0.98
+          },
+          "Nov": {
+            "target": 0.7,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.7,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-15"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-1.1.2.1",
+        "code": "L2 1.1.2.1",
+        "name": "NB request Score",
+        "nameVi": "NB request Score",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Biz",
+        "unit": "Percentage",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Biz",
+        "monthly": {
+          "Jan": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Feb": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Mar": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Apr": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "May": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 0.95,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Sep": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Oct": {
+            "target": 0.95,
+            "actual": 0.99
+          },
+          "Nov": {
+            "target": 0.95,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.95,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-14"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l2-1.1.3.1",
+        "code": "L2 1.1.3.1",
+        "name": "Orig Cfm Score",
+        "nameVi": "Orig Cfm Score",
+        "nameKo": "",
+        "level": "L2",
+        "department": "Biz",
+        "unit": "Percentage",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Biz",
+        "monthly": {
+          "Jan": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "May": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 0.98,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 0.98,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.98,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l2csr-13"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l1-del"
+        ],
+        "resourceRoles": {
+          "biz": "primary",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
       }
-    ]
+    ],
+    "correlations": {
+      "nekpi_p-l2csr-13_kpi-csr-l2-4.1.1.2": "primary",
+      "nekpi_p-l2-6_kpi-csr-l2-4.1.1.3": "primary",
+      "nekpi_p-l2-4_kpi-csr-l2-4.1.1.3": "primary",
+      "nekpi_p-l2csr-17_kpi-csr-l2-4.3.1.3": "primary",
+      "nekpi_p-l2csr-15_kpi-csr-l2-4.3.1.1": "primary",
+      "nekpi_p-l2csr-17_kpi-csr-l2-4.3.1.2": "primary",
+      "nekpi_p-l2csr-17_kpi-csr-l2-4.2.1.2": "primary",
+      "nekpi_p-l2-4_kpi-csr-l2-4.3.1.1": "primary"
+    }
   },
   "l3Data": {
     "level": "L3",
@@ -3101,6 +5462,56 @@
         "title": "3-Year Operational Roadmap (2026-2028)",
         "titleVi": "Lộ trình vận hành sản xuất 3 năm (2026-2028)",
         "period": "2026 - 2028"
+      },
+      {
+        "id": "3y-l3csr-1",
+        "code": "L1 1.1",
+        "title": "PPH",
+        "titleVi": "PPH",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l3csr-2",
+        "code": "L1 1.2",
+        "title": "Lean Assessent",
+        "titleVi": "Lean Assessent",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l3csr-3",
+        "code": "L1 4.1",
+        "title": "Responsible ownership - 4 Points",
+        "titleVi": "Responsible ownership - 4 Points",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l3csr-4",
+        "code": "L1 4.2",
+        "title": "Protecting the Environment - 6 Points",
+        "titleVi": "Protecting the Environment - 6 Points",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
+      },
+      {
+        "id": "3y-l3csr-5",
+        "code": "L1 4.4",
+        "title": "Fair Compensation - 1 point",
+        "titleVi": "Fair Compensation - 1 point",
+        "titleKo": "",
+        "period": "2026 - 2028",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": []
       }
     ],
     "annualObjectives": [
@@ -3131,6 +5542,52 @@
         "title": "Ultilize the exsisting facility",
         "titleVi": "Tận dụng cơ sở vật chất hiện có",
         "period": "2026"
+      },
+      {
+        "id": "obj-l3csr-1",
+        "code": "L2 4.4.1",
+        "title": "Fair Compensation - 1 point",
+        "period": "2026",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": [
+          "p-l3csr-1"
+        ]
+      },
+      {
+        "id": "obj-l3csr-2",
+        "code": "L2 4.3.1",
+        "title": "Respecting Human Rights - 4/4 Points",
+        "period": "2026",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": [
+          "p-l3csr-2",
+          "p-l3csr-3"
+        ]
+      },
+      {
+        "id": "obj-l3csr-3",
+        "code": "L2 4.2.1",
+        "title": "Protecting the Environment - 6/6 Points",
+        "period": "2026",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": [
+          "p-l3csr-4",
+          "p-l3csr-5"
+        ]
+      },
+      {
+        "id": "obj-l3csr-4",
+        "code": "L2 4.1.1",
+        "title": "Responsible ownership - 4/4 Points",
+        "period": "2026",
+        "linkedObjectiveIds": [],
+        "linkedPriorityIds": [
+          "p-l3csr-6",
+          "p-l3csr-7",
+          "p-l3csr-8",
+          "p-l3csr-9",
+          "p-l3csr-10"
+        ]
       }
     ],
     "priorities": [
@@ -3141,7 +5598,8 @@
         "titleVi": "Đầu tư Tự động hóa",
         "owner": "Lean: Huy/Trang/Bao",
         "linkedPriorityIds": [
-          "p-l2-1"
+          "p-l2-1",
+          "kpi-import-L3-1794543514734-3"
         ],
         "linkedObjectiveIds": [
           "p-l1-1"
@@ -3151,8 +5609,9 @@
           "quality": "none",
           "csr": "none",
           "lean": "primary",
-          "dev": "none",
+          "dev": "secondary",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3176,6 +5635,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3199,6 +5659,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "none"
         }
@@ -3222,6 +5683,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "none"
         }
@@ -3233,18 +5695,22 @@
         "titleVi": "Kết nối thời gian thực C2B với Xưởng đế/Offline",
         "owner": "Lean: Huy/Trang/Bao",
         "linkedPriorityIds": [
-          "p-l2-3"
+          "p-l2-3",
+          "kpi-csr-l3-1.2.1.1.1",
+          "kpi-csr-l3-1.2.1.1.2"
         ],
         "linkedObjectiveIds": [
-          "p-l1-2"
+          "p-l1-2",
+          "p-l1-3"
         ],
         "resourceRoles": {
           "biz": "none",
           "quality": "none",
           "csr": "none",
           "lean": "primary",
-          "dev": "none",
+          "dev": "secondary",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3268,6 +5734,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "none"
         }
@@ -3291,6 +5758,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "secondary"
         }
@@ -3314,6 +5782,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3337,6 +5806,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3360,6 +5830,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
           "hr": "none"
         }
@@ -3383,6 +5854,7 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "none"
         }
@@ -3406,8 +5878,367 @@
           "lean": "primary",
           "dev": "none",
           "prod": "secondary",
+          "plan": "none",
           "it": "none",
           "hr": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-1",
+        "code": "L3 4.4.1.1",
+        "title": "2025 wage date collection - 1 point",
+        "titleVi": "2025 wage date collection - 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-1"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.10.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-2",
+        "code": "L3 4.3.1.2",
+        "title": "Women Empowerment Programs (SERI + PE model) - 2 points",
+        "titleVi": "Women Empowerment Programs (SERI + PE model) - 2 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.8.1",
+          "kpi-csr-l3-4.1.1.8.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-3",
+        "code": "L3 4.3.1.1",
+        "title": "Workplace Dialogue Programs - 2 points",
+        "titleVi": "Workplace Dialogue Programs - 2 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.7.1",
+          "kpi-csr-l3-4.1.1.9.1",
+          "kpi-csr-l3-4.1.1.7.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-4",
+        "code": "L3 4.2.1.2",
+        "title": "Waste -98 % Diverted, 50% Recycle - 3 points",
+        "titleVi": "Waste -98 % Diverted, 50% Recycle - 3 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.6.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-5",
+        "code": "L3 4.2.1.1",
+        "title": "Climate 60 % Renewable Energy (RE) - 3 points",
+        "titleVi": "Climate 60 % Renewable Energy (RE) - 3 points",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.5.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-6",
+        "code": "L3 4.1.1.5",
+        "title": "Above and Beyond - 0.5 point",
+        "titleVi": "Above and Beyond - 0.5 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.4.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-7",
+        "code": "L3 4.1.1.4",
+        "title": "Internal Assessment - 1 point",
+        "titleVi": "Internal Assessment - 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.3.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-8",
+        "code": "L3 4.1.1.3",
+        "title": "Health and safety management (HSM) - 1 point",
+        "titleVi": "Health and safety management (HSM) - 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.2.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-9",
+        "code": "L3 4.1.1.2",
+        "title": "Human Resources management (HRM) - 1 point",
+        "titleVi": "Human Resources management (HRM) - 1 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.2.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-10",
+        "code": "L3 4.1.1.1",
+        "title": "Basic compliance: SLCP + FEM - 0.5 point",
+        "titleVi": "Basic compliance: SLCP + FEM - 0.5 point",
+        "titleKo": "",
+        "owner": "",
+        "department": "CSR",
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-4.1.1.1.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-11",
+        "code": "L3 1.2.1.5",
+        "title": "Andon",
+        "titleVi": "Andon",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-1.2.1.5.1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-12",
+        "code": "L3 1.2.1.4",
+        "title": "Manufacturing Innovation",
+        "titleVi": "Manufacturing Innovation",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-1.2.1.4.1",
+          "kpi-csr-l3-1.2.1.4.2",
+          "kpi-csr-l3-1.2.1.4.3",
+          "kpi-csr-l3-1.2.1.4.4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-13",
+        "code": "L3 1.2.1.3",
+        "title": "Quick change over program",
+        "titleVi": "Quick change over program",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-1.2.1.3.1",
+          "kpi-csr-l3-1.2.1.3.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "secondary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "p-l3csr-14",
+        "code": "L3 1.2.1.2",
+        "title": "Kaizen & ECRS",
+        "titleVi": "Kaizen & ECRS",
+        "titleKo": "",
+        "owner": "",
+        "department": "Lean",
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "linkedPriorityIds": [
+          "kpi-csr-l3-1.2.1.2.1",
+          "kpi-csr-l3-1.2.1.2.2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
         }
       }
     ],
@@ -3469,7 +6300,7 @@
         "nameVi": "+4 sets of auto cut in May. 2026",
         "level": "L3",
         "department": "Lean",
-        "unit": "Number",
+        "unit": "%",
         "jumpingOffPoint": "Jan. 2026",
         "targetDirection": "higher",
         "owner": "Lean",
@@ -3485,58 +6316,59 @@
           "quality": "none",
           "csr": "none",
           "lean": "primary",
-          "dev": "none",
-          "hr": "none",
+          "dev": "secondary",
+          "prod": "secondary",
+          "plan": "none",
           "it": "secondary",
-          "prod": "secondary"
+          "hr": "none"
         },
         "monthly": {
           "Jan": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.01
           },
           "Feb": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.01
           },
           "Mar": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.02
           },
           "Apr": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.02
           },
           "May": {
-            "target": 4,
-            "actual": 4
+            "target": 0.1,
+            "actual": 0.02
           },
           "Jun": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.03
           },
           "Jul": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.03
           },
           "Aug": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.03
           },
           "Sep": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.03
           },
           "Oct": {
-            "target": 0,
-            "actual": 0
+            "target": 0.1,
+            "actual": 0.05
           },
           "Nov": {
-            "target": 0,
+            "target": 0.1,
             "actual": null
           },
           "Dec": {
-            "target": 0,
+            "target": 0.1,
             "actual": null
           }
         },
@@ -4805,6 +7637,2002 @@
         "rootCause": "",
         "actionPlan": "",
         "actionStatus": "Open"
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.1.1",
+        "code": "L3 1.2.1.1.1",
+        "name": "Setup all in one layout for model 880v15",
+        "nameVi": "Setup all in one layout for model 880v15",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "Y/N",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "boolean",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": "Y",
+            "actual": "N"
+          },
+          "Feb": {
+            "target": "Y",
+            "actual": "N"
+          },
+          "Mar": {
+            "target": "Y",
+            "actual": "N"
+          },
+          "Apr": {
+            "target": "Y",
+            "actual": "N"
+          },
+          "May": {
+            "target": "Y",
+            "actual": "N"
+          },
+          "Jun": {
+            "target": "Y",
+            "actual": "Y"
+          },
+          "Jul": {
+            "target": "Y",
+            "actual": "Y"
+          },
+          "Aug": {
+            "target": "Y",
+            "actual": "Y"
+          },
+          "Sep": {
+            "target": "Y",
+            "actual": "Y"
+          },
+          "Oct": {
+            "target": "Y",
+            "actual": "Y"
+          },
+          "Nov": {
+            "target": "Y",
+            "actual": null
+          },
+          "Dec": {
+            "target": "Y",
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3-5"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-2",
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "secondary",
+          "prod": "secondary",
+          "plan": "none",
+          "it": "secondary",
+          "hr": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.1.2",
+        "code": "L3 1.2.1.1.2",
+        "name": "Reduce MLT of offline building by improve continuous flow",
+        "nameVi": "Reduce MLT of offline building by improve continuous flow",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "Days",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "May": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": "-"
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.2
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.2
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.2
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.2
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3-5"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-2",
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "secondary",
+          "prod": "secondary",
+          "plan": "none",
+          "it": "secondary",
+          "hr": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.2.1",
+        "code": "L3 1.2.1.2.1",
+        "name": "Target 624 case/year",
+        "nameVi": "Target 624 case/year",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "kaizen",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 52,
+            "actual": 14
+          },
+          "Feb": {
+            "target": 52,
+            "actual": 10
+          },
+          "Mar": {
+            "target": 52,
+            "actual": 17
+          },
+          "Apr": {
+            "target": 52,
+            "actual": 36
+          },
+          "May": {
+            "target": 52,
+            "actual": 43
+          },
+          "Jun": {
+            "target": 52,
+            "actual": 59
+          },
+          "Jul": {
+            "target": 52,
+            "actual": 36
+          },
+          "Aug": {
+            "target": 52,
+            "actual": 48
+          },
+          "Sep": {
+            "target": 52,
+            "actual": 13
+          },
+          "Oct": {
+            "target": 52,
+            "actual": 0
+          },
+          "Nov": {
+            "target": 52,
+            "actual": null
+          },
+          "Dec": {
+            "target": 52,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-14"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.2.2",
+        "code": "L3 1.2.1.2.2",
+        "name": "Accumulate savings of 624k USD per year",
+        "nameVi": "Accumulate savings of 624k USD per year",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "USD",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 52000,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 104000,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 156000,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 208000,
+            "actual": 259860
+          },
+          "May": {
+            "target": 260000,
+            "actual": 286056
+          },
+          "Jun": {
+            "target": 312000,
+            "actual": 458105
+          },
+          "Jul": {
+            "target": 364000,
+            "actual": 472441
+          },
+          "Aug": {
+            "target": 416000,
+            "actual": 485137
+          },
+          "Sep": {
+            "target": 468000,
+            "actual": 486161
+          },
+          "Oct": {
+            "target": 520000,
+            "actual": 486161
+          },
+          "Nov": {
+            "target": 572000,
+            "actual": null
+          },
+          "Dec": {
+            "target": 624000,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-14"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.3.1",
+        "code": "L3 1.2.1.3.1",
+        "name": "Saving 60% COT of Outsole press machine",
+        "nameVi": "Saving 60% COT of Outsole press machine",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Feb": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Mar": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Apr": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "May": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Jun": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Jul": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Aug": {
+            "target": 0.6,
+            "actual": 0.44
+          },
+          "Sep": {
+            "target": 0.6,
+            "actual": 0.697
+          },
+          "Oct": {
+            "target": 0.6,
+            "actual": 0.697
+          },
+          "Nov": {
+            "target": 0.6,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.6,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-13"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "secondary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.3.2",
+        "code": "L3 1.2.1.3.2",
+        "name": "QCO corner for all section",
+        "nameVi": "QCO corner for all section",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Feb": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Mar": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "Apr": {
+            "target": 0.35,
+            "actual": 0.35
+          },
+          "May": {
+            "target": 0.7,
+            "actual": 0.7
+          },
+          "Jun": {
+            "target": 0.7,
+            "actual": 0.7
+          },
+          "Jul": {
+            "target": 0.7,
+            "actual": 0.7
+          },
+          "Aug": {
+            "target": 0.7,
+            "actual": 0.7
+          },
+          "Sep": {
+            "target": 0.7,
+            "actual": 0.8
+          },
+          "Oct": {
+            "target": 0.7,
+            "actual": 0.8
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-13"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "secondary",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.4.1",
+        "code": "L3 1.2.1.4.1",
+        "name": "Applying 30% auto roller primer",
+        "nameVi": "Applying 30% auto roller primer",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "May": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Jun": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Jul": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Aug": {
+            "target": 0.3,
+            "actual": 0
+          },
+          "Sep": {
+            "target": 0.3,
+            "actual": 0.33
+          },
+          "Oct": {
+            "target": 0.3,
+            "actual": 0.33
+          },
+          "Nov": {
+            "target": 0.3,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.3,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.4.2",
+        "code": "L3 1.2.1.4.2",
+        "name": "Apply auto EM cutting machine for key modle",
+        "nameVi": "Apply auto EM cutting machine for key modle",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Feb": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Mar": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Apr": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "May": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Jun": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Jul": {
+            "target": 0.8,
+            "actual": 0.45
+          },
+          "Aug": {
+            "target": 0.8,
+            "actual": 0.55
+          },
+          "Sep": {
+            "target": 0.8,
+            "actual": 0.55
+          },
+          "Oct": {
+            "target": 0.8,
+            "actual": 0.55
+          },
+          "Nov": {
+            "target": 0.8,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.8,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.4.3",
+        "code": "L3 1.2.1.4.3",
+        "name": "Enhance auto cuttuing machine from 56% to 75%",
+        "nameVi": "Enhance auto cuttuing machine from 56% to 75%",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.75,
+            "actual": 0.54
+          },
+          "Feb": {
+            "target": 0.75,
+            "actual": 0.53
+          },
+          "Mar": {
+            "target": 0.75,
+            "actual": 0.56
+          },
+          "Apr": {
+            "target": 0.75,
+            "actual": 0.52
+          },
+          "May": {
+            "target": 0.75,
+            "actual": 0.54
+          },
+          "Jun": {
+            "target": 0.75,
+            "actual": 0.52
+          },
+          "Jul": {
+            "target": 0.75,
+            "actual": 0.49
+          },
+          "Aug": {
+            "target": 0.75,
+            "actual": 0.49
+          },
+          "Sep": {
+            "target": 0.75,
+            "actual": 0.53
+          },
+          "Oct": {
+            "target": 0.75,
+            "actual": 0.54
+          },
+          "Nov": {
+            "target": 0.75,
+            "actual": 0.65
+          },
+          "Dec": {
+            "target": 0.75,
+            "actual": 0.76
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.4.4",
+        "code": "L3 1.2.1.4.4",
+        "name": "Replace manual punching by auto laser punching 70%",
+        "nameVi": "Replace manual punching by auto laser punching 70%",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Feb": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Mar": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Apr": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "May": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Jun": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Jul": {
+            "target": 0.7,
+            "actual": 0.3
+          },
+          "Aug": {
+            "target": 0.7,
+            "actual": 0.75
+          },
+          "Sep": {
+            "target": 0.7,
+            "actual": 0.75
+          },
+          "Oct": {
+            "target": 0.7,
+            "actual": 0.75
+          },
+          "Nov": {
+            "target": 0.7,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.7,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-12"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-1.2.1.5.1",
+        "code": "L3 1.2.1.5.1",
+        "name": "100% ANDON application for C2B",
+        "nameVi": "100% ANDON application for C2B",
+        "nameKo": "",
+        "level": "L3",
+        "department": "Lean",
+        "unit": "%",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "Lean",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 0.6
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0.6
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0.6
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0.6
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-11"
+        ],
+        "linkedObjectiveIds": [
+          "p-l1-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "primary",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.1.1",
+        "code": "L3 4.1.1.1.1",
+        "name": "- Monthly internal review with a greater focus on ZT and high risk issues for both HR and HSE parts for immediate improvement - Continue to maintain weekly workshop inspection and scoring activities, awarding prizes to workshops with excellent achievements - Yearly workplans covering all requirement of SLCP and FEM are developed for timely implementation and tracking (1.0)",
+        "nameVi": "- Monthly internal review with a greater focus on ZT and high risk issues for both HR and HSE parts for immediate improvement - Continue to maintain weekly workshop inspection and scoring activities, awarding prizes to workshops with excellent achievements - Yearly workplans covering all requirement of SLCP and FEM are developed for timely implementation and tracking (1.0)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-10"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.2.1",
+        "code": "L3 4.1.1.2.1",
+        "name": "Human Resources (0.5) '-Follow Plan- do- check- act for managing processes and systems - Ensure all management actions align with updated policies and procedures, widely communicate and train to employees - Improve and enhance the HRM system by providing the professional training and skill enhancement on effective HRM system to all levels of management and staffs.",
+        "nameVi": "Human Resources (0.5) '-Follow Plan- do- check- act for managing processes and systems - Ensure all management actions align with updated policies and procedures, widely communicate and train to employees - Improve and enhance the HRM system by providing the professional training and skill enhancement on effective HRM system to all levels of management and staffs.",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-9"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.2.2",
+        "code": "L3 4.1.1.2.2",
+        "name": "Management Systems H&S (0.5)",
+        "nameVi": "Management Systems H&S (0.5)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-8"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "none",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.3.1",
+        "code": "L3 4.1.1.3.1",
+        "name": "Internal Assessment tiwce per year",
+        "nameVi": "Internal Assessment tiwce per year",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-7"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.4.1",
+        "code": "L3 4.1.1.4.1",
+        "name": "Above and Beyond activities: Project 1 Blood Donation Project 2 Anh Duong kindergarten Project 3 Samho home Project 4 Samho future ( Scholarship) Project 5 Visiting families of wounded soldiers and fallen heroes Project 6 Donating trash bins to trung an village Project 7 Donation for children’s orphanage “sharing is caring” Project 8 Free ice making machines",
+        "nameVi": "Above and Beyond activities: Project 1 Blood Donation Project 2 Anh Duong kindergarten Project 3 Samho home Project 4 Samho future ( Scholarship) Project 5 Visiting families of wounded soldiers and fallen heroes Project 6 Donating trash bins to trung an village Project 7 Donation for children’s orphanage “sharing is caring” Project 8 Free ice making machines",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-6"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-4"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.5.1",
+        "code": "L3 4.1.1.5.1",
+        "name": "Climate – 50 % Renewable Energy (RE): IREC certificate",
+        "nameVi": "Climate – 50 % Renewable Energy (RE): IREC certificate",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 3,
+            "actual": 3
+          },
+          "Feb": {
+            "target": 3,
+            "actual": 3
+          },
+          "Mar": {
+            "target": 3,
+            "actual": 3
+          },
+          "Apr": {
+            "target": 3,
+            "actual": 3
+          },
+          "May": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jun": {
+            "target": 3,
+            "actual": 3
+          },
+          "Jul": {
+            "target": 3,
+            "actual": 3
+          },
+          "Aug": {
+            "target": 3,
+            "actual": 3
+          },
+          "Sep": {
+            "target": 3,
+            "actual": 3
+          },
+          "Oct": {
+            "target": 3,
+            "actual": 3
+          },
+          "Nov": {
+            "target": 3,
+            "actual": null
+          },
+          "Dec": {
+            "target": 3,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-5"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.6.1",
+        "code": "L3 4.1.1.6.1",
+        "name": "Waste - % Diverted : 100% coprocessing & re-used ( Zerowaste to land fill)",
+        "nameVi": "Waste - % Diverted : 100% coprocessing & re-used ( Zerowaste to land fill)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 2,
+            "actual": 2
+          },
+          "Feb": {
+            "target": 2,
+            "actual": 2
+          },
+          "Mar": {
+            "target": 2,
+            "actual": 2
+          },
+          "Apr": {
+            "target": 2,
+            "actual": 2
+          },
+          "May": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jun": {
+            "target": 2,
+            "actual": 2
+          },
+          "Jul": {
+            "target": 2,
+            "actual": 2
+          },
+          "Aug": {
+            "target": 2,
+            "actual": 2
+          },
+          "Sep": {
+            "target": 2,
+            "actual": 2
+          },
+          "Oct": {
+            "target": 2,
+            "actual": 2
+          },
+          "Nov": {
+            "target": 2,
+            "actual": null
+          },
+          "Dec": {
+            "target": 2,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-4"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-3"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.7.1",
+        "code": "L3 4.1.1.7.1",
+        "name": "Workplace Dialogue Programs Functional Workplace cooperation Committee (1)",
+        "nameVi": "Workplace Dialogue Programs Functional Workplace cooperation Committee (1)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-3"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.7.2",
+        "code": "L3 4.1.1.7.2",
+        "name": "Workplace Dialogue Programs Impact Assessment (1)",
+        "nameVi": "Workplace Dialogue Programs Impact Assessment (1)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-3"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.8.1",
+        "code": "L3 4.1.1.8.1",
+        "name": "Women Empowerment Program - Started SERI Program (0.5)",
+        "nameVi": "Women Empowerment Program - Started SERI Program (0.5)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-2"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.8.2",
+        "code": "L3 4.1.1.8.2",
+        "name": "Women Empowerment Program -1000 employees were participated in SERI training program. (1)",
+        "nameVi": "Women Empowerment Program -1000 employees were participated in SERI training program. (1)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 0
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 0
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 0
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 0
+          },
+          "May": {
+            "target": 1,
+            "actual": 0
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 0
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 0
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 0
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 0
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 0
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-2"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.9.1",
+        "code": "L3 4.1.1.9.1",
+        "name": "Digital Engagement Programs 100% of the workforce are activated users on worker mobile app (0.5)",
+        "nameVi": "Digital Engagement Programs 100% of the workforce are activated users on worker mobile app (0.5)",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Feb": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Mar": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Apr": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "May": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jun": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Jul": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Aug": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Sep": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Oct": {
+            "target": 0.5,
+            "actual": 0.5
+          },
+          "Nov": {
+            "target": 0.5,
+            "actual": null
+          },
+          "Dec": {
+            "target": 0.5,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-3"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-2"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
+      },
+      {
+        "id": "kpi-csr-l3-4.1.1.10.1",
+        "code": "L3 4.1.1.10.1",
+        "name": "Fair Compensation - Factory has conducted wage analysis that tracks progress toward living wage benchmark for country/region",
+        "nameVi": "Fair Compensation - Factory has conducted wage analysis that tracks progress toward living wage benchmark for country/region",
+        "nameKo": "",
+        "level": "L3",
+        "department": "CSR",
+        "unit": "Points",
+        "jumpingOffPoint": "Jan. 2026",
+        "targetDirection": "higher",
+        "owner": "CSR",
+        "monthly": {
+          "Jan": {
+            "target": 1,
+            "actual": 1
+          },
+          "Feb": {
+            "target": 1,
+            "actual": 1
+          },
+          "Mar": {
+            "target": 1,
+            "actual": 1
+          },
+          "Apr": {
+            "target": 1,
+            "actual": 1
+          },
+          "May": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jun": {
+            "target": 1,
+            "actual": 1
+          },
+          "Jul": {
+            "target": 1,
+            "actual": 1
+          },
+          "Aug": {
+            "target": 1,
+            "actual": 1
+          },
+          "Sep": {
+            "target": 1,
+            "actual": 1
+          },
+          "Oct": {
+            "target": 1,
+            "actual": 1
+          },
+          "Nov": {
+            "target": 1,
+            "actual": null
+          },
+          "Dec": {
+            "target": 1,
+            "actual": null
+          }
+        },
+        "problemDescription": "",
+        "rootCause": "",
+        "actionPlan": "",
+        "actionStatus": "Open",
+        "linkedPriorityIds": [
+          "p-l3csr-1"
+        ],
+        "linkedObjectiveIds": [
+          "obj-l3csr-1"
+        ],
+        "resourceRoles": {
+          "biz": "none",
+          "quality": "none",
+          "csr": "primary",
+          "lean": "none",
+          "dev": "none",
+          "prod": "none",
+          "plan": "none",
+          "it": "none"
+        }
       }
     ]
   }
