@@ -49,6 +49,13 @@ const LEGACY_BASELINE_HASHES = [
     l2Data: '6bd05af1-7c0b0dbd',
     l3Data: '8c1290a5-c2483731',
   },
+  {
+    // Canonicalized Biz/CSR seed (2026-11 deploy). Browsers holding an unedited
+    // copy of this baseline can adopt the next shipped seed automatically.
+    l1Data: '55f4a2a5-b9b7b63',
+    l2Data: 'edde6082-b1d9c322',
+    l3Data: '56e894c7-647e84f2',
+  },
 ];
 
 function stableStringify(value: any): string {
