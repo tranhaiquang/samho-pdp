@@ -115,9 +115,12 @@ npm run build:static
 ```
 
 Existing visitors keep their own `localStorage` copy, so the seed only affects
-first-time visitors. To force everyone back to the shipped baseline, add
-`localStorage.removeItem('samho_policy_state_v1')` in the browser console and
-reload.
+first-time visitors. The app uses the `samho_policy_state_v2` storage keys;
+snapshots saved under the retired `_v1` keys are ignored, which forces every
+browser back to the shipped baseline once. To force it again after a future
+data re-publish, bump the keys in `server/policyStore_static.ts` the same way.
+For a one-off browser, `localStorage.removeItem('samho_policy_state_v2')` in
+the console and reload also works.
 
 ## Verification scripts
 

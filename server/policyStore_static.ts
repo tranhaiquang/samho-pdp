@@ -23,8 +23,8 @@ export interface StoreState {
   l3Data: LevelPolicyData;
 }
 
-const STORAGE_KEY = 'samho_policy_state_v1';
-const BACKUP_KEY = 'samho_policy_state_backup_v1';
+const STORAGE_KEY = 'samho_policy_state_v2';
+const BACKUP_KEY = 'samho_policy_state_backup_v2';
 
 // Hashes of obsolete static baselines. If localStorage still contains exactly
 // one of these unedited snapshots, the site can safely adopt the shipped seed
