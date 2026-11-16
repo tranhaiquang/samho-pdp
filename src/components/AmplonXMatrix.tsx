@@ -194,9 +194,9 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
   const isL2 = data.level === 'L2';
   const isL3 = data.level === 'L3';
 
-  // L2-only per-cell color picker (the L1 workflow, restricted to the L2
-  // view). Persists to localStorage and exports JSON to bake into
-  // matrixCellColors.ts. Hidden; flip back to re-enable. L1 keeps the baked palette.
+  // L1/L2 per-cell color picker (the L1 workflow, merged with baked palette).
+  // Persists to localStorage and exports JSON to bake into matrixCellColors.ts.
+  // Hidden; flip back to re-enable.
   const SHOW_L2_COLOR_PICKER = false;
   const CELL_COLOR_OPTIONS = [
     { value: '#DBEEF4', label: 'Lean / Prod' },
@@ -241,8 +241,8 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
   useEffect(() => {
     localStorage.setItem('amplon-cell-text-colors', JSON.stringify(cellTextColors));
   }, [cellTextColors]);
-  const effectiveColors = isL2 ? { ...MANUAL_CELL_COLORS, ...cellColors } : MANUAL_CELL_COLORS;
-  const effectiveTextColors = isL2 ? { ...MANUAL_CELL_TEXT_COLORS, ...cellTextColors } : MANUAL_CELL_TEXT_COLORS;
+  const effectiveColors = isL1 || isL2 ? { ...MANUAL_CELL_COLORS, ...cellColors } : MANUAL_CELL_COLORS;
+  const effectiveTextColors = isL1 || isL2 ? { ...MANUAL_CELL_TEXT_COLORS, ...cellTextColors } : MANUAL_CELL_TEXT_COLORS;
   const copyCellColors = async () => {
     const json = JSON.stringify({ cellColors, cellTextColors }, null, 2);
     try {
@@ -258,7 +258,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
     setCellTextColors({});
   };
   const renderCellColorPicker = (cellKey: string, position: 'right' | 'left' = 'right') => {
-    if (!isL2 || !SHOW_L2_COLOR_PICKER) return null;
+    if (!(isL1 || isL2) || !SHOW_L2_COLOR_PICKER) return null;
     return (
       <label
         className={`absolute top-0.5 ${position === 'right' ? 'right-0.5' : 'left-0.5'} z-20 opacity-70 hover:opacity-100 focus-within:opacity-100 transition cursor-pointer print:hidden`}
@@ -298,7 +298,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
     );
   };
   const renderCellTextColorPicker = (cellKey: string, position: 'under' | 'right' = 'under') => {
-    if (!isL2 || !SHOW_L2_COLOR_PICKER) return null;
+    if (!(isL1 || isL2) || !SHOW_L2_COLOR_PICKER) return null;
     return (
       <label
         className={`absolute ${position === 'right' ? 'top-0.5 right-5' : 'top-5 left-0.5'} z-20 opacity-70 hover:opacity-100 focus-within:opacity-100 transition cursor-pointer print:hidden`}
@@ -2639,7 +2639,7 @@ export const AmplonXMatrix: React.FC<AmplonXMatrixProps> = ({
               </div>
 
               {/* L2 color picker toolbar (export JSON to bake into matrixCellColors.ts) */}
-              {isL2 && SHOW_L2_COLOR_PICKER && (
+              {(isL1 || isL2) && SHOW_L2_COLOR_PICKER && (
                 <div className="flex items-center gap-2">
                   <span className="text-slate-500 font-medium">{isVi ? 'Ch?n m?u t?ng �:' : 'Per-cell colors:'}</span>
                   <button
